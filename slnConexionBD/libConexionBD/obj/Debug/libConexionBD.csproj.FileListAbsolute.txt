@@ -1,0 +1,14 @@
+E:\Docencia\ITM\Desarrollo Software\2017-1\Clases\DSI54-8\LibreriasComunes\slnConexionBD\libConexionBD\bin\Debug\libConexionBD.dll
+E:\Docencia\ITM\Desarrollo Software\2017-1\Clases\DSI54-8\LibreriasComunes\slnConexionBD\libConexionBD\bin\Debug\libConexionBD.pdb
+E:\Docencia\ITM\Desarrollo Software\2017-1\Clases\DSI54-8\LibreriasComunes\slnConexionBD\libConexionBD\bin\Debug\libParametros.dll
+E:\Docencia\ITM\Desarrollo Software\2017-1\Clases\DSI54-8\LibreriasComunes\slnConexionBD\libConexionBD\bin\Debug\libParametros.pdb
+E:\Docencia\ITM\Desarrollo Software\2017-1\Clases\DSI54-8\LibreriasComunes\slnConexionBD\libConexionBD\obj\Debug\libConexionBD.csprojResolveAssemblyReference.cache
+E:\Docencia\ITM\Desarrollo Software\2017-1\Clases\DSI54-8\LibreriasComunes\slnConexionBD\libConexionBD\obj\Debug\libConexionBD.dll
+E:\Docencia\ITM\Desarrollo Software\2017-1\Clases\DSI54-8\LibreriasComunes\slnConexionBD\libConexionBD\obj\Debug\libConexionBD.pdb
+E:\Docencia\ITM\Desarrollo Software\2017-1\Librerias Comunes\slnConexionBD\libConexionBD\bin\Debug\libConexionBD.dll
+E:\Docencia\ITM\Desarrollo Software\2017-1\Librerias Comunes\slnConexionBD\libConexionBD\bin\Debug\libConexionBD.pdb
+E:\Docencia\ITM\Desarrollo Software\2017-1\Librerias Comunes\slnConexionBD\libConexionBD\bin\Debug\libParametros.dll
+E:\Docencia\ITM\Desarrollo Software\2017-1\Librerias Comunes\slnConexionBD\libConexionBD\bin\Debug\libParametros.pdb
+E:\Docencia\ITM\Desarrollo Software\2017-1\Librerias Comunes\slnConexionBD\libConexionBD\obj\Debug\libConexionBD.csprojResolveAssemblyReference.cache
+E:\Docencia\ITM\Desarrollo Software\2017-1\Librerias Comunes\slnConexionBD\libConexionBD\obj\Debug\libConexionBD.dll
+E:\Docencia\ITM\Desarrollo Software\2017-1\Librerias Comunes\slnConexionBD\libConexionBD\obj\Debug\libConexionBD.pdb
