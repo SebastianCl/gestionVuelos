@@ -7,3 +7,11 @@ C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\slnGestionVuelos\libGes
 C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\slnGestionVuelos\libGestionVuelos\obj\Debug\libGestionVuelos.csprojResolveAssemblyReference.cache
 C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\slnGestionVuelos\libGestionVuelos\obj\Debug\libGestionVuelos.dll
 C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\slnGestionVuelos\libGestionVuelos\obj\Debug\libGestionVuelos.pdb
+C:\Users\sebas\Documents\Ingenieria de Software\FINAL\Versiones\3\gestionVuelos\libGestionVuelos\bin\Debug\libGestionVuelos.dll
+C:\Users\sebas\Documents\Ingenieria de Software\FINAL\Versiones\3\gestionVuelos\libGestionVuelos\bin\Debug\libGestionVuelos.pdb
+C:\Users\sebas\Documents\Ingenieria de Software\FINAL\Versiones\3\gestionVuelos\libGestionVuelos\bin\Debug\libConexionBD.dll
+C:\Users\sebas\Documents\Ingenieria de Software\FINAL\Versiones\3\gestionVuelos\libGestionVuelos\bin\Debug\libParametros.dll
+C:\Users\sebas\Documents\Ingenieria de Software\FINAL\Versiones\3\gestionVuelos\libGestionVuelos\bin\Debug\libConexionBD.pdb
+C:\Users\sebas\Documents\Ingenieria de Software\FINAL\Versiones\3\gestionVuelos\libGestionVuelos\bin\Debug\libParametros.pdb
+C:\Users\sebas\Documents\Ingenieria de Software\FINAL\Versiones\3\gestionVuelos\libGestionVuelos\obj\Debug\libGestionVuelos.dll
+C:\Users\sebas\Documents\Ingenieria de Software\FINAL\Versiones\3\gestionVuelos\libGestionVuelos\obj\Debug\libGestionVuelos.pdb

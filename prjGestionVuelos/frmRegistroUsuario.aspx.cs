@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using libGestionVuelos;
+using System.Reflection;
 
 namespace prjGestionVuelos
 {
-    public partial class frmRegistroAdmin : System.Web.UI.Page
+    public partial class frmRegistroUsuario : System.Web.UI.Page
     {
         #region "Variables Globales"
         private static string strNombreApp;
@@ -18,42 +18,41 @@ namespace prjGestionVuelos
         #region "Metodos Privados"
         private void LimpiarCampos()
         {
-            this.txtIDAdmin.Text = string.Empty;            
-            this.txtNickAdmin.Text = string.Empty;
-            this.txtClaveAdmin.Text = string.Empty;
-            this.txtNombreAdmin.Text = string.Empty;
-            this.txtCiudadAdmin.Text = string.Empty;
+            this.txtIDUsuario.Text = string.Empty;
+            this.txtNickUsuario.Text = string.Empty;
+            this.txtClaveUsuario.Text = string.Empty;
+            this.txtNombreUsuario.Text = string.Empty;
+            this.txtCiudadUsuario.Text = string.Empty;
         }
-
         private bool ValidarCampos()
         {
-            if (this.txtIDAdmin.Text.Trim() == string.Empty)
+            if (this.txtIDUsuario.Text.Trim() == string.Empty)
             {
                 this.lblMensaje.Text = "Debe ingresar una identificación";
                 this.pnlAlerta.Visible = true;
                 return false;
             }
-            if (this.txtNickAdmin.Text.Trim() == string.Empty)
+            if (this.txtIDUsuario.Text.Trim() == string.Empty)
             {
                 this.lblMensaje.Text = "Debe ingresar un nombre de usuario";
                 this.pnlAlerta.Visible = true;
                 return false;
             }
-            if (this.txtClaveAdmin.Text.Trim() == string.Empty)
+            if (this.txtClaveUsuario.Text.Trim() == string.Empty)
             {
                 this.lblMensaje.Text = "Debe ingresar una contraseña";
                 this.pnlAlerta.Visible = true;
                 return false;
             }
-            if (this.txtNombreAdmin.Text.Trim() == string.Empty)
+            if (this.txtNombreUsuario.Text.Trim() == string.Empty)
             {
-                this.lblMensaje.Text = "Debe ingresar el nombre del administrador a registrar";
+                this.lblMensaje.Text = "Debe ingresar el nombre del usuario a registrar";
                 this.pnlAlerta.Visible = true;
                 return false;
             }
-            if (this.txtCiudadAdmin.Text.Trim() == string.Empty)
+            if (this.txtCiudadUsuario.Text.Trim() == string.Empty)
             {
-                this.lblMensaje.Text = "Debe ingresar la ciudad del administrador a registrar";
+                this.lblMensaje.Text = "Debe ingresar la ciudad del usuario a registrar";
                 this.pnlAlerta.Visible = true;
                 return false;
             }
@@ -66,10 +65,10 @@ namespace prjGestionVuelos
             try
             {
                 clsPersona objPersona = new clsPersona(strNombreApp);
-                objPersona.Nombre = this.txtNombreAdmin.Text.Trim();
-                objPersona.Nick = this.txtNickAdmin.Text.Trim();
-                objPersona.Identificacion = this.txtIDAdmin.Text.Trim();
-                objPersona.Ciudad = this.txtCiudadAdmin.Text.Trim();
+                objPersona.Nombre = this.txtNombreUsuario.Text.Trim();
+                objPersona.Nick = this.txtNickUsuario.Text.Trim();
+                objPersona.Identificacion = this.txtIDUsuario.Text.Trim();
+                objPersona.Ciudad = this.txtCiudadUsuario.Text.Trim();
                 if (!objPersona.ConsultarIdUsuario())
                 {
                     this.lblMensaje.Text = objPersona.Error;
@@ -88,7 +87,7 @@ namespace prjGestionVuelos
                 return false;
             }
         }
-        private void RegistrarAdmin()
+        private void RegistrarUsuario()
         {
             try
             {
@@ -97,10 +96,10 @@ namespace prjGestionVuelos
                     return;
                 }
                 clsUsuario objUsu = new clsUsuario(strNombreApp);
-                objUsu.NickUsuario = this.txtNickAdmin.Text;
-                objUsu.Clave = this.txtClaveAdmin.Text;
-                objUsu.Rol = "A";
-                objUsu.Cedula = this.txtIDAdmin.Text;
+                objUsu.NickUsuario = this.txtNickUsuario.Text;
+                objUsu.Clave = this.txtCiudadUsuario.Text;
+                objUsu.Rol = "U";
+                objUsu.Cedula = this.txtIDUsuario.Text;
 
                 if (!objUsu.CrearUsuario())
                 {
@@ -124,6 +123,7 @@ namespace prjGestionVuelos
                         return;
                     }
                     this.lblMensaje.Text = "Nuevo usuario registrado con exito";
+                    LimpiarCampos();
                     this.pnlAlerta.Visible = true;
                     objUsu = null;
                     return;
@@ -140,7 +140,8 @@ namespace prjGestionVuelos
 
         #endregion
 
-        #region EVENTOS        
+        #region EVENTOS
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -150,12 +151,10 @@ namespace prjGestionVuelos
             this.pnlAlerta.Visible = false;
         }
 
-        protected void btnRegistroA_Click(object sender, EventArgs e)
+        protected void btnRegistroU_Click(object sender, EventArgs e)
         {
-            RegistrarAdmin();
-            LimpiarCampos();        
+            RegistrarUsuario();            
         }
         #endregion
-
     }
 }

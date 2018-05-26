@@ -10,61 +10,97 @@
 namespace prjGestionVuelos {
     
     
-    public partial class frmRegistroAdmin {
+    public partial class frmPiloto {
         
         /// <summary>
-        /// Control txtIDAdmin.
+        /// Control frmRegistroUsuario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtIDAdmin;
+        protected global::System.Web.UI.HtmlControls.HtmlForm frmRegistroUsuario;
         
         /// <summary>
-        /// Control txtNickAdmin.
+        /// Control txtIDPiloto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNickAdmin;
+        protected global::System.Web.UI.WebControls.TextBox txtIDPiloto;
         
         /// <summary>
-        /// Control txtClaveAdmin.
+        /// Control txtNickPiloto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtClaveAdmin;
+        protected global::System.Web.UI.WebControls.TextBox txtNickPiloto;
         
         /// <summary>
-        /// Control txtNombreAdmin.
+        /// Control txtClavePiloto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNombreAdmin;
+        protected global::System.Web.UI.WebControls.TextBox txtClavePiloto;
         
         /// <summary>
-        /// Control txtCiudadAdmin.
+        /// Control txtNombrePiloto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCiudadAdmin;
+        protected global::System.Web.UI.WebControls.TextBox txtNombrePiloto;
         
         /// <summary>
-        /// Control btnRegistroA.
+        /// Control txtCiudadPiloto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRegistroA;
+        protected global::System.Web.UI.WebControls.TextBox txtCiudadPiloto;
+        
+        /// <summary>
+        /// Control txtDirPiloto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtDirPiloto;
+        
+        /// <summary>
+        /// Control txtTelPiloto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtTelPiloto;
+        
+        /// <summary>
+        /// Control txtCodLineaAerea.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtCodLineaAerea;
+        
+        /// <summary>
+        /// Control btnRegistroP.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnRegistroP;
         
         /// <summary>
         /// Control pnlAlerta.

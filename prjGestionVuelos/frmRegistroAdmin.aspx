@@ -16,13 +16,13 @@
                 <form id="frmRegistroAdmin" runat="server">
                     <asp:TextBox ID="txtIDAdmin" runat="server" TextMode="Number" CssClass="form-control" placeholder="Identificación"></asp:TextBox>
                     <br />                    
-                    <asp:TextBox ID="txtUsuarioAdmin" runat="server" CssClass="form-control" placeholder="Nombre de usuario"></asp:TextBox>
+                    <asp:TextBox ID="txtNickAdmin" runat="server" CssClass="form-control" placeholder="Nombre de usuario"></asp:TextBox>
                     <br />
                     <asp:TextBox ID="txtClaveAdmin" runat="server" TextMode="Password" CssClass="form-control" placeholder="Ingrese una clave (max 10)"></asp:TextBox>
                     <br />
                     <asp:TextBox ID="txtNombreAdmin" runat="server" CssClass="form-control" placeholder="Nombre completo"></asp:TextBox>
                     <br />                    
-                    <asp:TextBox ID="txtCiudadAdmin" runat="server" CssClass="form-control" placeholder="Ingrese su ciudad local"></asp:TextBox>
+                    <asp:TextBox ID="txtCiudadAdmin" runat="server" CssClass="form-control" placeholder="Ingrese la ciudad local del admisnitrador"></asp:TextBox>
                     <br />
                     <asp:Button ID="btnRegistroA" runat="server" CssClass="btn btn-primary btn-lg btn-block" Text="Registrar nuevo administrador" OnClick="btnRegistroA_Click" />
                 </form>

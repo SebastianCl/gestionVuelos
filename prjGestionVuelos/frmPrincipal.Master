@@ -101,8 +101,8 @@
                 <li class="my-li-navG"><a href="frmRegistroProducto.aspx">Vuelo</a></li>
                 <li class="divider"></li>
                   <li class="dropdown-header">Usuarios</li>
-                <li class="my-li-navY"><a href="#">Piloto</a></li>
-                <li class="my-li-navY"><a href="#">Usuario Estandar</a></li>
+                <li class="my-li-navY"><a href="frmPiloto.aspx">Piloto</a></li>
+                <li class="my-li-navY"><a href="frmRegistroUsuario.aspx">Usuario Estandar</a></li>
                   <li class="my-li-navY"><a href="frmRegistroAdmin.aspx">Usuario Administrador</a></li>
                 <li class="divider"></li>
                 <li class="my-li-navR"><a href="#">Opciones</a></li>

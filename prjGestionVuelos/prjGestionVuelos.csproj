@@ -70,7 +70,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="frmPiloto.aspx" />
     <Content Include="frmRegistroAdmin.aspx" />
+    <Content Include="frmRegistroUsuario.aspx" />
     <Content Include="packages.config" />
     <Content Include="frmPrincipal.Master" />
     <Content Include="resources\font-awesome\fonts\fontawesome-webfont.eot" />
@@ -129,12 +131,26 @@
     <Compile Include="frmLogin.aspx.designer.cs">
       <DependentUpon>frmLogin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="frmPiloto.aspx.cs">
+      <DependentUpon>frmPiloto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmPiloto.aspx.designer.cs">
+      <DependentUpon>frmPiloto.aspx</DependentUpon>
+    </Compile>
     <Compile Include="frmRegistroAdmin.aspx.cs">
       <DependentUpon>frmRegistroAdmin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="frmRegistroAdmin.aspx.designer.cs">
       <DependentUpon>frmRegistroAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistroUsuario.aspx.cs">
+      <DependentUpon>frmRegistroUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmRegistroUsuario.aspx.designer.cs">
+      <DependentUpon>frmRegistroUsuario.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="frmPrincipal.Master.cs">

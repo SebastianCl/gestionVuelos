@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="clsLogin.cs" />
     <Compile Include="clsPersona.cs" />
+    <Compile Include="clsPiloto.cs" />
     <Compile Include="clsUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

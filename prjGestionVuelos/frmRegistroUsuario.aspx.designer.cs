@@ -10,61 +10,61 @@
 namespace prjGestionVuelos {
     
     
-    public partial class frmRegistroAdmin {
+    public partial class frmRegistroUsuario {
         
         /// <summary>
-        /// Control txtIDAdmin.
+        /// Control txtIDUsuario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtIDAdmin;
+        protected global::System.Web.UI.WebControls.TextBox txtIDUsuario;
         
         /// <summary>
-        /// Control txtNickAdmin.
+        /// Control txtNickUsuario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNickAdmin;
+        protected global::System.Web.UI.WebControls.TextBox txtNickUsuario;
         
         /// <summary>
-        /// Control txtClaveAdmin.
+        /// Control txtClaveUsuario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtClaveAdmin;
+        protected global::System.Web.UI.WebControls.TextBox txtClaveUsuario;
         
         /// <summary>
-        /// Control txtNombreAdmin.
+        /// Control txtNombreUsuario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNombreAdmin;
+        protected global::System.Web.UI.WebControls.TextBox txtNombreUsuario;
         
         /// <summary>
-        /// Control txtCiudadAdmin.
+        /// Control txtCiudadUsuario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCiudadAdmin;
+        protected global::System.Web.UI.WebControls.TextBox txtCiudadUsuario;
         
         /// <summary>
-        /// Control btnRegistroA.
+        /// Control btnRegistroU.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRegistroA;
+        protected global::System.Web.UI.WebControls.Button btnRegistroU;
         
         /// <summary>
         /// Control pnlAlerta.
