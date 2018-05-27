@@ -30,7 +30,7 @@
                         <div class="col-md-6">
                             <div class="alert alert-info alert-dismissible">
                                 <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                                <asp:Label ID="lblMensaje" runat="server" CssClass="text-center" ForeColor="#8B8787"></asp:Label>
+                                <asp:Label ID="lblMensaje" runat="server" CssClass="text-center" ForeColor="#000000"></asp:Label>
                             </div>
                         </div>  	
                     </asp:Panel>

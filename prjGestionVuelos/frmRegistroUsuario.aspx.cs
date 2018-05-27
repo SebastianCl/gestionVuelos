@@ -95,6 +95,16 @@ namespace prjGestionVuelos
                 {
                     return;
                 }
+                clsPersona objValPer = new clsPersona(strNombreApp);
+                objValPer.Identificacion = this.txtIDUsuario.Text.Trim();
+                if (objValPer.ValidarPersona())
+                {
+                    this.lblMensaje.Text = "Los sentimos, ya hay un usuario registrado con esa identificación";
+                    this.pnlAlerta.Visible = true;
+                    objValPer = null;
+                    return;
+                }
+                objValPer = null;
                 clsUsuario objUsu = new clsUsuario(strNombreApp);
                 objUsu.NickUsuario = this.txtNickUsuario.Text;
                 objUsu.Clave = this.txtCiudadUsuario.Text;
@@ -153,7 +163,8 @@ namespace prjGestionVuelos
 
         protected void btnRegistroU_Click(object sender, EventArgs e)
         {
-            RegistrarUsuario();            
+            RegistrarUsuario();
+            LimpiarCampos();        
         }
         #endregion
     }

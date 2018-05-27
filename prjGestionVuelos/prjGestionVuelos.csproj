@@ -70,7 +70,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="frmPiloto.aspx" />
+    <Content Include="frmLineaAerea.aspx" />
+    <Content Include="frmRegistroPiloto.aspx" />
     <Content Include="frmRegistroAdmin.aspx" />
     <Content Include="frmRegistroUsuario.aspx" />
     <Content Include="packages.config" />
@@ -124,6 +125,13 @@
     <Compile Include="frmBusqueda.aspx.designer.cs">
       <DependentUpon>frmBusqueda.aspx</DependentUpon>
     </Compile>
+    <Compile Include="frmLineaAerea.aspx.cs">
+      <DependentUpon>frmLineaAerea.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmLineaAerea.aspx.designer.cs">
+      <DependentUpon>frmLineaAerea.aspx</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.aspx.cs">
       <DependentUpon>frmLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -131,12 +139,12 @@
     <Compile Include="frmLogin.aspx.designer.cs">
       <DependentUpon>frmLogin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="frmPiloto.aspx.cs">
-      <DependentUpon>frmPiloto.aspx</DependentUpon>
+    <Compile Include="frmRegistroPiloto.aspx.cs">
+      <DependentUpon>frmRegistroPiloto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="frmPiloto.aspx.designer.cs">
-      <DependentUpon>frmPiloto.aspx</DependentUpon>
+    <Compile Include="frmRegistroPiloto.aspx.designer.cs">
+      <DependentUpon>frmRegistroPiloto.aspx</DependentUpon>
     </Compile>
     <Compile Include="frmRegistroAdmin.aspx.cs">
       <DependentUpon>frmRegistroAdmin.aspx</DependentUpon>

@@ -24,7 +24,9 @@ namespace libGestionVuelos
         private string strClave;
         private string strError;
         private int intRpta;
+        private string strRol;
         private SqlParameter[] objParamSQL;
+        private SqlDataReader objReader;
         #endregion
 
         #region PROPIEDADES
@@ -59,6 +61,14 @@ namespace libGestionVuelos
                 return intRpta;
             }
         }
+
+        public string Rol
+        {
+            get
+            {
+                return strRol;
+            }            
+        }
         #endregion
 
         #region METODOS PRIVADOS
@@ -77,13 +87,23 @@ namespace libGestionVuelos
             return true;
         }
 
-        private bool CrearParametros()
+        private bool CrearParametros(string strTipo)
         {
             try
             {
-                objParamSQL = new SqlParameter[2];
-                objParamSQL[0] = new SqlParameter("@usuario", strUsuario);
-                objParamSQL[1] = new SqlParameter("@clave", strClave);
+                switch (strTipo)
+                {
+                    case "Logueo":
+                        objParamSQL = new SqlParameter[2];
+                        objParamSQL[0] = new SqlParameter("@usuario", strUsuario);
+                        objParamSQL[1] = new SqlParameter("@clave", strClave);                        
+                        break;
+                    case "CONSULTAR_ROL":
+                        objParamSQL = new SqlParameter[1];
+
+                        objParamSQL[0] = new SqlParameter("@NOMBRE_USUARIO", strUsuario);
+                        break;
+                }
                 return true;
             }
             catch (Exception ex)
@@ -102,7 +122,7 @@ namespace libGestionVuelos
                 {
                     return false;
                 }
-                if (!CrearParametros())
+                if (!CrearParametros("Logueo"))
                 {
                     strError = "Error en la creación de parametros";
                     return false;
@@ -124,6 +144,48 @@ namespace libGestionVuelos
             }
             catch (Exception ex)
             {
+                throw ex;
+            }
+        }
+        public bool ConsultarROl()
+        {
+            try
+            {
+                if (!CrearParametros("CONSULTAR_ROL"))
+                {
+                    strError = "Hubo un error al crear los parametros SQL";
+                    return false;
+                }
+                clsConexionBD objConexion = new clsConexionBD(strNombreApp);
+                objConexion.SQL = "SP_ConsultarRol";
+                objConexion.ParametrosSQL = objParamSQL;
+
+                if (!objConexion.Consultar(true, true))
+                {
+                    strError = objConexion.Error;
+                    objConexion.CerrarCnx();
+                    objConexion = null;
+                    return false;
+                }
+
+                objReader = objConexion.DataReader_Lleno;
+
+                if (!objReader.HasRows)
+                {
+                    strError = objConexion.Error;
+                    objReader.Close();
+                    objConexion = null;
+                    return false;
+                }
+                objReader.Read();
+                strRol = objReader.GetString(0);
+
+                objReader.Close();
+                return true;
+            }
+            catch (Exception ex)
+            {
+
                 throw ex;
             }
         }

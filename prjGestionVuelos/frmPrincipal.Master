@@ -96,12 +96,13 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Registros<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li class="dropdown-header">Entidades</li>
-                  <li class="my-li-navG"><a href="frmRegistroProducto.aspx">Aerolinea</a></li>
-                <li class="my-li-navG"><a href="frmRegistroCliente.aspx">Plan de vuelo</a></li>
-                <li class="my-li-navG"><a href="frmRegistroProducto.aspx">Vuelo</a></li>
+                  <li class="my-li-navG"><a href="frmLineaAerea.aspx">Aerolinea</a></li>
+                <li class="my-li-navG"><a href="#">Plan de vuelo</a></li>
+                <li class="my-li-navG"><a href="#">Vuelo</a></li> 
+                <li class="my-li-navG"><a href="#">Avión</a></li>                 
                 <li class="divider"></li>
                   <li class="dropdown-header">Usuarios</li>
-                <li class="my-li-navY"><a href="frmPiloto.aspx">Piloto</a></li>
+                <li class="my-li-navY"><a href="frmRegistroPiloto.aspx">Piloto</a></li>
                 <li class="my-li-navY"><a href="frmRegistroUsuario.aspx">Usuario Estandar</a></li>
                   <li class="my-li-navY"><a href="frmRegistroAdmin.aspx">Usuario Administrador</a></li>
                 <li class="divider"></li>

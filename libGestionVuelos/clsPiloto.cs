@@ -192,6 +192,11 @@ namespace libGestionVuelos
                         objParameterSQL[5] = new SqlParameter("@COD_USUARIO", intCodUsuario);
                         objParameterSQL[6] = new SqlParameter("@TELEFONO", strTelefono);
                         break;
+                    case "VALIDAR":
+                        objParameterSQL = new SqlParameter[1];
+
+                        objParameterSQL[0] = new SqlParameter("@ID", strID);
+                        break;
                 }
                 return true;
             }
@@ -241,7 +246,7 @@ namespace libGestionVuelos
             }
         }
 
-        public bool ConsultarIdUsuario()
+        public bool ObtenerIdUsuario()
         {
             try
             {
@@ -283,6 +288,48 @@ namespace libGestionVuelos
             }
         }
 
+        public bool ValidarPiloto()
+        {
+            try
+            {
+                if (!CrearParametros("VALIDAR"))
+                {
+                    strError = "Hubo un error al crear los parametros SQL";
+                    return false;
+                }
+                clsConexionBD objConexion = new clsConexionBD(strNombreApp);
+                objConexion.SQL = "SP_ConsultarPiloto";
+                objConexion.ParametrosSQL = objParameterSQL;
+
+                if (!objConexion.Consultar(true, true))
+                {
+                    strError = objConexion.Error;
+                    objConexion.CerrarCnx();
+                    objConexion = null;
+                    return false;
+                }
+
+                objReader = objConexion.DataReader_Lleno;
+
+                if (!objReader.HasRows)
+                {
+                    strError = "El piloto " + strNombre + " no existe";
+                    objReader.Close();
+                    objConexion = null;
+                    return false;
+                }
+                objReader.Read();
+                strID = objReader.GetString(0);                
+
+                objReader.Close();
+                return true;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
         #endregion
     }

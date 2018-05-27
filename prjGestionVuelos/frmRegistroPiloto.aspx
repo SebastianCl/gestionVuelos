@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/frmPrincipal.Master" AutoEventWireup="true" CodeBehind="frmPiloto.aspx.cs" Inherits="prjGestionVuelos.frmPiloto" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/frmPrincipal.Master" AutoEventWireup="true" CodeBehind="frmRegistroPiloto.aspx.cs" Inherits="prjGestionVuelos.frmPiloto" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -9,8 +9,7 @@
             </div>
             <div class="col-xs-12 col-md-8">
     		    <h2>Ingrese los datos del nuevo Piloto</h2>
-                <br /><br/>
-
+                <br />
                 <form id="frmRegistroUsuario" runat="server">
                     <asp:textbox id="txtIDPiloto" runat="server" textmode="Number" cssclass="form-control" placeholder="Identificación"></asp:textbox>
                     <br />
@@ -36,7 +35,7 @@
                         <div class="col-md-6">
                             <div class="alert alert-info alert-dismissible">
                                 <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                                <asp:Label ID="lblMensaje" runat="server" CssClass="text-center" ForeColor="#8B8787" ></asp:Label>
+                                <asp:Label ID="lblMensaje" runat="server" CssClass="text-center" ForeColor="#000000" ></asp:Label>
                             </div>
                         </div>  	
                     </asp:Panel>

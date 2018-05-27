@@ -13,6 +13,7 @@ namespace prjGestionVuelos
     {
         #region VAIABLES GLOBALES
         private static string strNombreApp;
+        private string strRolUsuario;
         #endregion
 
 
@@ -52,7 +53,25 @@ namespace prjGestionVuelos
                 }
                 if (objLog.Respuesta == 0)
                 {
-                    Response.Redirect("frmBusqueda.aspx");
+                    if (!objLog.ConsultarROl())
+                    {
+                        objLog = null;
+                        return;
+                    }
+                    strRolUsuario = objLog.Rol;
+                    switch (strRolUsuario)
+                    {
+                        case "A":
+                            Response.Redirect("frmBusqueda.aspx");
+                            break;
+                        case "U":
+                            Response.Redirect("frmBusqueda.aspx");
+                            break;
+                        case "P":
+                            Response.Redirect("frmBusqueda.aspx");
+                            break;
+                    }
+                    
                 }
                 else
                 {

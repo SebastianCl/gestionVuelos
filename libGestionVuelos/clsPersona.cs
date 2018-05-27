@@ -145,6 +145,11 @@ namespace libGestionVuelos
                         objParameterSQL[2] = new SqlParameter("@CIUDAD", strCiudad);
                         objParameterSQL[3] = new SqlParameter("@COD_USUARIO", intCodUsuario);
                         break;
+                    case "VALIDAR":
+                        objParameterSQL = new SqlParameter[1];
+
+                        objParameterSQL[0] = new SqlParameter("@ID", strID);
+                        break;
                 }
                 return true;
             }
@@ -232,12 +237,52 @@ namespace libGestionVuelos
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
         }
 
+        public bool ValidarPersona()
+        {
+            try
+            {
+                if (!CrearParametros("VALIDAR"))
+                {
+                    strError = "Hubo un error al crear los parametros SQL";
+                    return false;
+                }
+                clsConexionBD objConexion = new clsConexionBD(strNombreApp);
+                objConexion.SQL = "SP_ConsultarPersona";
+                objConexion.ParametrosSQL = objParameterSQL;
 
+                if (!objConexion.Consultar(true, true))
+                {
+                    strError = objConexion.Error;
+                    objConexion.CerrarCnx();
+                    objConexion = null;
+                    return false;
+                }
+
+                objReader = objConexion.DataReader_Lleno;
+
+                if (!objReader.HasRows)
+                {
+                    strError = "El usuario " + strNombre + " no existe";
+                    objReader.Close();
+                    objConexion = null;
+                    return false;
+                }
+                objReader.Read();
+                strID = objReader.GetString(0);
+
+                objReader.Close();
+                return true;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         #endregion
     }
 }

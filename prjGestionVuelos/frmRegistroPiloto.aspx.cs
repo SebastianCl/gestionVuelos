@@ -63,10 +63,14 @@ namespace prjGestionVuelos
             return true;
         }
 
-        private bool verificarIdUsuario()
+        private bool crearPiloto()
         {
             try
             {
+                if (!consultarIdUsuario())
+                {
+                    return false;
+                }
                 clsPiloto objPiloto = new clsPiloto(strNombreApp);
                 objPiloto.Identificacion = this.txtIDPiloto.Text.Trim();
                 objPiloto.Nombre = this.txtNombrePiloto.Text.Trim();
@@ -74,15 +78,9 @@ namespace prjGestionVuelos
                 objPiloto.Ciudad = this.txtCiudadPiloto.Text.Trim();
                 objPiloto.Telefono = this.txtTelPiloto.Text.Trim();
                 objPiloto.CodigoLinea = this.txtCodLineaAerea.Text.Trim();
-                objPiloto.Nick = this.txtNickPiloto.Text.Trim();                
+                objPiloto.Nick = this.txtNickPiloto.Text.Trim();
+                objPiloto.ObtenerIdUsuario();       
                 
-                if (!objPiloto.ConsultarIdUsuario())
-                {
-                    this.lblMensaje.Text = objPiloto.Error;
-                    this.pnlAlerta.Visible = true;
-                    objPiloto = null;
-                    return false;
-                }
                 objPiloto.CrearPiloto();
                 objPiloto = null;
                 return true;
@@ -95,6 +93,30 @@ namespace prjGestionVuelos
             }
         }
 
+        private bool consultarIdUsuario()
+        {
+            try
+            {
+                clsPiloto objPiloto = new clsPiloto(strNombreApp);
+                objPiloto.Nick = this.txtNickPiloto.Text.Trim();
+                if (!objPiloto.ObtenerIdUsuario())
+                {
+                    this.lblMensaje.Text = objPiloto.Error;
+                    this.pnlAlerta.Visible = true;
+                    objPiloto = null;
+                    return false;
+                }
+                objPiloto = null;
+                return true;
+            }
+            catch (Exception ex)
+            {
+                this.lblMensaje.Text = ex.Message;
+                this.pnlAlerta.Visible = true;                
+                return false;
+            }
+        }
+
         private void RegistrarPiloto()
         {
             try
@@ -102,12 +124,30 @@ namespace prjGestionVuelos
                 if (!ValidarCampos())
                 {
                     return;
+                }                
+                clsLineaAerea objLA = new clsLineaAerea(strNombreApp);
+                objLA.Codigo_Linea_Aerea = this.txtCodLineaAerea.Text.Trim();
+                if (!objLA.ObtenerIdLineaAerea())
+                {
+                    this.lblMensaje.Text = objLA.Error;
+                    this.pnlAlerta.Visible = true;
+                    objLA = null;
+                    return;
                 }
+                clsPiloto objValPil = new clsPiloto(strNombreApp);
+                objValPil.Identificacion = this.txtIDPiloto.Text.Trim();
+                if (objValPil.ValidarPiloto())
+                {
+                    this.lblMensaje.Text = "Lo sentimos ,ya hay un piloto registrado con esa identificación";
+                    this.pnlAlerta.Visible = true;
+                    objValPil = null;
+                    return;
+                }
+                objValPil = null;
                 clsUsuario objUsu = new clsUsuario(strNombreApp);
                 objUsu.NickUsuario = this.txtNickPiloto.Text;
                 objUsu.Clave = this.txtClavePiloto.Text;
-                objUsu.Rol = "P";
-                //objUsu.Cedula = this.txtIDPiloto.Text;
+                objUsu.Rol = "P";                
 
                 if (!objUsu.CrearUsuario())
                 {
@@ -125,8 +165,8 @@ namespace prjGestionVuelos
                     return;
                 }
                 else
-                {
-                    if (!verificarIdUsuario())
+                {                    
+                    if (!crearPiloto())
                     {
                         return;
                     }

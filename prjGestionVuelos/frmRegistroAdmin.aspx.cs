@@ -96,6 +96,16 @@ namespace prjGestionVuelos
                 {
                     return;
                 }
+                clsPersona objValPer = new clsPersona(strNombreApp);
+                objValPer.Identificacion = this.txtIDAdmin.Text.Trim();
+                if (objValPer.ValidarPersona())
+                {
+                    this.lblMensaje.Text = "Los sentimos, ya hay un administrador registrado con esa identificación";
+                    this.pnlAlerta.Visible = true;
+                    objValPer = null;
+                    return;
+                }
+                objValPer = null;
                 clsUsuario objUsu = new clsUsuario(strNombreApp);
                 objUsu.NickUsuario = this.txtNickAdmin.Text;
                 objUsu.Clave = this.txtClaveAdmin.Text;
