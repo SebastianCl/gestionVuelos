@@ -1,18 +1,17 @@
-﻿using libConexionBD;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using libConexionBD;
 
 namespace libGestionVuelos
 {
-    public class clsLineaAerea
+    public class clsAvion
     {
-        #region CONSTRUCTOR
-        
-        public clsLineaAerea(string strNomApp)
+        #region CONSTRCUTOR
+        public clsAvion(string strNomApp)
         {
             strNombreApp = strNomApp;
             strError = string.Empty;
@@ -21,10 +20,10 @@ namespace libGestionVuelos
         #endregion
 
         #region ATRIBUTOS
-        string strCodLineaAerea;
-        string strNombreLineaAerea;
-        string strPais;     
-   
+        string strCodigoAvion;
+        string strModelo;
+        int    intCapacidad;
+        string strCodLinea;
         string strError;
         string strNombreApp;
         int intRpta;
@@ -33,6 +32,58 @@ namespace libGestionVuelos
         #endregion
 
         #region PROPIEDADES
+        public string CodigoAvion
+        {
+            get
+            {
+                return strCodigoAvion;
+            }
+
+            set
+            {
+                strCodigoAvion = value;
+            }
+        }
+
+        public string Modelo
+        {
+            get
+            {
+                return strModelo;
+            }
+
+            set
+            {
+                strModelo = value;
+            }
+        }
+
+        public int Capacidad
+        {
+            get
+            {
+                return intCapacidad;
+            }
+
+            set
+            {
+                intCapacidad = value;
+            }
+        }
+
+        public string CodLinea
+        {
+            get
+            {
+                return strCodLinea;
+            }
+
+            set
+            {
+                strCodLinea = value;
+            }
+        }
+
         public string Error
         {
             get
@@ -41,70 +92,53 @@ namespace libGestionVuelos
             }
         }
 
+       
+
         public int Respuesta
         {
             get
             {
                 return intRpta;
             }
-
         }
 
-        public string Codigo_Linea_Aerea
-        {
-            set
-            {
-                strCodLineaAerea = value;
-            }             
-        }
 
-        public string Nombre_Linea_Aerea
-        {
-            set
-            {
-                strNombreLineaAerea = value;
-            }
-        }
-
-        public string Pais
-        {
-            set
-            {
-                strPais = value;
-            }
-        }
         #endregion
-
+                
         #region METODOS PRIVADOS
         private bool Validar(string strOpcion)
         {
             switch (strOpcion)
             {
                 case "BUSCAR":
-                    if (strCodLineaAerea == string.Empty)
+                    if (strCodigoAvion == string.Empty)
                     {
-                        strError = "Debe ingresar un codigo de Linea Aerea para realizar una busqueda";
+                        strError = "Debe ingresar un codigo para realizar una busqueda";
                         return false;
                     }
                     break;
                 case "REGISTRAR":
 
-                    if (strCodLineaAerea == string.Empty)
+                    if (strCodigoAvion == string.Empty)
                     {
-                        strError = "Debe ingresar el codigo de la Linea Aerea";
+                        strError = "Debe ingresar un codigo para registrar un nuevo avión";
                         return false;
                     }
-                    if (strNombreLineaAerea == string.Empty)
+                    if (strModelo == string.Empty)
                     {
-                        strError = "Debe ingresar el nombre de la Linea Aerea";
+                        strError = "Debe especificar el modelo para registrar un nuevo avión";
                         return false;
                     }
-                    if (strPais == string.Empty)
+                    if (intCapacidad == 0)
                     {
-                        strError = "Debe indicar el pais de la Linea Aerea ";
+                        strError = "Debe especificar la capacidad para registrar un nuevo avión";
                         return false;
                     }
-
+                    if (strCodLinea == string.Empty)
+                    {
+                        strError = "Debe ingresar el codigo de la linea aerea para registrar un nuevo avión";
+                        return false;
+                    }
                     break;
             }
             return true;
@@ -119,28 +153,35 @@ namespace libGestionVuelos
                     case "CONSULTAR":
                         objParameterSQL = new SqlParameter[1];
 
-                        objParameterSQL[0] = new SqlParameter("@CODIGO", strCodLineaAerea);
+                        objParameterSQL[0] = new SqlParameter("@CODIGO", strCodigoAvion);
                         break;
                     case "REGISTRAR":
-                        objParameterSQL = new SqlParameter[3];
+                        objParameterSQL = new SqlParameter[4];
 
-                        objParameterSQL[0] = new SqlParameter("@CODIGO", strCodLineaAerea);
-                        objParameterSQL[1] = new SqlParameter("@NOMBRE", strNombreLineaAerea);
-                        objParameterSQL[2] = new SqlParameter("@PAIS", strPais);
-                        break;               
+                        objParameterSQL[0] = new SqlParameter("@CODIGO", strCodigoAvion);
+                        objParameterSQL[1] = new SqlParameter("@MODELO", strModelo);
+                        objParameterSQL[2] = new SqlParameter("@CAPACIDAD", intCapacidad);
+                        objParameterSQL[3] = new SqlParameter("@CODIGO_LINEA", strCodLinea);
+                        break;
+                    case "VALIDAR":
+                        objParameterSQL = new SqlParameter[1];
+
+                        objParameterSQL[0] = new SqlParameter("@CODIGO", strCodigoAvion);
+                        break;
                 }
                 return true;
             }
             catch (Exception ex)
             {
-
+                return false;
                 throw ex;
             }
         }
+
         #endregion
 
         #region METODOS PUBLICOS
-        public bool Crear_Linea_Aerea()
+        public bool CrearAvion()
         {
             try
             {
@@ -154,7 +195,7 @@ namespace libGestionVuelos
                     return false;
                 }
                 clsConexionBD objConexion = new clsConexionBD(strNombreApp);
-                objConexion.SQL = "SP_CrearLineaAerea";
+                objConexion.SQL = "SP_CrearAvion";
                 objConexion.ParametrosSQL = objParameterSQL;
 
                 if (!objConexion.ConsultarValorUnico(true, true))
@@ -177,7 +218,7 @@ namespace libGestionVuelos
             }
         }
 
-        public bool ObtenerIdLineaAerea()
+        public bool ConsultarAvion()
         {
             try
             {
@@ -187,7 +228,7 @@ namespace libGestionVuelos
                     return false;
                 }
                 clsConexionBD objConexion = new clsConexionBD(strNombreApp);
-                objConexion.SQL = "SP_ConsultarLineaAerea";
+                objConexion.SQL = "SP_ConsultarAvion";
                 objConexion.ParametrosSQL = objParameterSQL;
 
                 if (!objConexion.Consultar(true, true))
@@ -202,13 +243,16 @@ namespace libGestionVuelos
 
                 if (!objReader.HasRows)
                 {
-                    strError = "La Linea Aerea " + strCodLineaAerea + " no existe";
+                    strError = "El avion " + strCodigoAvion + " no existe";
                     objReader.Close();
                     objConexion = null;
                     return false;
                 }
                 objReader.Read();
-                strCodLineaAerea = objReader.GetString(0);
+                strCodigoAvion = objReader.GetString(0);
+                strModelo = objReader.GetString(1);
+                intCapacidad = objReader.GetInt32(2);
+                strCodLinea = objReader.GetString(3);
                 objReader.Close();
                 return true;
 
@@ -218,7 +262,7 @@ namespace libGestionVuelos
                 throw ex;
             }
         }
-
         #endregion
+
     }
 }

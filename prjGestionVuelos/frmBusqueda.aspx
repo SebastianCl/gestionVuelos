@@ -1,13 +1,14 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/frmPrincipal.Master" AutoEventWireup="true" CodeBehind="frmBusqueda.aspx.cs" Inherits="prjGestionVuelos.frmBusqueda" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">    
         <div id="page-content-wrapper">
         <div class="container-fluid">
 	    <div class="row">
             <div class="col-xs-12 col-md-2">
             </div>
             <div class="col-xs-12 col-md-8">
+                <br /><br />
     		    <h2>Buscar aeropuertos, aviones, vuelos y aerolíneas</h2>
                 <br /><br />
                 <div id="search-aeropuerto">

@@ -1,4 +1,4 @@
-CREATE DATABASE CONTROLVUELO
+--CREATE DATABASE CONTROLVUELO
 GO
 
 USE CONTROLVUELO
@@ -172,6 +172,20 @@ BEGIN
 END
 GO
 
+CREATE PROCEDURE SP_CrearAvion
+@CODIGO VARCHAR(10),
+@MODELO VARCHAR(20),
+@CAPACIDAD INT,
+@CODIGO_LINEA VARCHAR(10)
+AS
+BEGIN
+	INSERT INTO tblAVION(CODIGO,MODELO,CAPACIDAD,CODIGO_LINEA) VALUES(@CODIGO,@MODELO,@CAPACIDAD,@CODIGO_LINEA)
+
+		SELECT '1' AS SW,
+			   'Registro creado correctamente'
+END
+GO
+
 CREATE PROCEDURE SP_ConsultarIdUsuario
 @NOMBRE_USUARIO VARCHAR(10)
 AS
@@ -183,6 +197,16 @@ BEGIN
 END
 GO
 
+CREATE PROCEDURE SP_ConsultarAvion
+@CODIGO VARCHAR(10)
+AS
+BEGIN
+	SELECT *	   
+	FROM tblAVION
+	WHERE CODIGO = @CODIGO
+
+END
+GO
 
 
 INSERT INTO tblUsuario VALUES ('sebas','1','A')
@@ -196,9 +220,11 @@ exec SP_ConsultarIdUsuario @nombre_usuario = 'sebas3435'
 
 exec SP_CrearPiloto @ID = '1', @NOMBRE = 'DonPiloto', @DIRECCION = 'Cra 10',@CIUDAD_RESIDENCIA = 'Medellín', @CODIGO_LINEA = '1', @COD_USUARIO = 9 , @TELEFONO = '2341672'
 
+exec SP_ConsultarAvion @CODIGO = '1'
+
 select * from tblpersona
 select * from tblusuario
-select * from tblpiloto
+select * from tblavion
 
 
 

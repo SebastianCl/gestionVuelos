@@ -12,15 +12,15 @@
                 <br /><br/>
                                     
                 <form id="frmRegistroUsuario" runat="server">
-                    <asp:TextBox ID="txtIDUsuario" runat="server" TextMode="Number" CssClass="form-control" placeholder="Identificación"></asp:TextBox>
+                    <asp:TextBox ID="txtIDUsuario" runat="server" TextMode="Number" CssClass="form-control" placeholder="Identificación" MaxLength="10"></asp:TextBox>
                     <br />                    
-                    <asp:TextBox ID="txtNickUsuario" runat="server" CssClass="form-control" placeholder="Nombre de usuario"></asp:TextBox>
+                    <asp:TextBox ID="txtNickUsuario" runat="server" CssClass="form-control" placeholder="Nombre de usuario" MaxLength="10"></asp:TextBox>
                     <br />
-                    <asp:TextBox ID="txtClaveUsuario" runat="server" TextMode="Password" CssClass="form-control" placeholder="Ingrese una clave (max 10)"></asp:TextBox>
+                    <asp:TextBox ID="txtClaveUsuario" runat="server" TextMode="Password" CssClass="form-control" placeholder="Ingrese una clave (max 10)" MaxLength="10"></asp:TextBox>
                     <br />
-                    <asp:TextBox ID="txtNombreUsuario" runat="server" CssClass="form-control" placeholder="Nombre completo"></asp:TextBox>
+                    <asp:TextBox ID="txtNombreUsuario" runat="server" CssClass="form-control" placeholder="Nombre completo" MaxLength="30"></asp:TextBox>
                     <br />                    
-                    <asp:TextBox ID="txtCiudadUsuario" runat="server" CssClass="form-control" placeholder="Ingrese la ciudad local del usuario"></asp:TextBox>
+                    <asp:TextBox ID="txtCiudadUsuario" runat="server" CssClass="form-control" placeholder="Ingrese la ciudad local del usuario" MaxLength="30"></asp:TextBox>
                     <br />
                     <asp:Button ID="btnRegistroU" runat="server" CssClass="btn btn-primary btn-lg btn-block" Text="Registrar nuevo usuario" OnClick="btnRegistroU_Click" />
                 </form>

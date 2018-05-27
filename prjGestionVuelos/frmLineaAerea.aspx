@@ -13,11 +13,11 @@
                 <br /><br/>
                                     
                 <form id="frmRegistroLineaAerea" runat="server">
-                    <asp:textbox id="txtCodLineaAerea" runat="server" cssclass="form-control" placeholder="Ingrese el codigo de la Linea Aerea"></asp:TextBox>
+                    <asp:textbox id="txtCodLineaAerea" runat="server" cssclass="form-control" placeholder="Ingrese el codigo de la Linea Aerea" MaxLength="10"></asp:TextBox>
                     <br />                    
-                    <asp:TextBox ID="txtNombreLineaAerea" runat="server" CssClass="form-control" placeholder="Nombre de la Linea Aerea"></asp:TextBox>
+                    <asp:TextBox ID="txtNombreLineaAerea" runat="server" CssClass="form-control" placeholder="Nombre de la Linea Aerea" MaxLength="30"></asp:TextBox>
                     <br />
-                    <asp:TextBox ID="txtPaisLineaAerea" runat="server" TextMode="Password" CssClass="form-control" placeholder="Ingrese el pais de la Linea Aerea"></asp:TextBox>
+                    <asp:TextBox ID="txtPaisLineaAerea" runat="server"  CssClass="form-control" placeholder="Ingrese el pais de la Linea Aerea" MaxLength="30"></asp:TextBox>
                     <br />
                     <asp:Button ID="btnRegistroLA" runat="server" CssClass="btn btn-primary btn-lg btn-block" Text="Registrar nueva linea aerea" OnClick="btnRegistroLA_Click" />
                 </form>

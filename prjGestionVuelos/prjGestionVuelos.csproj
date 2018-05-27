@@ -70,7 +70,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="frmBienvenida.aspx" />
     <Content Include="frmLineaAerea.aspx" />
+    <Content Include="frmRegistroAvion.aspx" />
     <Content Include="frmRegistroPiloto.aspx" />
     <Content Include="frmRegistroAdmin.aspx" />
     <Content Include="frmRegistroUsuario.aspx" />
@@ -85,6 +87,7 @@
     <Content Include="resources\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="resources\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="resources\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="frmUsuarios.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -118,6 +121,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmBienvenida.aspx.cs">
+      <DependentUpon>frmBienvenida.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmBienvenida.aspx.designer.cs">
+      <DependentUpon>frmBienvenida.aspx</DependentUpon>
+    </Compile>
     <Compile Include="frmBusqueda.aspx.cs">
       <DependentUpon>frmBusqueda.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -139,6 +149,13 @@
     <Compile Include="frmLogin.aspx.designer.cs">
       <DependentUpon>frmLogin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="frmRegistroAvion.aspx.cs">
+      <DependentUpon>frmRegistroAvion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmRegistroAvion.aspx.designer.cs">
+      <DependentUpon>frmRegistroAvion.aspx</DependentUpon>
+    </Compile>
     <Compile Include="frmRegistroPiloto.aspx.cs">
       <DependentUpon>frmRegistroPiloto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -159,6 +176,13 @@
     </Compile>
     <Compile Include="frmRegistroUsuario.aspx.designer.cs">
       <DependentUpon>frmRegistroUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmUsuarios.Master.cs">
+      <DependentUpon>frmUsuarios.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmUsuarios.Master.designer.cs">
+      <DependentUpon>frmUsuarios.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="frmPrincipal.Master.cs">

@@ -11,21 +11,21 @@
     		    <h2>Ingrese los datos del nuevo Piloto</h2>
                 <br />
                 <form id="frmRegistroUsuario" runat="server">
-                    <asp:textbox id="txtIDPiloto" runat="server" textmode="Number" cssclass="form-control" placeholder="Identificación"></asp:textbox>
+                    <asp:textbox id="txtIDPiloto" runat="server" textmode="Number" cssclass="form-control" placeholder="Identificación" MaxLength="10"></asp:textbox>
                     <br />
-                    <asp:textbox id="txtNickPiloto" runat="server" cssclass="form-control" placeholder="Nombre de usuario"></asp:textbox>
+                    <asp:textbox id="txtNickPiloto" runat="server" cssclass="form-control" placeholder="Nombre de usuario" MaxLength="10"></asp:textbox>
                     <br />
-                    <asp:textbox id="txtClavePiloto" runat="server" textmode="Password" cssclass="form-control" placeholder="Ingrese una clave (max 10)"></asp:textbox>
+                    <asp:textbox id="txtClavePiloto" runat="server" textmode="Password" cssclass="form-control" placeholder="Ingrese una clave (max 10)" MaxLength="10"></asp:textbox>
                     <br />
-                    <asp:textbox id="txtNombrePiloto" runat="server" cssclass="form-control" placeholder="Nombre completo"></asp:textbox>
+                    <asp:textbox id="txtNombrePiloto" runat="server" cssclass="form-control" placeholder="Nombre completo" MaxLength="30"></asp:textbox>
                     <br />
-                    <asp:textbox id="txtCiudadPiloto" runat="server" cssclass="form-control" placeholder="Ingrese la ciudad local del piloto"></asp:textbox>
+                    <asp:textbox id="txtCiudadPiloto" runat="server" cssclass="form-control" placeholder="Ingrese la ciudad local del piloto" MaxLength="30"></asp:textbox>
                     <br />
-                    <asp:textbox id="txtDirPiloto" runat="server" cssclass="form-control" placeholder="Ingrese la dirección local del piloto"></asp:textbox>
+                    <asp:textbox id="txtDirPiloto" runat="server" cssclass="form-control" placeholder="Ingrese la dirección local del piloto" MaxLength="30"></asp:textbox>
                     <br />
-                    <asp:textbox id="txtTelPiloto" runat="server" cssclass="form-control" placeholder="Ingrese el número de telefono del piloto"></asp:textbox>
+                    <asp:textbox id="txtTelPiloto" runat="server" cssclass="form-control" placeholder="Ingrese el número de telefono del piloto" MaxLength="20" TextMode="Phone"></asp:textbox>
                     <br />
-                    <asp:textbox id="txtCodLineaAerea" runat="server" cssclass="form-control" placeholder="Ingrese la linea aerea a la que pertenece el piloto"></asp:textbox>
+                    <asp:textbox id="txtCodLineaAerea" runat="server" cssclass="form-control" placeholder="Ingrese la linea aerea a la que pertenece el piloto" MaxLength="10"></asp:textbox>
                     <br />
                     <asp:button id="btnRegistroP" runat="server" cssclass="btn btn-primary btn-lg btn-block" text="Registrar nuevo piloto" OnClick="btnRegistroP_Click" />
                 </form>

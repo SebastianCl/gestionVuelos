@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500" rel="stylesheet"/>
     <link href="resources/css/custom.css" rel="stylesheet" />
     <title>Gestion de Vuelos | MENÚ</title>    
-    <asp:ContentPlaceHolder ID="head" runat="server">
+    <asp:ContentPlaceHolder ID="head" runat="server">        
     </asp:ContentPlaceHolder>
 </head>
 <body>
@@ -42,7 +42,7 @@
                 <div class="navbar-collapse  collapse"  id="barra-menu">
                 <ul class="nav navbar-nav my-right-ul">
                                   
-                  <li class="dropdown messages-menu">
+                  <li class="dropdown messages-menu" id="liNotificacion">
                       <a href="#" class="dropdown-toggle mytool" data-toggle="tooltip" data-placement="bottom" data-original-title="Notificaciones">
                       <i class="fa fa-bell"></i>
                       <span class="label label-default">4</span>
@@ -83,43 +83,50 @@
      <div id="wrapper" >
       <!-- Sidebar -->
       <div class="navbar navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+          
         <ul class="nav sidebar-nav">
           <li>
-              <a href="frmBusqueda.aspx">
+              <a href="frmBienvenida.aspx">
                  <asp:Image id="imgLogo" runat="server" CssClass="img-responsive" ImageUrl="~/resources/img/avion.png"/>
               </a>
           </li>
           <li class="my-li-nav">
               <a href="frmBusqueda.aspx">Busqueda</a>
-          </li>          
+          </li>                   
           <li class="dropdown my-li-nav">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Registros<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li class="dropdown-header">Entidades</li>
-                  <li class="my-li-navG"><a href="frmLineaAerea.aspx">Aerolinea</a></li>
-                <li class="my-li-navG"><a href="#">Plan de vuelo</a></li>
-                <li class="my-li-navG"><a href="#">Vuelo</a></li> 
-                <li class="my-li-navG"><a href="#">Avión</a></li>                 
-                <li class="divider"></li>
-                  <li class="dropdown-header">Usuarios</li>
+                    <li class="my-li-navG"><a href="frmLineaAerea.aspx">Aerolinea</a></li>
+                    <li class="my-li-navG"><a href="#">Plan de vuelo</a></li>
+                    <li class="my-li-navG"><a href="#">Vuelo</a></li> 
+                    <li class="my-li-navG"><a href="frmRegistroAvion.aspx">Avión</a></li>    
+                    <li class="my-li-navG"><a href="#">Aeropuerto</a></li>
+                    <li class="my-li-navG"><a href="#">Escala Tecnica</a></li>    
+                    <li class="divider"></li>                             
+              </ul>
+          </li> 
+        <li class="dropdown my-li-nav">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Registros usuarios<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li class="dropdown-header">Usuarios</li>
                 <li class="my-li-navY"><a href="frmRegistroPiloto.aspx">Piloto</a></li>
                 <li class="my-li-navY"><a href="frmRegistroUsuario.aspx">Usuario Estandar</a></li>
-                  <li class="my-li-navY"><a href="frmRegistroAdmin.aspx">Usuario Administrador</a></li>
-                <li class="divider"></li>
-                <li class="my-li-navR"><a href="#">Opciones</a></li>
-              </ul>
-          </li>        
-        </ul>
-      </div>
-      
+                <li class="my-li-navY"><a href="frmRegistroAdmin.aspx">Usuario Administrador</a></li>      
+                <li class="divider"></li>    
+            </ul>                                           
+        </li>      
+        <li class="my-li-navR"><a href="#">Opciones</a></li>                 
+      </div>           
+         
     </div>
-    <script src="resources/js/jquery-3.1.1.min.js"></script>
-    <script src="resources/js/bootstrap.js"></script>
-    <script src="resources/js/myscript.js"></script>
     <div>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>
-    </div>    
+    </div> 
+    <script src="resources/js/jquery-3.1.1.min.js"></script>
+    <script src="resources/js/bootstrap.js"></script>
+    <script src="resources/js/myscript.js"></script>   
 </body>
 </html>

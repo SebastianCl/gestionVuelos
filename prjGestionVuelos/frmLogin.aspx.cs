@@ -62,13 +62,13 @@ namespace prjGestionVuelos
                     switch (strRolUsuario)
                     {
                         case "A":
-                            Response.Redirect("frmBusqueda.aspx");
+                            Response.Redirect("frmBienvenida.aspx");
                             break;
                         case "U":
-                            Response.Redirect("frmBusqueda.aspx");
+                            Response.Redirect("frmBienvenida.aspx");
                             break;
                         case "P":
-                            Response.Redirect("frmBusqueda.aspx");
+                            Response.Redirect("frmBienvenida.aspx");
                             break;
                     }
                     
