@@ -101,7 +101,7 @@
                     <li class="my-li-navG"><a href="#">Plan de vuelo</a></li>
                     <li class="my-li-navG"><a href="#">Vuelo</a></li> 
                     <li class="my-li-navG"><a href="frmRegistroAvion.aspx">Avión</a></li>    
-                    <li class="my-li-navG"><a href="#">Aeropuerto</a></li>
+                    <li class="my-li-navG"><a href="frmRegistroAeropuerto.aspx">Aeropuerto</a></li>
                     <li class="my-li-navG"><a href="#">Escala Tecnica</a></li>    
                     <li class="divider"></li>                             
               </ul>

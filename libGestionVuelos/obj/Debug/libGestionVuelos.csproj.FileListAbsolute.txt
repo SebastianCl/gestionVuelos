@@ -32,3 +32,12 @@ C:\Users\sebas\Documents\Ingenieria de Software\FINAL\Versiones\5\gestionVuelos\
 C:\Users\sebas\Documents\Ingenieria de Software\FINAL\Versiones\5\gestionVuelos\libGestionVuelos\bin\Debug\libParametros.pdb
 C:\Users\sebas\Documents\Ingenieria de Software\FINAL\Versiones\5\gestionVuelos\libGestionVuelos\obj\Debug\libGestionVuelos.dll
 C:\Users\sebas\Documents\Ingenieria de Software\FINAL\Versiones\5\gestionVuelos\libGestionVuelos\obj\Debug\libGestionVuelos.pdb
+C:\Users\sebas\Documents\Ingenieria de Software\FINAL\Versiones\6\gestionVuelos\libGestionVuelos\bin\Debug\libGestionVuelos.dll
+C:\Users\sebas\Documents\Ingenieria de Software\FINAL\Versiones\6\gestionVuelos\libGestionVuelos\bin\Debug\libGestionVuelos.pdb
+C:\Users\sebas\Documents\Ingenieria de Software\FINAL\Versiones\6\gestionVuelos\libGestionVuelos\bin\Debug\libConexionBD.dll
+C:\Users\sebas\Documents\Ingenieria de Software\FINAL\Versiones\6\gestionVuelos\libGestionVuelos\bin\Debug\libParametros.dll
+C:\Users\sebas\Documents\Ingenieria de Software\FINAL\Versiones\6\gestionVuelos\libGestionVuelos\bin\Debug\libConexionBD.pdb
+C:\Users\sebas\Documents\Ingenieria de Software\FINAL\Versiones\6\gestionVuelos\libGestionVuelos\bin\Debug\libParametros.pdb
+C:\Users\sebas\Documents\Ingenieria de Software\FINAL\Versiones\6\gestionVuelos\libGestionVuelos\obj\Debug\libGestionVuelos.csprojResolveAssemblyReference.cache
+C:\Users\sebas\Documents\Ingenieria de Software\FINAL\Versiones\6\gestionVuelos\libGestionVuelos\obj\Debug\libGestionVuelos.dll
+C:\Users\sebas\Documents\Ingenieria de Software\FINAL\Versiones\6\gestionVuelos\libGestionVuelos\obj\Debug\libGestionVuelos.pdb
