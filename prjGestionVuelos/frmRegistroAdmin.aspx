@@ -23,7 +23,7 @@
                     <br />                    
                     <asp:TextBox ID="txtCiudadAdmin" runat="server" CssClass="form-control" placeholder="Ingrese la ciudad local del admisnitrador" MaxLength="30"></asp:TextBox>
                     <br />
-                    <asp:Button ID="btnRegistroA" runat="server" CssClass="btn btn-primary btn-lg btn-block" Text="Registrar nuevo administrador" OnClick="btnRegistroA_Click" />
+                    <asp:Button ID="btnRegistroA" runat="server" CssClass="btn btn-warning btn-lg btn-block" Text="Registrar nuevo administrador" OnClick="btnRegistroA_Click" />
                 </form>
                 <br /><br />
                     <asp:Panel ID="pnlAlerta" runat="server">

@@ -64,8 +64,8 @@ namespace prjGestionVuelos
                     return;
                 }
                 clsLineaAerea objValidarLA = new clsLineaAerea(strNombreApp);
-                objValidarLA.Codigo_Linea_Aerea = this.txtLineaAerea.Text.Trim();
-                if (!objValidarLA.ObtenerIdLineaAerea())
+                objValidarLA.CodLineaAerea = this.txtLineaAerea.Text.Trim();
+                if (!objValidarLA.ConsultarLineaAerea())
                 {
                     this.lblMensaje.Text = objValidarLA.Error;
                     this.pnlAlerta.Visible = true;

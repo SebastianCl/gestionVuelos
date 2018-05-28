@@ -21,7 +21,7 @@
                     <br />
                      <asp:TextBox ID="txtLineaAerea" runat="server"  CssClass="form-control" placeholder="Ingrese el codigo de la linea aerea del avión" MaxLength="10"></asp:TextBox>
                     <br />
-                    <asp:Button ID="btnRegistroAv" runat="server" CssClass="btn btn-primary btn-lg btn-block" Text="Registrar nueva Avión" OnClick="btnRegistroAv_Click" />
+                    <asp:Button ID="btnRegistroAv" runat="server" CssClass="btn btn-success btn-lg btn-block" Text="Registrar nueva Avión" OnClick="btnRegistroAv_Click" />
                      
                 </form>
                 <br /><br />

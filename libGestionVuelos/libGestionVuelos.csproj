@@ -45,11 +45,14 @@
   <ItemGroup>
     <Compile Include="clsAeropuerto.cs" />
     <Compile Include="clsAvion.cs" />
+    <Compile Include="clsEscalaTecnica.cs" />
     <Compile Include="clsLineaAerea.cs" />
     <Compile Include="clsLogin.cs" />
     <Compile Include="clsPersona.cs" />
     <Compile Include="clsPiloto.cs" />
+    <Compile Include="clsPlanVuelo.cs" />
     <Compile Include="clsUsuario.cs" />
+    <Compile Include="clsVuelo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -97,12 +97,12 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Registros<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li class="dropdown-header">Entidades</li>
-                    <li class="my-li-navG"><a href="frmLineaAerea.aspx">Aerolinea</a></li>
-                    <li class="my-li-navG"><a href="#">Plan de vuelo</a></li>
-                    <li class="my-li-navG"><a href="#">Vuelo</a></li> 
+                    <li class="my-li-navG"><a href="frmRegistroLineaAerea.aspx">Aerolinea</a></li>
+                    <li class="my-li-navG"><a href="frmRegistroPlanVuelo.aspx">Plan de vuelo</a></li>
+                    <li class="my-li-navG"><a href="frmVuelo.aspx">Vuelo</a></li> 
                     <li class="my-li-navG"><a href="frmRegistroAvion.aspx">Avión</a></li>    
                     <li class="my-li-navG"><a href="frmRegistroAeropuerto.aspx">Aeropuerto</a></li>
-                    <li class="my-li-navG"><a href="#">Escala Tecnica</a></li>    
+                    <li class="my-li-navG"><a href="frmRegistroEscalaTecnica.aspx">Escala Tecnica</a></li>    
                     <li class="divider"></li>                             
               </ul>
           </li> 
@@ -115,8 +115,17 @@
                 <li class="my-li-navY"><a href="frmRegistroAdmin.aspx">Usuario Administrador</a></li>      
                 <li class="divider"></li>    
             </ul>                                           
-        </li>      
-        <li class="my-li-navR"><a href="#">Opciones</a></li>                 
+        </li>    
+        <li class="dropdown my-li-nav">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Asignaciones<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li class="dropdown-header">Nueva asignación</li>
+                <li class="my-li-navR"><a href="#">Plan de Vuelo | Escala Técnica</a></li>
+                <li class="my-li-navR"><a href="#">Aeropuerto | Linea Aerea</a></li>                 
+                <li class="divider"></li>    
+            </ul>                                           
+        </li>                
+                      
       </div>           
          
     </div>
@@ -127,6 +136,6 @@
     </div> 
     <script src="resources/js/jquery-3.1.1.min.js"></script>
     <script src="resources/js/bootstrap.js"></script>
-    <script src="resources/js/myscript.js"></script>   
+    <script src="resources/js/myscript.js"></script>       
 </body>
 </html>

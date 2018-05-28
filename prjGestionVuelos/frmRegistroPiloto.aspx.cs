@@ -77,7 +77,7 @@ namespace prjGestionVuelos
                 objPiloto.Direccion = this.txtDirPiloto.Text.Trim();
                 objPiloto.Ciudad = this.txtCiudadPiloto.Text.Trim();
                 objPiloto.Telefono = this.txtTelPiloto.Text.Trim();
-                objPiloto.CodigoLinea = this.txtCodLineaAerea.Text.Trim();
+                objPiloto.Codigo_Linea = this.txtCodLineaAerea.Text.Trim();
                 objPiloto.Nick = this.txtNickPiloto.Text.Trim();
                 objPiloto.ObtenerIdUsuario();       
                 
@@ -126,8 +126,8 @@ namespace prjGestionVuelos
                     return;
                 }                
                 clsLineaAerea objLA = new clsLineaAerea(strNombreApp);
-                objLA.Codigo_Linea_Aerea = this.txtCodLineaAerea.Text.Trim();
-                if (!objLA.ObtenerIdLineaAerea())
+                objLA.CodLineaAerea = this.txtCodLineaAerea.Text.Trim();
+                if (!objLA.ConsultarLineaAerea())
                 {
                     this.lblMensaje.Text = objLA.Error;
                     this.pnlAlerta.Visible = true;
@@ -136,7 +136,7 @@ namespace prjGestionVuelos
                 }
                 clsPiloto objValPil = new clsPiloto(strNombreApp);
                 objValPil.Identificacion = this.txtIDPiloto.Text.Trim();
-                if (objValPil.ValidarPiloto())
+                if (objValPil.ConsultarPiloto())
                 {
                     this.lblMensaje.Text = "Lo sentimos ,ya hay un piloto registrado con esa identificación";
                     this.pnlAlerta.Visible = true;
@@ -170,7 +170,7 @@ namespace prjGestionVuelos
                     {
                         return;
                     }
-                    this.lblMensaje.Text = "Nuevo usuario registrado con exito";
+                    this.lblMensaje.Text = "Nuevo piloto registrado con exito";
                     this.pnlAlerta.Visible = true;
                     objUsu = null;
                     return;

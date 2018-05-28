@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace libGestionVuelos
 {
-    public class clsAeropuerto
+    public class clsVuelo
     {
         #region CONSTRUCTOR
-        public clsAeropuerto(string strNomApp)
+        public clsVuelo(String strNomApp)
         {
             strNombreApp = strNomApp;
             strError = string.Empty;
@@ -20,108 +20,99 @@ namespace libGestionVuelos
         #endregion
 
         #region ATRIBUTOS
-        string strCodigoAeropuerto;
-        string strNombre;
-        string strCiudad;
-        string strDireccion;
-        string strPais;
-        string strTelefono;
 
+        string strCodVuelo;
+        DateTime dtFechaPartida;
+        DateTime dtFechaLlegada;
+        int intPlazasVacias;
+        string strIdPiloto;
+        string strCodAvion;
+
+
+        int intRpta;
         string strError;
         string strNombreApp;
-        int intRpta;
         SqlParameter[] objParameterSQL;
         SqlDataReader objReader;
-
         #endregion
 
         #region PROPIEDADES
 
-        public string CodigoAeropuerto
+        public string CodigoVuelo
         {
             get
             {
-                return strCodigoAeropuerto;
+                return strCodVuelo;
             }
 
             set
             {
-                strCodigoAeropuerto = value;
+                strCodVuelo = value;
             }
         }
 
-        public string Nombre
+        public DateTime FechaPartida
         {
             get
             {
-                return strNombre;
+                return dtFechaPartida;
             }
 
             set
             {
-                strNombre = value;
+                dtFechaPartida = value;
             }
         }
 
-        public string Ciudad
+        public DateTime FechaLlegada
         {
             get
             {
-                return strCiudad;
+                return dtFechaLlegada;
             }
 
             set
             {
-                strCiudad = value;
+                dtFechaLlegada = value;
             }
         }
 
-        public string Pais
+        public int PlazasVacias
         {
             get
             {
-                return strPais;
+                return intPlazasVacias;
             }
 
             set
             {
-                strPais = value;
+                intPlazasVacias = value;
             }
         }
 
-        public string Error
+        public string IDPiloto
         {
             get
             {
-                return strError;
-            }            
-        }
-
-        public string Direccion
-        {
-            get
-            {
-                return strDireccion;
+                return strIdPiloto;
             }
 
             set
             {
-                strDireccion = value;
+                strIdPiloto = value;
             }
         }
 
-
-
-        public string Telefono
+        public string CodigoAvion
         {
             get
             {
-                return strTelefono;
+                return strCodAvion;
             }
 
             set
             {
-                strTelefono = value;
+                strCodAvion = value;
             }
         }
 
@@ -132,6 +123,14 @@ namespace libGestionVuelos
                 return intRpta;
             }
         }
+
+        public string Error
+        {
+            get
+            {
+                return strError;
+            }
+        }
         #endregion
 
         #region METODOS PRIVADOS
@@ -140,42 +139,42 @@ namespace libGestionVuelos
             switch (strOpcion)
             {
                 case "BUSCAR":
-                    if (strCodigoAeropuerto == string.Empty)
+                    if (strCodVuelo == string.Empty)
                     {
-                        strError = "Debe ingresar el codigo del Aeropuerto para realizar una busqueda";
+                        strError = "Debe ingresar el código del vuelo para realizar una busqueda";
                         return false;
                     }
                     break;
                 case "REGISTRAR":
 
-                    if (strCodigoAeropuerto == string.Empty)
+                    if (strCodVuelo == string.Empty)
                     {
-                        strError = "Debe ingresar el codigo del Aeropuerto";
+                        strError = "Debe ingresar el código del Vuelo";
                         return false;
                     }
-                    if (strNombre == string.Empty)
+                    if (dtFechaPartida == null)
                     {
-                        strError = "Debe ingresar el nombre del Aeropuerto";
+                        strError = "Debe ingresar la fecha de partida del Vuelo";
                         return false;
                     }
-                    if (strCiudad == string.Empty)
+                    if (dtFechaLlegada == null)
                     {
-                        strError = "Debe indicar la ciudad del Aeropuerto ";
+                        strError = "Debe ingresar la fecha de llegada del Vuelo";
                         return false;
                     }
-                    if (strPais == string.Empty)
+                    if (intPlazasVacias < 0)
                     {
-                        strError = "Debe indicar el pais del Aeropuerto ";
+                        strError = "Debe ingresar la cantidad de plazas vacias del Vuelo";
                         return false;
                     }
-                    if (strDireccion == string.Empty)
+                    if (strIdPiloto == null)
                     {
-                        strError = "Debe indicar la dirección del Aeropuerto ";
+                        strError = "Debe ingresar la identificación del Piloto";
                         return false;
                     }
-                    if (strTelefono == string.Empty)
+                    if (strCodAvion == null)
                     {
-                        strError = "Debe indicar el telefono del Aeropuerto ";
+                        strError = "Debe ingresar el código del Avión";
                         return false;
                     }
 
@@ -193,17 +192,17 @@ namespace libGestionVuelos
                     case "CONSULTAR":
                         objParameterSQL = new SqlParameter[1];
 
-                        objParameterSQL[0] = new SqlParameter("@CODIGO", strCodigoAeropuerto);
+                        objParameterSQL[0] = new SqlParameter("@CODIGO", strCodVuelo);
                         break;
                     case "REGISTRAR":
                         objParameterSQL = new SqlParameter[6];
 
-                        objParameterSQL[0] = new SqlParameter("@CODIGO", strCodigoAeropuerto);
-                        objParameterSQL[1] = new SqlParameter("@NOMBRE", strNombre);
-                        objParameterSQL[2] = new SqlParameter("@CIUDAD", strCiudad);
-                        objParameterSQL[3] = new SqlParameter("@PAIS", strPais);
-                        objParameterSQL[4] = new SqlParameter("@DIRECCION", strDireccion);
-                        objParameterSQL[5] = new SqlParameter("@TELEFONO", strTelefono);
+                        objParameterSQL[0] = new SqlParameter("@CODIGO", strCodVuelo);
+                        objParameterSQL[1] = new SqlParameter("@FECHA_partida", dtFechaPartida);
+                        objParameterSQL[2] = new SqlParameter("@FECHA_llegada", dtFechaLlegada);
+                        objParameterSQL[3] = new SqlParameter("@PLAZAS_VACIAS", intPlazasVacias);
+                        objParameterSQL[4] = new SqlParameter("@IDPILOTO", strIdPiloto);
+                        objParameterSQL[5] = new SqlParameter("@COD_AVION", strCodAvion);
                         break;
                 }
                 return true;
@@ -217,7 +216,7 @@ namespace libGestionVuelos
         #endregion
 
         #region METODOS PUBLICOS
-        public bool CrearAeropuerto()
+        public bool CrearVuelo()
         {
             try
             {
@@ -231,7 +230,7 @@ namespace libGestionVuelos
                     return false;
                 }
                 clsConexionBD objConexion = new clsConexionBD(strNombreApp);
-                objConexion.SQL = "SP_CrearAeropuerto";
+                objConexion.SQL = "SP_CrearVuelo";
                 objConexion.ParametrosSQL = objParameterSQL;
 
                 if (!objConexion.ConsultarValorUnico(true, true))
@@ -253,7 +252,7 @@ namespace libGestionVuelos
             }
         }
 
-        public bool ConsultarAeropuerto()
+        public bool ConsultarVuelo()
         {
             try
             {
@@ -263,7 +262,7 @@ namespace libGestionVuelos
                     return false;
                 }
                 clsConexionBD objConexion = new clsConexionBD(strNombreApp);
-                objConexion.SQL = "SP_ConsultarAeropuerto";
+                objConexion.SQL = "SP_ConsultarVuelo";
                 objConexion.ParametrosSQL = objParameterSQL;
 
                 if (!objConexion.Consultar(true, true))
@@ -278,18 +277,18 @@ namespace libGestionVuelos
 
                 if (!objReader.HasRows)
                 {
-                    strError = "El Aeropuerto " + strCodigoAeropuerto + " no existe";
+                    strError = "El vuelo con código: " + strCodVuelo + " no existe";
                     objReader.Close();
                     objConexion = null;
                     return false;
                 }
                 objReader.Read();
-                strCodigoAeropuerto = objReader.GetString(0);
-                strNombre = objReader.GetString(1);
-                strCiudad = objReader.GetString(2);
-                strPais = objReader.GetString(3);
-                strDireccion = objReader.GetString(4);
-                strTelefono = objReader.GetString(5);
+                strCodVuelo = objReader.GetString(0);
+                dtFechaPartida = objReader.GetDateTime(1);
+                dtFechaLlegada = objReader.GetDateTime(2);
+                intPlazasVacias = objReader.GetInt32(3);
+                strIdPiloto = objReader.GetString(4);
+                strCodAvion = objReader.GetString(5);
                 objReader.Close();
                 return true;
 
@@ -301,6 +300,5 @@ namespace libGestionVuelos
         }
 
         #endregion
-
     }
 }

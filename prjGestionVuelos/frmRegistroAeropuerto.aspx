@@ -24,7 +24,7 @@
                     <br />
                     <asp:TextBox ID="txtTelAeropuerto" runat="server"  CssClass="form-control" placeholder="Ingrese el telefono del Aeropuerto" MaxLength="50"></asp:TextBox>
                     <br />
-                    <asp:Button ID="btnRegistroAe" runat="server" CssClass="btn btn-primary btn-lg btn-block" Text="Registrar nuevo Aeropuerto" OnClick="btnRegistroAe_Click" />
+                    <asp:Button ID="btnRegistroAe" runat="server" CssClass="btn btn-success btn-lg btn-block" Text="Registrar nuevo Aeropuerto" OnClick="btnRegistroAe_Click" />
                 </form>
                 <br /><br />
                     <asp:Panel ID="pnlAlerta" runat="server">

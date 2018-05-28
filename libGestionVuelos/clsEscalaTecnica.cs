@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace libGestionVuelos
 {
-    public class clsAeropuerto
+    public class clsEscalaTecnica
     {
         #region CONSTRUCTOR
-        public clsAeropuerto(string strNomApp)
+        public clsEscalaTecnica(string strNomApp)
         {
             strNombreApp = strNomApp;
             strError = string.Empty;
@@ -21,18 +21,13 @@ namespace libGestionVuelos
 
         #region ATRIBUTOS
         string strCodigoAeropuerto;
-        string strNombre;
-        string strCiudad;
-        string strDireccion;
-        string strPais;
-        string strTelefono;
+        string strCodEscalaTecnica;
 
-        string strError;
-        string strNombreApp;
         int intRpta;
+        string strError;
+        string strNombreApp;        
         SqlParameter[] objParameterSQL;
         SqlDataReader objReader;
-
         #endregion
 
         #region PROPIEDADES
@@ -50,78 +45,16 @@ namespace libGestionVuelos
             }
         }
 
-        public string Nombre
+        public string CodEscalaTecnica
         {
             get
             {
-                return strNombre;
+                return strCodEscalaTecnica;
             }
 
             set
             {
-                strNombre = value;
-            }
-        }
-
-        public string Ciudad
-        {
-            get
-            {
-                return strCiudad;
-            }
-
-            set
-            {
-                strCiudad = value;
-            }
-        }
-
-        public string Pais
-        {
-            get
-            {
-                return strPais;
-            }
-
-            set
-            {
-                strPais = value;
-            }
-        }
-
-        public string Error
-        {
-            get
-            {
-                return strError;
-            }            
-        }
-
-        public string Direccion
-        {
-            get
-            {
-                return strDireccion;
-            }
-
-            set
-            {
-                strDireccion = value;
-            }
-        }
-
-
-
-        public string Telefono
-        {
-            get
-            {
-                return strTelefono;
-            }
-
-            set
-            {
-                strTelefono = value;
+                strCodEscalaTecnica = value;
             }
         }
 
@@ -132,6 +65,15 @@ namespace libGestionVuelos
                 return intRpta;
             }
         }
+
+        public string Error
+        {
+            get
+            {
+                return strError;
+            }
+        }
+
         #endregion
 
         #region METODOS PRIVADOS
@@ -140,9 +82,9 @@ namespace libGestionVuelos
             switch (strOpcion)
             {
                 case "BUSCAR":
-                    if (strCodigoAeropuerto == string.Empty)
+                    if (strCodEscalaTecnica == string.Empty)
                     {
-                        strError = "Debe ingresar el codigo del Aeropuerto para realizar una busqueda";
+                        strError = "Debe ingresar el codigo de la Escala Técnica para realizar una busqueda";
                         return false;
                     }
                     break;
@@ -153,31 +95,11 @@ namespace libGestionVuelos
                         strError = "Debe ingresar el codigo del Aeropuerto";
                         return false;
                     }
-                    if (strNombre == string.Empty)
+                    if (strCodEscalaTecnica == string.Empty)
                     {
-                        strError = "Debe ingresar el nombre del Aeropuerto";
+                        strError = "Debe ingresar el codigo de la Escala Técnica";
                         return false;
-                    }
-                    if (strCiudad == string.Empty)
-                    {
-                        strError = "Debe indicar la ciudad del Aeropuerto ";
-                        return false;
-                    }
-                    if (strPais == string.Empty)
-                    {
-                        strError = "Debe indicar el pais del Aeropuerto ";
-                        return false;
-                    }
-                    if (strDireccion == string.Empty)
-                    {
-                        strError = "Debe indicar la dirección del Aeropuerto ";
-                        return false;
-                    }
-                    if (strTelefono == string.Empty)
-                    {
-                        strError = "Debe indicar el telefono del Aeropuerto ";
-                        return false;
-                    }
+                    }                   
 
                     break;
             }
@@ -193,17 +115,13 @@ namespace libGestionVuelos
                     case "CONSULTAR":
                         objParameterSQL = new SqlParameter[1];
 
-                        objParameterSQL[0] = new SqlParameter("@CODIGO", strCodigoAeropuerto);
+                        objParameterSQL[0] = new SqlParameter("@CODIGO", strCodEscalaTecnica);
                         break;
                     case "REGISTRAR":
-                        objParameterSQL = new SqlParameter[6];
+                        objParameterSQL = new SqlParameter[2];
 
-                        objParameterSQL[0] = new SqlParameter("@CODIGO", strCodigoAeropuerto);
-                        objParameterSQL[1] = new SqlParameter("@NOMBRE", strNombre);
-                        objParameterSQL[2] = new SqlParameter("@CIUDAD", strCiudad);
-                        objParameterSQL[3] = new SqlParameter("@PAIS", strPais);
-                        objParameterSQL[4] = new SqlParameter("@DIRECCION", strDireccion);
-                        objParameterSQL[5] = new SqlParameter("@TELEFONO", strTelefono);
+                        objParameterSQL[0] = new SqlParameter("@CODIGO", strCodEscalaTecnica);
+                        objParameterSQL[1] = new SqlParameter("@COD_AEROPUERTO", strCodigoAeropuerto);                       
                         break;
                 }
                 return true;
@@ -217,7 +135,7 @@ namespace libGestionVuelos
         #endregion
 
         #region METODOS PUBLICOS
-        public bool CrearAeropuerto()
+        public bool CrearEscalaTecnica()
         {
             try
             {
@@ -231,7 +149,7 @@ namespace libGestionVuelos
                     return false;
                 }
                 clsConexionBD objConexion = new clsConexionBD(strNombreApp);
-                objConexion.SQL = "SP_CrearAeropuerto";
+                objConexion.SQL = "SP_CrearEscalaTecnica";
                 objConexion.ParametrosSQL = objParameterSQL;
 
                 if (!objConexion.ConsultarValorUnico(true, true))
@@ -253,7 +171,7 @@ namespace libGestionVuelos
             }
         }
 
-        public bool ConsultarAeropuerto()
+        public bool ConsultarEscalaTenica()
         {
             try
             {
@@ -263,7 +181,7 @@ namespace libGestionVuelos
                     return false;
                 }
                 clsConexionBD objConexion = new clsConexionBD(strNombreApp);
-                objConexion.SQL = "SP_ConsultarAeropuerto";
+                objConexion.SQL = "SP_ConsultarEscalaTecnica";
                 objConexion.ParametrosSQL = objParameterSQL;
 
                 if (!objConexion.Consultar(true, true))
@@ -278,18 +196,15 @@ namespace libGestionVuelos
 
                 if (!objReader.HasRows)
                 {
-                    strError = "El Aeropuerto " + strCodigoAeropuerto + " no existe";
+                    strError = "La escala técnica con codigo: " + strCodEscalaTecnica + " no existe";
                     objReader.Close();
                     objConexion = null;
                     return false;
                 }
                 objReader.Read();
-                strCodigoAeropuerto = objReader.GetString(0);
-                strNombre = objReader.GetString(1);
-                strCiudad = objReader.GetString(2);
-                strPais = objReader.GetString(3);
-                strDireccion = objReader.GetString(4);
-                strTelefono = objReader.GetString(5);
+                strCodEscalaTecnica = objReader.GetString(0);
+                strCodigoAeropuerto = objReader.GetString(1);
+                
                 objReader.Close();
                 return true;
 

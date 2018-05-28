@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/frmPrincipal.Master" AutoEventWireup="true" CodeBehind="frmLineaAerea.aspx.cs" Inherits="prjGestionVuelos.frmLineaAerea" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/frmPrincipal.Master" AutoEventWireup="true" CodeBehind="frmRegistroLineaAerea.aspx.cs" Inherits="prjGestionVuelos.frmLineaAerea" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">    
@@ -19,7 +19,7 @@
                     <br />
                     <asp:TextBox ID="txtPaisLineaAerea" runat="server"  CssClass="form-control" placeholder="Ingrese el pais de la Linea Aerea" MaxLength="30"></asp:TextBox>
                     <br />
-                    <asp:Button ID="btnRegistroLA" runat="server" CssClass="btn btn-primary btn-lg btn-block" Text="Registrar nueva linea aerea" OnClick="btnRegistroLA_Click" />
+                    <asp:Button ID="btnRegistroLA" runat="server" CssClass="btn btn-success btn-lg btn-block" Text="Registrar nueva linea aerea" OnClick="btnRegistroLA_Click" />
                 </form>
                 <br /><br />
                     <asp:Panel ID="pnlAlerta" runat="server">

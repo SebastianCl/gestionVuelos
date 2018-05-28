@@ -27,7 +27,7 @@
                     <br />
                     <asp:textbox id="txtCodLineaAerea" runat="server" cssclass="form-control" placeholder="Ingrese la linea aerea a la que pertenece el piloto" MaxLength="10"></asp:textbox>
                     <br />
-                    <asp:button id="btnRegistroP" runat="server" cssclass="btn btn-primary btn-lg btn-block" text="Registrar nuevo piloto" OnClick="btnRegistroP_Click" />
+                    <asp:button id="btnRegistroP" runat="server" cssclass="btn btn-warning btn-lg btn-block" text="Registrar nuevo piloto" OnClick="btnRegistroP_Click" />
                 </form>
                 <br /><br />
                     <asp:Panel ID="pnlAlerta" runat="server">

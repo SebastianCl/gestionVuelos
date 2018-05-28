@@ -54,15 +54,15 @@ namespace prjGestionVuelos
                     return;
                 }                
                 clsLineaAerea objAerolinea = new clsLineaAerea(strNombreApp);
-                objAerolinea.Codigo_Linea_Aerea = this.txtCodLineaAerea.Text.Trim();
-                if (objAerolinea.ObtenerIdLineaAerea())
+                objAerolinea.CodLineaAerea = this.txtCodLineaAerea.Text.Trim();
+                if (objAerolinea.ConsultarLineaAerea())
                 {
                     this.lblMensaje.Text = "La Aerolinea ya se encuentra registrada";
                     this.pnlAlerta.Visible = true;
                     objAerolinea = null;
                     return;
                 }
-                objAerolinea.Nombre_Linea_Aerea = this.txtNombreLineaAerea.Text.Trim();
+                objAerolinea.NombreLineaAerea = this.txtNombreLineaAerea.Text.Trim();
                 objAerolinea.Pais = this.txtPaisLineaAerea.Text.Trim();
 
 

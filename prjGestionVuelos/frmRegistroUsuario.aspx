@@ -22,7 +22,7 @@
                     <br />                    
                     <asp:TextBox ID="txtCiudadUsuario" runat="server" CssClass="form-control" placeholder="Ingrese la ciudad local del usuario" MaxLength="30"></asp:TextBox>
                     <br />
-                    <asp:Button ID="btnRegistroU" runat="server" CssClass="btn btn-primary btn-lg btn-block" Text="Registrar nuevo usuario" OnClick="btnRegistroU_Click" />
+                    <asp:Button ID="btnRegistroU" runat="server" CssClass="btn btn-warning btn-lg btn-block" Text="Registrar nuevo usuario" OnClick="btnRegistroU_Click" />
                 </form>
                 <br /><br />
                     <asp:Panel ID="pnlAlerta" runat="server">

@@ -23,21 +23,52 @@ namespace libGestionVuelos
         #region ATRIBUTOS
         string strCodLineaAerea;
         string strNombreLineaAerea;
-        string strPais;     
-   
-        string strError;
-        string strNombreApp;
+        string strPais;
+
         int intRpta;
+        string strError;
+        string strNombreApp;        
         SqlParameter[] objParameterSQL;
         SqlDataReader objReader;
         #endregion
 
         #region PROPIEDADES
-        public string Error
+        public string CodLineaAerea
         {
             get
             {
-                return strError;
+                return strCodLineaAerea;
+            }
+
+            set
+            {
+                strCodLineaAerea = value;
+            }
+        }
+
+        public string NombreLineaAerea
+        {
+            get
+            {
+                return strNombreLineaAerea;
+            }
+
+            set
+            {
+                strNombreLineaAerea = value;
+            }
+        }
+
+        public string Pais
+        {
+            get
+            {
+                return strPais;
+            }
+
+            set
+            {
+                strPais = value;
             }
         }
 
@@ -47,32 +78,17 @@ namespace libGestionVuelos
             {
                 return intRpta;
             }
-
         }
 
-        public string Codigo_Linea_Aerea
+        public string Error
         {
-            set
+            get
             {
-                strCodLineaAerea = value;
-            }             
-        }
-
-        public string Nombre_Linea_Aerea
-        {
-            set
-            {
-                strNombreLineaAerea = value;
+                return strError;
             }
         }
 
-        public string Pais
-        {
-            set
-            {
-                strPais = value;
-            }
-        }
+
         #endregion
 
         #region METODOS PRIVADOS
@@ -177,7 +193,7 @@ namespace libGestionVuelos
             }
         }
 
-        public bool ObtenerIdLineaAerea()
+        public bool ConsultarLineaAerea()
         {
             try
             {
@@ -209,6 +225,8 @@ namespace libGestionVuelos
                 }
                 objReader.Read();
                 strCodLineaAerea = objReader.GetString(0);
+                strNombreLineaAerea = objReader.GetString(1);
+                strPais = objReader.GetString(2);
                 objReader.Close();
                 return true;
 
@@ -220,5 +238,6 @@ namespace libGestionVuelos
         }
 
         #endregion
+
     }
 }

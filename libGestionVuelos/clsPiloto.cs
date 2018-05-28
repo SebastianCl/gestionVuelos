@@ -30,62 +30,124 @@ namespace libGestionVuelos
         string strNick;
         int intCodUsuario;
 
-        string strError;
-        string strNombreApp;
         int intRpta;
+        string strError;
+        string strNombreApp;        
         SqlParameter[] objParameterSQL;
         SqlDataReader objReader;
         #endregion
 
-        #region "Propiedades"
+        #region "PROPIEDADES"
 
-        public string Direccion
+        public string Identificacion
         {
+            get
+            {
+                return strID;
+            }
+
             set
             {
-                strDireccion = value;
+                strID = value;
             }
         }
-
-        public string Telefono
-        {
-            set
-            {
-                strTelefono = value;
-            }
-        }
-
-        public string CodigoLinea
-        {
-            set
-            {
-                strCodLinea = value;
-            }
-        }
-
 
         public string Nombre
         {
+            get
+            {
+                return strNombre;
+            }
+
             set
             {
                 strNombre = value;
             }
         }
 
+        public string Direccion
+        {
+            get
+            {
+                return strDireccion;
+            }
+
+            set
+            {
+                strDireccion = value;
+            }
+        }
+
+        public string Ciudad
+        {
+            get
+            {
+                return strCiudad;
+            }
+
+            set
+            {
+                strCiudad = value;
+            }
+        }
+
+        public string Telefono
+        {
+            get
+            {
+                return strTelefono;
+            }
+
+            set
+            {
+                strTelefono = value;
+            }
+        }
+
+        public string Codigo_Linea
+        {
+            get
+            {
+                return strCodLinea;
+            }
+
+            set
+            {
+                strCodLinea = value;
+            }
+        }
 
         public string Nick
         {
+            get
+            {
+                return strNick;
+            }
+
             set
             {
                 strNick = value;
             }
         }
-        public string Ciudad
+
+        public int Codigo_Usuario
         {
+            get
+            {
+                return intCodUsuario;
+            }
 
             set
             {
-                strCiudad = value;
+                intCodUsuario = value;
+            }
+        }
+
+        public int Respuesta
+        {
+            get
+            {
+                return intRpta;
             }
         }
 
@@ -96,23 +158,7 @@ namespace libGestionVuelos
                 return strError;
             }
         }
-
-        public int Respuesta
-        {
-            get
-            {
-                return intRpta;
-            }
-
-        }
-
-        public string Identificacion
-        {
-            set
-            {
-                strID = value;
-            }
-        }
+ 
 
         #endregion
 
@@ -122,9 +168,9 @@ namespace libGestionVuelos
             switch (strOpcion)
             {
                 case "BUSCAR":
-                    if (strNombre == string.Empty)
+                    if (strID == string.Empty)
                     {
-                        strError = "Debe ingresar un Nombre de Usuario para realizar una busqueda";
+                        strError = "Debe ingresar una identificación para buscar un piloto";
                         return false;
                     }
                     break;
@@ -179,7 +225,7 @@ namespace libGestionVuelos
                     case "CONSULTAR":
                         objParameterSQL = new SqlParameter[1];
 
-                        objParameterSQL[0] = new SqlParameter("@NOMBRE_USUARIO", strNick);
+                        objParameterSQL[0] = new SqlParameter("@ID", strID);
                         break;
                     case "REGISTRAR":
                         objParameterSQL = new SqlParameter[7];
@@ -192,10 +238,10 @@ namespace libGestionVuelos
                         objParameterSQL[5] = new SqlParameter("@COD_USUARIO", intCodUsuario);
                         objParameterSQL[6] = new SqlParameter("@TELEFONO", strTelefono);
                         break;
-                    case "VALIDAR":
+                    case "CONSULTAR_ID":
                         objParameterSQL = new SqlParameter[1];
 
-                        objParameterSQL[0] = new SqlParameter("@ID", strID);
+                        objParameterSQL[0] = new SqlParameter("@NOMBRE_USUARIO", strNick);
                         break;
                 }
                 return true;
@@ -250,7 +296,7 @@ namespace libGestionVuelos
         {
             try
             {
-                if (!CrearParametros("CONSULTAR"))
+                if (!CrearParametros("CONSULTAR_ID"))
                 {
                     strError = "Hubo un error al crear los parametros SQL";
                     return false;
@@ -271,7 +317,7 @@ namespace libGestionVuelos
 
                 if (!objReader.HasRows)
                 {
-                    strError = "El usuario con nombre " + strNombre + " no existe";
+                    strError = "El usuario con nick " + strNick + " no existe";
                     objReader.Close();
                     objConexion = null;
                     return false;
@@ -280,7 +326,6 @@ namespace libGestionVuelos
                 intCodUsuario = objReader.GetInt32(0);
                 objReader.Close();
                 return true;
-
             }
             catch (Exception ex)
             {
@@ -288,11 +333,11 @@ namespace libGestionVuelos
             }
         }
 
-        public bool ValidarPiloto()
+        public bool ConsultarPiloto()
         {
             try
             {
-                if (!CrearParametros("VALIDAR"))
+                if (!CrearParametros("CONSULTAR"))
                 {
                     strError = "Hubo un error al crear los parametros SQL";
                     return false;
@@ -319,7 +364,14 @@ namespace libGestionVuelos
                     return false;
                 }
                 objReader.Read();
-                strID = objReader.GetString(0);                
+                strID = objReader.GetString(0);
+                strNombre = objReader.GetString(1);
+                strDireccion = objReader.GetString(2);
+                strCiudad = objReader.GetString(3);
+                strCodLinea = objReader.GetString(4);
+                intCodUsuario = objReader.GetInt32(5);
+                strTelefono = objReader.GetString(6);
+
 
                 objReader.Close();
                 return true;

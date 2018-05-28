@@ -1,17 +1,18 @@
-﻿using libConexionBD;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using libConexionBD;
 
 namespace libGestionVuelos
 {
-    public class clsAeropuerto
+    public class clsPlanVuelo
     {
         #region CONSTRUCTOR
-        public clsAeropuerto(string strNomApp)
+
+        public clsPlanVuelo(string strNomApp)
         {
             strNombreApp = strNomApp;
             strError = string.Empty;
@@ -20,108 +21,84 @@ namespace libGestionVuelos
         #endregion
 
         #region ATRIBUTOS
-        string strCodigoAeropuerto;
-        string strNombre;
-        string strCiudad;
-        string strDireccion;
-        string strPais;
-        string strTelefono;
+        string strPlanVuelo;
+        string strCodVuelo;
+        string strCodigoLineaA;
+        string strCodigoEscalaT;
+        string strAeropuertoPartida;
+        string strAeropuertoLlegada;
 
+        int intRpta;
         string strError;
         string strNombreApp;
-        int intRpta;
         SqlParameter[] objParameterSQL;
         SqlDataReader objReader;
-
         #endregion
 
         #region PROPIEDADES
 
-        public string CodigoAeropuerto
+        public string PlanVuelo
         {
             get
             {
-                return strCodigoAeropuerto;
+                return strPlanVuelo;
             }
 
             set
             {
-                strCodigoAeropuerto = value;
+                strPlanVuelo = value;
             }
         }
 
-        public string Nombre
+        public string CodigoLineaA
         {
             get
             {
-                return strNombre;
+                return strCodigoLineaA;
             }
 
             set
             {
-                strNombre = value;
+                strCodigoLineaA = value;
             }
         }
 
-        public string Ciudad
+        public string CodigoEscalaT
         {
             get
             {
-                return strCiudad;
+                return strCodigoEscalaT;
             }
 
             set
             {
-                strCiudad = value;
+                strCodigoEscalaT = value;
             }
         }
 
-        public string Pais
+        public string AeropuertoPartida
         {
             get
             {
-                return strPais;
+                return strAeropuertoPartida;
             }
 
             set
             {
-                strPais = value;
+                strAeropuertoPartida = value;
             }
         }
 
-        public string Error
+        public string AeropuertoLlegada
         {
             get
             {
-                return strError;
-            }            
-        }
-
-        public string Direccion
-        {
-            get
-            {
-                return strDireccion;
+                return strAeropuertoLlegada;
             }
 
             set
             {
-                strDireccion = value;
-            }
-        }
-
-
-
-        public string Telefono
-        {
-            get
-            {
-                return strTelefono;
-            }
-
-            set
-            {
-                strTelefono = value;
+                strAeropuertoLlegada = value;
             }
         }
 
@@ -132,6 +109,28 @@ namespace libGestionVuelos
                 return intRpta;
             }
         }
+
+        public string Error
+        {
+            get
+            {
+                return strError;
+            }
+            
+        }
+
+        public string CodigoVuelo
+        {
+            get
+            {
+                return strCodVuelo;
+            }
+
+            set
+            {
+                strCodVuelo = value;
+            }
+        }
         #endregion
 
         #region METODOS PRIVADOS
@@ -140,45 +139,44 @@ namespace libGestionVuelos
             switch (strOpcion)
             {
                 case "BUSCAR":
-                    if (strCodigoAeropuerto == string.Empty)
+                    if (strPlanVuelo == string.Empty)
                     {
-                        strError = "Debe ingresar el codigo del Aeropuerto para realizar una busqueda";
+                        strError = "Debe ingresar el código para realizar una busqueda";
                         return false;
                     }
                     break;
                 case "REGISTRAR":
 
-                    if (strCodigoAeropuerto == string.Empty)
+                    if (strPlanVuelo == string.Empty)
                     {
-                        strError = "Debe ingresar el codigo del Aeropuerto";
+                        strError = "Debe ingresar el codigo del Plan de Vuelo";
                         return false;
                     }
-                    if (strNombre == string.Empty)
+                    if (strCodVuelo == string.Empty)
                     {
-                        strError = "Debe ingresar el nombre del Aeropuerto";
+                        strError = "Debe ingresar el código de vuelo del Plan de Vuelo";
                         return false;
                     }
-                    if (strCiudad == string.Empty)
+                    if (strCodigoLineaA == string.Empty)
                     {
-                        strError = "Debe indicar la ciudad del Aeropuerto ";
+                        strError = "Debe indicar el código de la Linea Aerea del Plan de Vuelo ";
                         return false;
                     }
-                    if (strPais == string.Empty)
+                    if (strCodigoEscalaT == string.Empty)
                     {
-                        strError = "Debe indicar el pais del Aeropuerto ";
+                        strError = "Debe indicar el código de la Escala Técnica del Plan de Vuelo ";
                         return false;
                     }
-                    if (strDireccion == string.Empty)
+                    if (strAeropuertoPartida == string.Empty)
                     {
-                        strError = "Debe indicar la dirección del Aeropuerto ";
+                        strError = "Debe indicar el código del Aeropuerto de partida del Plan de Vuelo ";
                         return false;
                     }
-                    if (strTelefono == string.Empty)
+                    if (strAeropuertoLlegada == string.Empty)
                     {
-                        strError = "Debe indicar el telefono del Aeropuerto ";
+                        strError = "Debe indicar el código del Aeropuerto de llegada del Plan de Vuelo ";
                         return false;
                     }
-
                     break;
             }
             return true;
@@ -193,17 +191,17 @@ namespace libGestionVuelos
                     case "CONSULTAR":
                         objParameterSQL = new SqlParameter[1];
 
-                        objParameterSQL[0] = new SqlParameter("@CODIGO", strCodigoAeropuerto);
+                        objParameterSQL[0] = new SqlParameter("@CODIGO", strPlanVuelo);
                         break;
                     case "REGISTRAR":
                         objParameterSQL = new SqlParameter[6];
 
-                        objParameterSQL[0] = new SqlParameter("@CODIGO", strCodigoAeropuerto);
-                        objParameterSQL[1] = new SqlParameter("@NOMBRE", strNombre);
-                        objParameterSQL[2] = new SqlParameter("@CIUDAD", strCiudad);
-                        objParameterSQL[3] = new SqlParameter("@PAIS", strPais);
-                        objParameterSQL[4] = new SqlParameter("@DIRECCION", strDireccion);
-                        objParameterSQL[5] = new SqlParameter("@TELEFONO", strTelefono);
+                        objParameterSQL[0] = new SqlParameter("@CODIGO", strPlanVuelo);
+                        objParameterSQL[1] = new SqlParameter("@CODIGO_VUELO", strCodVuelo);
+                        objParameterSQL[2] = new SqlParameter("@CODIGO_LINEA", strCodigoLineaA);
+                        objParameterSQL[3] = new SqlParameter("@CODIGO_ESCALATECNICA", strCodigoEscalaT);
+                        objParameterSQL[4] = new SqlParameter("@AEROPUERTO_PARTIDA", strAeropuertoPartida);
+                        objParameterSQL[5] = new SqlParameter("@AEROPUERTO_DESTINO", strAeropuertoLlegada);
                         break;
                 }
                 return true;
@@ -217,7 +215,7 @@ namespace libGestionVuelos
         #endregion
 
         #region METODOS PUBLICOS
-        public bool CrearAeropuerto()
+        public bool CrearPlanVuelo()
         {
             try
             {
@@ -231,7 +229,7 @@ namespace libGestionVuelos
                     return false;
                 }
                 clsConexionBD objConexion = new clsConexionBD(strNombreApp);
-                objConexion.SQL = "SP_CrearAeropuerto";
+                objConexion.SQL = "SP_CrearPlanVuelo";
                 objConexion.ParametrosSQL = objParameterSQL;
 
                 if (!objConexion.ConsultarValorUnico(true, true))
@@ -245,6 +243,7 @@ namespace libGestionVuelos
                 objConexion.CerrarCnx();
                 objConexion = null;
                 return true;
+
             }
             catch (Exception ex)
             {
@@ -253,7 +252,7 @@ namespace libGestionVuelos
             }
         }
 
-        public bool ConsultarAeropuerto()
+        public bool ConsultarPlanVuelo()
         {
             try
             {
@@ -263,7 +262,7 @@ namespace libGestionVuelos
                     return false;
                 }
                 clsConexionBD objConexion = new clsConexionBD(strNombreApp);
-                objConexion.SQL = "SP_ConsultarAeropuerto";
+                objConexion.SQL = "SP_ConsultarPlanVuelo";
                 objConexion.ParametrosSQL = objParameterSQL;
 
                 if (!objConexion.Consultar(true, true))
@@ -278,18 +277,19 @@ namespace libGestionVuelos
 
                 if (!objReader.HasRows)
                 {
-                    strError = "El Aeropuerto " + strCodigoAeropuerto + " no existe";
+                    strError = "El plan de vuelo con código " + strPlanVuelo + " no existe";
                     objReader.Close();
                     objConexion = null;
                     return false;
                 }
                 objReader.Read();
-                strCodigoAeropuerto = objReader.GetString(0);
-                strNombre = objReader.GetString(1);
-                strCiudad = objReader.GetString(2);
-                strPais = objReader.GetString(3);
-                strDireccion = objReader.GetString(4);
-                strTelefono = objReader.GetString(5);
+                strPlanVuelo = objReader.GetString(0);
+                strCodVuelo = objReader.GetString(1);
+                strCodigoLineaA = objReader.GetString(2);
+                strCodigoEscalaT = objReader.GetString(3);
+                strAeropuertoPartida = objReader.GetString(4);
+                strAeropuertoLlegada = objReader.GetString(5);
+
                 objReader.Close();
                 return true;
 
@@ -301,6 +301,5 @@ namespace libGestionVuelos
         }
 
         #endregion
-
     }
 }
