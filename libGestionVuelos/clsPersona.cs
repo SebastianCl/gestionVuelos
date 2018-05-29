@@ -10,7 +10,7 @@ namespace libGestionVuelos
 {
     public class clsPersona
     {
-        #region "Constructor"
+        #region CONSTRUCTOR
         public clsPersona(String strNomApp)
         {
             strNombreApp = strNomApp;
@@ -19,30 +19,35 @@ namespace libGestionVuelos
         }
         #endregion
 
-        #region "Atributos"
+        #region ATRIBUTOS
 
         string strID;
         string strNick;
         string strNombre;
         string strCiudad;
         int intCodUsuario;
-        string strError;
-        string strNombreApp;
+
         int intRpta;
+        string strError;
+        string strNombreApp;        
         SqlParameter[] objParameterSQL;
         SqlDataReader objReader;
         #endregion
 
-        #region "Propiedades"
+        #region PROPÍEDADES
 
-        public string Nombre
+        public string Identificacion
         {
+            get
+            {
+                return strID;
+            }
+
             set
             {
-                strNombre = value;
+                strID = value;
             }
         }
-
 
         public string Nick
         {
@@ -51,13 +56,52 @@ namespace libGestionVuelos
                 strNick = value;
             }
         }
+
+        public string Nombre
+        {
+            get
+            {
+                return strNombre;
+            }
+
+            set
+            {
+                strNombre = value;
+            }
+        }
+
         public string Ciudad
         {
+            get
+            {
+                return strCiudad;
+            }
 
             set
             {
                 strCiudad = value;
             }
+        }
+
+        public int CodUsuario
+        {
+            get
+            {
+                return intCodUsuario;
+            }
+
+            set
+            {
+                intCodUsuario = value;
+            }
+        }
+
+        public int Respuesta
+        {
+            get
+            {
+                return intRpta;
+            }            
         }
 
         public string Error
@@ -67,27 +111,10 @@ namespace libGestionVuelos
                 return strError;
             }
         }
-
-        public int Respuesta
-        {
-            get
-            {
-                return intRpta;
-            }
-
-        }
-
-        public string Identificacion
-        {
-            set
-            {
-                strID = value;
-            }
-        }
-
         #endregion
 
-        #region "Metodos Privados"
+
+        #region METODOS PRIVADOS
         private bool Validar(string strOpcion)
         {
             switch (strOpcion)
@@ -120,6 +147,13 @@ namespace libGestionVuelos
                     if (strNick == string.Empty)
                     {
                         strError = "Debe ingresar un nick para registrar un nuevo usuario";
+                        return false;
+                    }
+                    break;
+                case "VALIDAR":
+                    if (strID == string.Empty)
+                    {
+                        strError = "Debe ingresar una identificación";
                         return false;
                     }
                     break;
@@ -190,62 +224,18 @@ namespace libGestionVuelos
                 objConexion.CerrarCnx();
                 objConexion = null;
                 return true;
-
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
         }
 
-        public bool ConsultarIdUsuario()
+        public bool ConsultarPersona()
         {
             try
             {
                 if (!CrearParametros("CONSULTAR"))
-                {
-                    strError = "Hubo un error al crear los parametros SQL";
-                    return false;
-                }
-                clsConexionBD objConexion = new clsConexionBD(strNombreApp);
-                objConexion.SQL = "SP_ConsultarIdUsuario";
-                objConexion.ParametrosSQL = objParameterSQL;
-
-                if (!objConexion.Consultar(true, true))
-                {
-                    strError = objConexion.Error;
-                    objConexion.CerrarCnx();
-                    objConexion = null;
-                    return false;
-                }
-
-                objReader = objConexion.DataReader_Lleno;
-
-                if (!objReader.HasRows)
-                {
-                    strError = "El usuario con nombre " + strNombre + " no existe";
-                    objReader.Close();
-                    objConexion = null;
-                    return false;
-                }
-                objReader.Read();
-                intCodUsuario = objReader.GetInt32(0);
-                objReader.Close();
-                return true;
-
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        public bool ValidarPersona()
-        {
-            try
-            {
-                if (!CrearParametros("VALIDAR"))
                 {
                     strError = "Hubo un error al crear los parametros SQL";
                     return false;
@@ -266,23 +256,66 @@ namespace libGestionVuelos
 
                 if (!objReader.HasRows)
                 {
-                    strError = "El usuario " + strNombre + " no existe";
+                    strError = "El usuario con nick " + strNick + " no existe";
                     objReader.Close();
                     objConexion = null;
                     return false;
                 }
                 objReader.Read();
                 strID = objReader.GetString(0);
-
+                strNombre = objReader.GetString(1);
+                strCiudad = objReader.GetString(2);
+                intCodUsuario = objReader.GetInt32(3);
                 objReader.Close();
                 return true;
-
             }
             catch (Exception ex)
             {
                 throw ex;
             }
         }
+
+        public bool ValidarIdentificacion()
+        {
+            try
+            {
+                if (!CrearParametros("VALIDAR"))
+                {
+                    strError = "Hubo un error al crear los parametros SQL";
+                    return false;
+                }
+                clsConexionBD objConexion = new clsConexionBD(strNombreApp);
+                objConexion.SQL = "SP_ValidarPersona";
+                objConexion.ParametrosSQL = objParameterSQL;
+
+                if (!objConexion.Consultar(true, true))
+                {
+                    strError = objConexion.Error;
+                    objConexion.CerrarCnx();
+                    objConexion = null;
+                    return false;
+                }
+
+                objReader = objConexion.DataReader_Lleno;
+
+                if (!objReader.HasRows)
+                {
+                    strError = "El usuario con identificación " + strID + " no existe";
+                    objReader.Close();
+                    objConexion = null;
+                    return false;
+                }
+                objReader.Read();
+                //intRpta = objReader.GetInt32(0);
+                objReader.Close();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         #endregion
     }
 }

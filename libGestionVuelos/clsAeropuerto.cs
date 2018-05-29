@@ -25,7 +25,8 @@ namespace libGestionVuelos
         string strCiudad;
         string strDireccion;
         string strPais;
-        string strTelefono;
+        string strEstado;
+        string strCodResponsable;
 
         string strError;
         string strNombreApp;
@@ -95,33 +96,18 @@ namespace libGestionVuelos
             {
                 return strError;
             }            
-        }
+        }     
 
-        public string Direccion
+        public string Estado
         {
             get
             {
-                return strDireccion;
+                return strEstado;
             }
 
             set
             {
-                strDireccion = value;
-            }
-        }
-
-
-
-        public string Telefono
-        {
-            get
-            {
-                return strTelefono;
-            }
-
-            set
-            {
-                strTelefono = value;
+                strEstado = value;
             }
         }
 
@@ -130,6 +116,19 @@ namespace libGestionVuelos
             get
             {
                 return intRpta;
+            }
+        }
+
+        public string CodigoResponsable
+        {
+            get
+            {
+                return strCodResponsable;
+            }
+
+            set
+            {
+                strCodResponsable = value;
             }
         }
         #endregion
@@ -142,7 +141,7 @@ namespace libGestionVuelos
                 case "BUSCAR":
                     if (strCodigoAeropuerto == string.Empty)
                     {
-                        strError = "Debe ingresar el codigo del Aeropuerto para realizar una busqueda";
+                        strError = "Debe ingresar el código del Aeropuerto para realizar una busqueda";
                         return false;
                     }
                     break;
@@ -150,17 +149,17 @@ namespace libGestionVuelos
 
                     if (strCodigoAeropuerto == string.Empty)
                     {
-                        strError = "Debe ingresar el codigo del Aeropuerto";
+                        strError = "Debe ingresar el código del Aeropuerto";
                         return false;
                     }
                     if (strNombre == string.Empty)
                     {
-                        strError = "Debe ingresar el nombre del Aeropuerto";
+                        strError = "Debe ingresar el código del Aeropuerto";
                         return false;
                     }
                     if (strCiudad == string.Empty)
                     {
-                        strError = "Debe indicar la ciudad del Aeropuerto ";
+                        strError = "Debe indicar la código del Aeropuerto ";
                         return false;
                     }
                     if (strPais == string.Empty)
@@ -168,14 +167,14 @@ namespace libGestionVuelos
                         strError = "Debe indicar el pais del Aeropuerto ";
                         return false;
                     }
-                    if (strDireccion == string.Empty)
+                    if (strEstado == string.Empty)
                     {
-                        strError = "Debe indicar la dirección del Aeropuerto ";
+                        strError = "Debe indicar el estado del Aeropuerto ";
                         return false;
                     }
-                    if (strTelefono == string.Empty)
+                    if (strCodResponsable == string.Empty)
                     {
-                        strError = "Debe indicar el telefono del Aeropuerto ";
+                        strError = "Debe indicar el código del responsable del Aeropuerto ";
                         return false;
                     }
 
@@ -202,8 +201,8 @@ namespace libGestionVuelos
                         objParameterSQL[1] = new SqlParameter("@NOMBRE", strNombre);
                         objParameterSQL[2] = new SqlParameter("@CIUDAD", strCiudad);
                         objParameterSQL[3] = new SqlParameter("@PAIS", strPais);
-                        objParameterSQL[4] = new SqlParameter("@DIRECCION", strDireccion);
-                        objParameterSQL[5] = new SqlParameter("@TELEFONO", strTelefono);
+                        objParameterSQL[4] = new SqlParameter("@ID_RESPONSABLE", strCodResponsable);
+                        objParameterSQL[5] = new SqlParameter("@ESTADO", strEstado);
                         break;
                 }
                 return true;
@@ -288,8 +287,8 @@ namespace libGestionVuelos
                 strNombre = objReader.GetString(1);
                 strCiudad = objReader.GetString(2);
                 strPais = objReader.GetString(3);
-                strDireccion = objReader.GetString(4);
-                strTelefono = objReader.GetString(5);
+                strCodResponsable = objReader.GetString(4);
+                strEstado = objReader.GetString(5);
                 objReader.Close();
                 return true;
 

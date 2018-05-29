@@ -20,9 +20,9 @@
                     <br />
                     <asp:TextBox ID="txtCiudadAeropuerto" runat="server"  CssClass="form-control" placeholder="Ingrese la ciudad del Aeropuerto" MaxLength="30"></asp:TextBox>
                     <br />
-                    <asp:TextBox ID="txtDirAeropuerto" runat="server"  CssClass="form-control" placeholder="Ingrese la dirección del Aeropuerto" MaxLength="50"></asp:TextBox>
+                    <asp:TextBox ID="txtEstado" runat="server"  CssClass="form-control" placeholder="Ingrese el estado del Aeropuerto" MaxLength="50"></asp:TextBox>
                     <br />
-                    <asp:TextBox ID="txtTelAeropuerto" runat="server"  CssClass="form-control" placeholder="Ingrese el telefono del Aeropuerto" MaxLength="50"></asp:TextBox>
+                    <asp:TextBox ID="txtCodResponsable" runat="server"  CssClass="form-control" placeholder="Ingrese el código del responsable del Aeropuerto" MaxLength="10"></asp:TextBox>
                     <br />
                     <asp:Button ID="btnRegistroAe" runat="server" CssClass="btn btn-success btn-lg btn-block" Text="Registrar nuevo Aeropuerto" OnClick="btnRegistroAe_Click" />
                 </form>

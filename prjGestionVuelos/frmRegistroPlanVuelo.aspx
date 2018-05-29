@@ -16,13 +16,13 @@
                     <br />                    
                     <asp:TextBox ID="txtCodVuelo" runat="server" CssClass="form-control" placeholder="Ingrese el código de vuelo" MaxLength="10"></asp:TextBox>
                     <br />                    
-                    <asp:TextBox ID="txtCodLineaA" runat="server" CssClass="form-control" placeholder="Ingrese el código de la linea aerea" MaxLength="10"></asp:TextBox>
-                    <br />
-                    <asp:TextBox ID="txtCodEscalaT" runat="server" CssClass="form-control" placeholder="Ingrese el código de la escala técnica" MaxLength="10"></asp:TextBox>
+                    <asp:TextBox ID="txtCodLineaA" runat="server" CssClass="form-control" placeholder="Ingrese el código de la linea aerea" MaxLength="10"></asp:TextBox>                    
                     <br />
                     <asp:TextBox ID="txtAeroPartida" runat="server" CssClass="form-control" placeholder="Ingrese el código del Aeropuerto de partida" MaxLength="10"></asp:TextBox>
                     <br />
                     <asp:TextBox ID="txtAeroLlegada" runat="server" CssClass="form-control" placeholder="Ingrese el código del Aeropuerto de destino" MaxLength="10"></asp:TextBox>
+                    <br />                    
+                    <asp:TextBox ID="txtCodEscalaT" runat="server" CssClass="form-control" placeholder="Ingrese el código de la escala técnica (opcional)" Text="N/A" ToolTip="Escriba N/A si no aplica" MaxLength="10"></asp:TextBox>
                     <br />
                     <asp:Button ID="btnRegistroPV" runat="server" CssClass="btn btn-success btn-lg btn-block" Text="Registrar nuevo Plan de Vuelo" OnClick="btnRegistroPV_Click"/>
                 </form>

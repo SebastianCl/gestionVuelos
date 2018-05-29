@@ -1,4 +1,4 @@
-body{
+body {
     background-color: rgba(0, 0, 0, 0.12);
     font-family: 'Raleway', sans-serif;
 }
@@ -7,33 +7,34 @@ body{
     max-height: 100px;
     background-color: #222733;
 }
-.my-header .my-logo {
-    webkit-transition: width 0.9s cubic-bezier(0.81, -0.05, 0.24, 1.31);
-    -o-transition: width 0.9s ease-in-out;
-    transition: width 0.9s cubic-bezier(0.81, -0.05, 0.24, 1.31);
-    display: block;
-    float: left;
-    height: 50px;
-    font-size: 20px;
-    line-height: 50px;
-    text-align: center;
-    width: 230px;
-    padding: 0 15px;
-    font-weight: 300;
-    overflow: hidden;
-}
+
+    .my-header .my-logo {
+        webkit-transition: width 0.9s cubic-bezier(0.81, -0.05, 0.24, 1.31);
+        -o-transition: width 0.9s ease-in-out;
+        transition: width 0.9s cubic-bezier(0.81, -0.05, 0.24, 1.31);
+        display: block;
+        float: left;
+        height: 50px;
+        font-size: 20px;
+        line-height: 50px;
+        text-align: center;
+        width: 230px;
+        padding: 0 15px;
+        font-weight: 300;
+        overflow: hidden;
+    }
 /*-----------------------------------*/
 
 
 /*DIv de la zona de menu derecha*/
- .my-div-right{
+.my-div-right {
     float: right;
     position: absolute;
     right: 1px;
-    }
+}
 /*---------------*/
 /*---ALERTA ICONO DE NOTIFICACION--------*/
-    .my-header .navbar .nav > li > a > .label {
+.my-header .navbar .nav > li > a > .label {
     position: absolute;
     top: 9px;
     right: 7px;
@@ -41,11 +42,11 @@ body{
     font-size: 9px;
     padding: 2px 3px;
     line-height: .9;
-    }
+}
 
-    .label-default {
+.label-default {
     background-color: #f13720;
-    }
+}
 /*-----------------------------*/
 /*SECCION DEL USUARIO*/
 .navbar-nav .user-menu .user-image {
@@ -54,8 +55,9 @@ body{
     height: 25px;
     border-radius: 50%;
     margin-top: -2px;
-    }
-.navbar-nav  .user-menu  .dropdown-menu {
+}
+
+.navbar-nav .user-menu .dropdown-menu {
     border-top-right-radius: 0;
     border-top-left-radius: 0;
     padding: 1px 0 0 0;
@@ -66,52 +68,58 @@ body{
     right: 0px;
     left: auto;
 }
-.navbar-nav  .user-menu  .dropdown-menu  li.my-user-header  img {
-    height: 90px;
-    width: 90px;
-    border: 3px solid;
-    border-color: transparent;
-    border-color: rgba(255, 255, 255, 0.2);
-}
-.navbar-nav  .user-menu .dropdown-menu  li.my-user-header {
-    height: 175px;
-    padding: 10px;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.07);
-}
-.navbar-nav  .user-menu  .dropdown-menu  li.my-user-footer {
-    background-color: #f9f9f9;
-    padding: 10px;
-}
+
+    .navbar-nav .user-menu .dropdown-menu li.my-user-header img {
+        height: 90px;
+        width: 90px;
+        border: 3px solid;
+        border-color: transparent;
+        border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .navbar-nav .user-menu .dropdown-menu li.my-user-header {
+        height: 175px;
+        padding: 10px;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.07);
+    }
+
+    .navbar-nav .user-menu .dropdown-menu li.my-user-footer {
+        background-color: #f9f9f9;
+        padding: 10px;
+    }
 /*-----------------------------*/
 
 /*Efectos sobre botones*/
-a:focus, a:hover{
-    
+a:focus, a:hover {
     text-decoration: none;
     background-color: rgba(8, 8, 8, 0.54);
     color: #1AAE88;
     font-weight: 400;
-    border-left: 1px groove #1AAE88;    
+    border-left: 1px groove #1AAE88;
     border-right: 1px groove #1AAE88;
 }
-a, .my-logo{
+
+a, .my-logo {
     color: #fff;
     text-decoration: none;
 }
-a:hover:focus, .my-logo{
-    color: #fff;
-    text-decoration: none;
-}
-.nav>li>a:focus, .nav>li>a:hover{
+
+    a:hover:focus, .my-logo {
+        color: #fff;
+        text-decoration: none;
+    }
+
+.nav > li > a:focus, .nav > li > a:hover {
     text-decoration: none;
     background-color: rgba(8, 8, 8, 0.54);
     color: #1AAE88;
     font-weight: 400;
-    border-left: 1px groove #1AAE88;    
+    border-left: 1px groove #1AAE88;
     border-right: 1px groove #1AAE88;
 }
-.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+
+.nav .open > a, .nav .open > a:focus, .nav .open > a:hover {
     background-color: transparent;
 }
 /*------------------------------------------------------*/
@@ -130,7 +138,7 @@ div#barra-menu {
     position: absolute;
     top: auto;
     margin-top: -20px;
-    z-index: 100;  /*Como en photoshop, sirve para dar un valor a las capas siendo 100m el max*/
+    z-index: 100; /*Como en photoshop, sirve para dar un valor a las capas siendo 100m el max*/
     left: 220px;
     width: 0;
     height: 100%;
@@ -142,21 +150,21 @@ div#barra-menu {
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    
 }
+
 #wrapper.toggled #sidebar-wrapper {
     width: 210px;
 }
 
 #page-content-wrapper {
-  width: 100%;
-  position: absolute;
-  padding: 15px;
+    width: 100%;
+    position: absolute;
+    padding: 15px;
 }
 
 #wrapper.toggled #page-content-wrapper {
-  position: absolute;
-  margin-right: -250px;
+    position: absolute;
+    margin-right: -250px;
 }
 /*----------------------------------------*/
 /*----------------------------------------*/
@@ -167,14 +175,16 @@ div#barra-menu {
     display: block;
     color: #ddd;
     text-decoration: none;
-    padding: 10px 15px 10px 30px;    
+    padding: 10px 15px 10px 30px;
 }
+
 .sidebar-nav li {
-    position: relative; 
+    position: relative;
     line-height: 20px;
     display: inline-block;
     width: 100%;
 }
+
 .sidebar-nav {
     position: absolute;
     top: 0;
@@ -183,75 +193,80 @@ div#barra-menu {
     padding: 0;
     list-style: none;
 }
-.sidebar-nav li a:hover,
-.sidebar-nav li a:active,
-.sidebar-nav li a:focus,
-.sidebar-nav li.open a:hover,
-.sidebar-nav li.open a:active,
-.sidebar-nav li.open a:focus{
-    color: #fff;
-    text-decoration: none;
-    background-color: transparent;
-}
-.sidebar-nav > .sidebar-brand {
-    height: 65px;
-    font-size: 20px;
-    line-height: 44px;
-}
-.sidebar-nav li:.sidebar-brand a {
-    color: #fff;
-    background-color: #1a1a1a;
-}
-.sidebar-nav .dropdown-menu {
-    position: relative;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    border-radius: 0;
-    border: none;
-    background-color: #222733;
-   
-}
 
-.sidebar-nav li:before {  /*pseudoclase para controlar el efecto de los botones del sidebar*/
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 3px;
-    z-index: -1;
-    background-color: #1c1c1c;
-    -webkit-transition: width .2s ease-in;
-      -moz-transition:  width .2s ease-in;      
-       -ms-transition:  width .2s ease-in;
-            transition: width .2s ease-in;
-}
+    .sidebar-nav li a:hover,
+    .sidebar-nav li a:active,
+    .sidebar-nav li a:focus,
+    .sidebar-nav li.open a:hover,
+    .sidebar-nav li.open a:active,
+    .sidebar-nav li.open a:focus {
+        color: #fff;
+        text-decoration: none;
+        background-color: transparent;
+    }
 
-.sidebar-nav li.my-li-nav:before {
-    background-color: #1aae88;   
-}
+    .sidebar-nav > .sidebar-brand {
+        height: 65px;
+        font-size: 20px;
+        line-height: 44px;
+    }
 
-.sidebar-nav li.my-li-navY:before {
-    background-color: #f9f611;   
-}
-.sidebar-nav li.my-li-navG:before {
-    background-color: #10f913;   
-}
-.sidebar-nav li.my-li-navR:before {
-    background-color: #d13232   ;   
-}
+    .sidebar-nav li:.sidebar-brand a {
+        color: #fff;
+        background-color: #1a1a1a;
+    }
+
+    .sidebar-nav .dropdown-menu {
+        position: relative;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        border-radius: 0;
+        border: none;
+        background-color: #222733;
+    }
+
+    .sidebar-nav li:before { /*pseudoclase para controlar el efecto de los botones del sidebar*/
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 3px;
+        z-index: -1;
+        background-color: #1c1c1c;
+        -webkit-transition: width .2s ease-in;
+        -moz-transition: width .2s ease-in;
+        -ms-transition: width .2s ease-in;
+        transition: width .2s ease-in;
+    }
+
+    .sidebar-nav li.my-li-nav:before {
+        background-color: #1aae88;
+    }
+
+    .sidebar-nav li.my-li-navY:before {
+        background-color: #f9f611;
+    }
+
+    .sidebar-nav li.my-li-navG:before {
+        background-color: #10f913;
+    }
+
+    .sidebar-nav li.my-li-navR:before {
+        background-color: #d13232;
+    }
 
 
 
-.sidebar-nav li:hover:before,
-.sidebar-nav li.open:hover:before {
-    width: 100%;
-    -webkit-transition: width .2s ease-in;
-      -moz-transition:  width .2s ease-in;
-       -ms-transition:  width .2s ease-in;
-            transition: width .2s ease-in;
-}
+    .sidebar-nav li:hover:before,
+    .sidebar-nav li.open:hover:before {
+        width: 100%;
+        -webkit-transition: width .2s ease-in;
+        -moz-transition: width .2s ease-in;
+        -ms-transition: width .2s ease-in;
+        transition: width .2s ease-in;
+    }
 
 /*----------------------------------------*/
 
@@ -259,17 +274,17 @@ div#barra-menu {
 /*    Botones Barra Superior     */
 /*-------------------------------*/
 
-.hamburger  {
-  
-  top: 0px;  
-  width: 32px;
-  height: 32px;
-  margin-left: 15px;
-  background: transparent;
-  color: #ffff;
-  border: none;
+.hamburger {
+    top: 0px;
+    width: 32px;
+    height: 32px;
+    margin-left: 15px;
+    background: transparent;
+    color: #ffff;
+    border: none;
 }
-a.hamburger:hover{
+
+a.hamburger:hover {
     color: #1aae88;
     background: none;
     border: none;
@@ -279,34 +294,38 @@ a.btnbarra:hover {
     color: #1aae88;
     background: none;
     border: none;
-    top:-10px;
+    top: -10px;
 }
 /*------------------------------------------------*/
 /*Media Query*/
-@media (max-width: 767px){
+@media (max-width: 767px) {
 
     .my-header .my-logo {
-    width: 100%;
+        width: 100%;
     }
-    .navbar-toggle{
-    float: left;
-    font-size: large;
-    top: -10px;
-    border-radius: 0px;
+
+    .navbar-toggle {
+        float: left;
+        font-size: large;
+        top: -10px;
+        border-radius: 0px;
     }
-    .my-navbar-left{
-    float: left;
-    background-color: #222733;
-    position: absolute;
-    top: 100px;
-    left: 0px;
-    width: 100px;
+
+    .my-navbar-left {
+        float: left;
+        background-color: #222733;
+        position: absolute;
+        top: 100px;
+        left: 0px;
+        width: 100px;
     }
+
     ul.nav.navbar-nav.my-right-ul {
         display: -webkit-inline-box;
         display: flex;
     }
-    .my-div-right{
+
+    .my-div-right {
         position: relative;
         top: 0px;
         right: 0px;
@@ -314,49 +333,51 @@ a.btnbarra:hover {
         justify-content: center;
         width: 100%;
     }
-    .navbar-nav > .user-menu > .dropdown-menu {
-    background-color: #fff;
-    position: absolute;
-    top: 42px;
-    }
-    .nav>li>a:focus, .nav>li>a:hover {
-    text-decoration: none;
-    height: 40px;
-    }
-}/*Cierra Media Query*/
 
- /*-------------------------------*/
+    .navbar-nav > .user-menu > .dropdown-menu {
+        background-color: #fff;
+        position: absolute;
+        top: 42px;
+    }
+
+    .nav > li > a:focus, .nav > li > a:hover {
+        text-decoration: none;
+        height: 40px;
+    }
+}
+/*Cierra Media Query*/
+
+/*-------------------------------*/
 /*    BARRA DE BUSQUEDA          */
 /*-------------------------------*/
- #custom-search-input{
+#custom-search-input {
     padding: 3px;
     border: solid 1px #E4E4E4;
     border-radius: 6px;
     background-color: #fff;
 }
 
-#custom-search-input input{
-    border: 0;
-    box-shadow: none;
-}
+    #custom-search-input input {
+        border: 0;
+        box-shadow: none;
+    }
 
-#custom-search-input button{
-    margin: 2px 0 0 0;
-    background: none;
-    box-shadow: none;
-    border: 0;
-    color: #666666;
-    padding: 0 8px 0 10px;
-    border-left: solid 1px #ccc;
-}
+    #custom-search-input button {
+        margin: 2px 0 0 0;
+        background: none;
+        box-shadow: none;
+        border: 0;
+        color: #666666;
+        padding: 0 8px 0 10px;
+        border-left: solid 1px #ccc;
+    }
 
-#custom-search-input button:hover{
-    border: 0;
-    box-shadow: none;
-    border-left: solid 1px #ccc;
-}
+        #custom-search-input button:hover {
+            border: 0;
+            box-shadow: none;
+            border-left: solid 1px #ccc;
+        }
 
-#custom-search-input .glyphicon-search{
-    font-size: 23px;
-}
-    
+    #custom-search-input .glyphicon-search {
+        font-size: 23px;
+    }

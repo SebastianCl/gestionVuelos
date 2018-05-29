@@ -47,6 +47,5 @@ C:\Users\Sebastian\Documents\GIT\gestionVuelos\libGestionVuelos\bin\Debug\libCon
 C:\Users\Sebastian\Documents\GIT\gestionVuelos\libGestionVuelos\bin\Debug\libParametros.dll
 C:\Users\Sebastian\Documents\GIT\gestionVuelos\libGestionVuelos\bin\Debug\libConexionBD.pdb
 C:\Users\Sebastian\Documents\GIT\gestionVuelos\libGestionVuelos\bin\Debug\libParametros.pdb
-C:\Users\Sebastian\Documents\GIT\gestionVuelos\libGestionVuelos\obj\Debug\libGestionVuelos.csprojResolveAssemblyReference.cache
 C:\Users\Sebastian\Documents\GIT\gestionVuelos\libGestionVuelos\obj\Debug\libGestionVuelos.dll
 C:\Users\Sebastian\Documents\GIT\gestionVuelos\libGestionVuelos\obj\Debug\libGestionVuelos.pdb

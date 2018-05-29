@@ -49,22 +49,22 @@ namespace prjGestionVuelos {
         protected global::System.Web.UI.WebControls.TextBox txtCiudadAeropuerto;
         
         /// <summary>
-        /// Control txtDirAeropuerto.
+        /// Control txtEstado.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDirAeropuerto;
+        protected global::System.Web.UI.WebControls.TextBox txtEstado;
         
         /// <summary>
-        /// Control txtTelAeropuerto.
+        /// Control txtCodResponsable.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTelAeropuerto;
+        protected global::System.Web.UI.WebControls.TextBox txtCodResponsable;
         
         /// <summary>
         /// Control btnRegistroAe.

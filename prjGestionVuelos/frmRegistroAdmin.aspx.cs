@@ -13,6 +13,7 @@ namespace prjGestionVuelos
     {
         #region "Variables Globales"
         private static string strNombreApp;
+        private int intCodUsuario;
         #endregion
 
         #region "Metodos Privados"
@@ -65,20 +66,17 @@ namespace prjGestionVuelos
         {
             try
             {
-                clsPersona objPersona = new clsPersona(strNombreApp);
-                objPersona.Nombre = this.txtNombreAdmin.Text.Trim();
-                objPersona.Nick = this.txtNickAdmin.Text.Trim();
-                objPersona.Identificacion = this.txtIDAdmin.Text.Trim();
-                objPersona.Ciudad = this.txtCiudadAdmin.Text.Trim();
-                if (!objPersona.ConsultarIdUsuario())
+                clsUsuario objUsuario = new clsUsuario(strNombreApp);
+                objUsuario.NickUsuario = this.txtNickAdmin.Text.Trim();
+                if (!objUsuario.ObtenerCodigoUsuario())
                 {
-                    this.lblMensaje.Text = objPersona.Error;
+                    this.lblMensaje.Text = objUsuario.Error;
                     this.pnlAlerta.Visible = true;
-                    objPersona = null;
+                    objUsuario = null;
                     return false;
                 }
-                objPersona.CrearPersona();
-                objPersona = null;
+                intCodUsuario = objUsuario.CodigoUsuario;
+                objUsuario = null;                
                 return true;
             }
             catch (Exception ex)
@@ -88,6 +86,7 @@ namespace prjGestionVuelos
                 return false;
             }
         }
+
         private void RegistrarAdmin()
         {
             try
@@ -96,21 +95,22 @@ namespace prjGestionVuelos
                 {
                     return;
                 }
-                clsPersona objValPer = new clsPersona(strNombreApp);
-                objValPer.Identificacion = this.txtIDAdmin.Text.Trim();
-                if (objValPer.ValidarPersona())
+                clsPersona objPersona = new clsPersona(strNombreApp);
+                objPersona.Identificacion = this.txtIDAdmin.Text.Trim();
+                if (objPersona.ValidarIdentificacion())
                 {
                     this.lblMensaje.Text = "Los sentimos, ya hay un administrador registrado con esa identificación";
                     this.pnlAlerta.Visible = true;
-                    objValPer = null;
+                    objPersona = null;
                     return;
                 }
-                objValPer = null;
+                
                 clsUsuario objUsu = new clsUsuario(strNombreApp);
                 objUsu.NickUsuario = this.txtNickAdmin.Text;
                 objUsu.Clave = this.txtClaveAdmin.Text;
-                objUsu.Rol = "A";
                 objUsu.Cedula = this.txtIDAdmin.Text;
+                objUsu.Rol = "A";
+                
 
                 if (!objUsu.CrearUsuario())
                 {
@@ -133,7 +133,13 @@ namespace prjGestionVuelos
                     {
                         return;
                     }
-                    this.lblMensaje.Text = "Nuevo usuario registrado con exito";
+                    objPersona.Nombre = this.txtNombreAdmin.Text.Trim();
+                    objPersona.Nick = this.txtNickAdmin.Text.Trim();
+                    objPersona.Ciudad = this.txtCiudadAdmin.Text.Trim();
+                    objPersona.CodUsuario = intCodUsuario;
+                    objPersona.CrearPersona();
+                    objPersona = null;
+                    this.lblMensaje.Text = "Nuevo administrador registrado con exito";
                     this.pnlAlerta.Visible = true;
                     objUsu = null;
                     return;

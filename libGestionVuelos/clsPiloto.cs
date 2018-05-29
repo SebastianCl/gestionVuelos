@@ -302,7 +302,7 @@ namespace libGestionVuelos
                     return false;
                 }
                 clsConexionBD objConexion = new clsConexionBD(strNombreApp);
-                objConexion.SQL = "SP_ConsultarIdUsuario";
+                objConexion.SQL = "SP_ObtenerCodigoUsuario";
                 objConexion.ParametrosSQL = objParameterSQL;
 
                 if (!objConexion.Consultar(true, true))

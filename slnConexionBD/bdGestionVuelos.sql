@@ -244,11 +244,32 @@ BEGIN
 END
 GO
 
-CREATE PROCEDURE SP_ConsultarIdUsuario
+CREATE PROCEDURE SP_ConsultarPersona
+@NOMBRE VARCHAR(10)
+AS
+BEGIN
+	SELECT *	   
+	FROM tblPERSONA
+	WHERE NOMBRE = @NOMBRE
+
+END
+GO
+
+CREATE PROCEDURE SP_ValidarPersona (
+@ID VARCHAR(10))
+AS
+BEGIN
+	SELECT *	   
+	FROM tblPERSONA
+	WHERE ID = @ID
+END
+GO
+
+CREATE PROCEDURE SP_ObtenerCodigoUsuario
 @NOMBRE_USUARIO VARCHAR(10)
 AS
 BEGIN
-	SELECT CODIGO_USUARIO	   
+	SELECT CODIGO_USUARIO
 	FROM tblUSUARIO
 	WHERE NOMBRE_USUARIO = @NOMBRE_USUARIO
 
@@ -353,19 +374,16 @@ INSERT INTO tblLINEA_AEREA VALUES ('1','LA','COLOMBIA')
 
 exec SP_CrearUsuario @NOMBRE_USUARIO = 'piloto', @CLAVE_USUARIO='1', @ROL_USUARIO='P'
 
-exec SP_CrearPersona @ID='1', @NOMBRE='El Responsable', @CIUDAD = 'Medellín',@COD_USUARIO='1'
+exec SP_CrearPersona @ID='1111', @NOMBRE='El Responsable', @CIUDAD = 'Medellín',@COD_USUARIO='1'
 
-exec SP_ConsultarIdUsuario @nombre_usuario = 'sebas3435'
 
 exec SP_CrearPiloto @ID = '1', @NOMBRE = 'DonPiloto', @DIRECCION = 'Cra 10',@CIUDAD_RESIDENCIA = 'Medellín', @CODIGO_LINEA = '1', @COD_USUARIO = 2 , @TELEFONO = '2341672'
 
-exec SP_CrearAeropuerto @CODIGO = '1',@NOMBRE = 'Olaya Herrera',@CIUDAD= 'Medellín',@PAIS='Colombia',@ID_RESPONSABLE='1',@ESTADO='ACTIVO'
-exec SP_ConsultarPiloto @ID= '1'
+exec SP_CrearAeropuerto @CODIGO = 'AB12',@NOMBRE = 'Olaya Herrera',@CIUDAD= 'Medellín',@PAIS='Colombia',@ID_RESPONSABLE='1',@ESTADO='ACTIVO'
+
+exec SP_CrearEscalaTecnica @CODIGO = 'N/A', @COD_AEROPUERTO = null
 
 select * from tblvuelo
-select * from tblusuario
-select * from tblPiloto
-select * from tblavion
 
 
 

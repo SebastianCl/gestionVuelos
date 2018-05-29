@@ -23,8 +23,8 @@ namespace prjGestionVuelos
             this.txtNombreAeropuerto.Text = string.Empty;
             this.txtPaisAeropuerto.Text = string.Empty;
             this.txtCiudadAeropuerto.Text = string.Empty;
-            this.txtDirAeropuerto.Text = string.Empty;
-            this.txtTelAeropuerto.Text = string.Empty;
+            this.txtCodResponsable.Text = string.Empty;
+            this.txtEstado.Text = string.Empty;
         }
         private bool ValidarCampos()
         {
@@ -52,18 +52,25 @@ namespace prjGestionVuelos
                 this.pnlAlerta.Visible = true;
                 return false;
             }
-            if (this.txtDirAeropuerto.Text.Trim() == string.Empty)
+            if (this.txtCodResponsable.Text.Trim() == string.Empty)
             {
-                this.lblMensaje.Text = "Debe ingresar la dirección del Aeropuerto";
+                this.lblMensaje.Text = "Debe ingresar la código del responsable del Aeropuerto";
                 this.pnlAlerta.Visible = true;
                 return false;
             }
-            if (this.txtTelAeropuerto.Text.Trim() == string.Empty)
+            if (this.txtEstado.Text.Trim() == string.Empty)
             {
-                this.lblMensaje.Text = "Debe ingresar el telefono del Aeropuerto";
+                this.lblMensaje.Text = "Debe idicar el estado del Aeropuerto";
                 this.pnlAlerta.Visible = true;
                 return false;
             }
+            if (this.txtCodResponsable.Text.Trim() == string.Empty)
+            {
+                this.lblMensaje.Text = "Debe ingresar el código del responsable del Aeropuerto";
+                this.pnlAlerta.Visible = true;
+                return false;
+            }
+
             return true;
         }
 
@@ -84,11 +91,22 @@ namespace prjGestionVuelos
                     objAeropuerto = null;
                     return;
                 }
+                clsPersona objValPersona = new clsPersona(strNombreApp);
+                objValPersona.Identificacion = this.txtCodResponsable.Text.Trim();
+                if (!objValPersona.ValidarIdentificacion())
+                {
+                    this.lblMensaje.Text = "No existe un usuario con la identificación " + objValPersona.Identificacion;
+                    this.pnlAlerta.Visible = true;
+                    objValPersona = null;
+                    return;
+                }
+                objValPersona = null;
+
                 objAeropuerto.Nombre = this.txtNombreAeropuerto.Text.Trim();
                 objAeropuerto.Pais = this.txtPaisAeropuerto.Text.Trim();
                 objAeropuerto.Ciudad = this.txtPaisAeropuerto.Text.Trim();
-                objAeropuerto.Direccion = this.txtDirAeropuerto.Text.Trim();
-                objAeropuerto.Telefono = this.txtTelAeropuerto.Text.Trim();
+                objAeropuerto.CodigoResponsable = this.txtCodResponsable.Text.Trim();
+                objAeropuerto.Estado = this.txtEstado.Text.Trim();
 
 
                 if (!objAeropuerto.CrearAeropuerto())
@@ -101,7 +119,7 @@ namespace prjGestionVuelos
 
                 if (objAeropuerto.Respuesta == 0)
                 {
-                    this.lblMensaje.Text = "El aeropuerto ya se esta registrado";
+                    this.lblMensaje.Text = objAeropuerto.Error;
                     this.pnlAlerta.Visible = true;
                     objAeropuerto = null;
                     return;

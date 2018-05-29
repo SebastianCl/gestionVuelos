@@ -180,3 +180,5 @@ C:\Users\Sebastian\Documents\GIT\gestionVuelos\prjGestionVuelos\bin\libParametro
 C:\Users\Sebastian\Documents\GIT\gestionVuelos\prjGestionVuelos\obj\Debug\prjGestionVuelos.csprojResolveAssemblyReference.cache
 C:\Users\Sebastian\Documents\GIT\gestionVuelos\prjGestionVuelos\obj\Debug\prjGestionVuelos.dll
 C:\Users\Sebastian\Documents\GIT\gestionVuelos\prjGestionVuelos\obj\Debug\prjGestionVuelos.pdb
+C:\Users\Sebastian\Documents\GIT\gestionVuelos\prjGestionVuelos\bin\Microsoft.QualityTools.Testing.Fakes.dll
+C:\Users\Sebastian\Documents\GIT\gestionVuelos\prjGestionVuelos\bin\es\Microsoft.QualityTools.Testing.Fakes.resources.dll

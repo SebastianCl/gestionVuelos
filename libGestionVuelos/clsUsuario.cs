@@ -24,6 +24,8 @@ namespace libGestionVuelos
         string strNickUsuario;
         string strClave;
         string strCedula;
+        int intCodUsuario;
+
         string strError;
         string strNombreApp;
         int intRpta;
@@ -83,6 +85,19 @@ namespace libGestionVuelos
             }
         }
 
+        public int CodigoUsuario
+        {
+            get
+            {
+                return intCodUsuario;
+            }
+
+            set
+            {
+                intCodUsuario = value;
+            }
+        }
+
         #endregion
 
         #region "Metodos Privados"
@@ -126,7 +141,7 @@ namespace libGestionVuelos
                     case "BUSCAR":
                         objParameterSQL = new SqlParameter[1];
 
-                        objParameterSQL[0] = new SqlParameter("@CODIGO_USUARIO", strCedula);
+                        objParameterSQL[0] = new SqlParameter("@NOMBRE_USUARIO", strNickUsuario);
                         break;
                     case "REGISTRAR":
                         objParameterSQL = new SqlParameter[3];
@@ -184,7 +199,7 @@ namespace libGestionVuelos
             }
         }
 
-        public bool BuscarUsuario()
+        public bool ObtenerCodigoUsuario()
         {
             try
             {
@@ -194,7 +209,7 @@ namespace libGestionVuelos
                     return false;
                 }
                 clsConexionBD objConexion = new clsConexionBD(strNombreApp);
-                objConexion.SQL = "SP_BuscarUsuario";
+                objConexion.SQL = "SP_ObtenerCodigoUsuario";
                 objConexion.ParametrosSQL = objParameterSQL;
 
                 if (!objConexion.Consultar(true, true))
@@ -209,16 +224,15 @@ namespace libGestionVuelos
 
                 if (!objReader.HasRows)
                 {
-                    strError = "El usuario con cédula " + strCedula + " no existe";
+                    strError = "El usuario " + strNickUsuario + " no existe";
                     objReader.Close();
                     objConexion = null;
                     return false;
                 }
                 objReader.Read();
-                strRol = objReader.GetString(1);
+                intCodUsuario = objReader.GetInt32(0);
                 objReader.Close();
                 return true;
-
             }
             catch (Exception ex)
             {

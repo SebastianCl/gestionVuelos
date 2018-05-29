@@ -1,0 +1,1328 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>libGestionVuelos.1.0.0.0.Fakes</name>
+    </assembly>
+    <members>
+        <member name="T:libGestionVuelos.Fakes.ShimclsAeropuerto">
+            <summary>Tipo de correcciones de compatibilidad (shim) de libGestionVuelos.clsAeropuerto</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.ShimclsAeropuerto.#ctor">
+            <summary>Inicializa una nueva instancia de correcciones de compatibilidad (shim)</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.ShimclsAeropuerto.#ctor(libGestionVuelos.clsAeropuerto)">
+            <summary>Inicializa nuevas correcciones de compatibilidad (shim) para la instancia especificada</summary>
+        </member>
+        <member name="T:libGestionVuelos.Fakes.ShimclsAeropuerto.AllInstances">
+            <summary>Definir correcciones de compatibilidad (shim) para todos los miembros de instancia</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAeropuerto.AllInstances.CiudadGet">
+            <summary>Establecer el shim de clsAeropuerto.get_Ciudad()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAeropuerto.AllInstances.CiudadSetString">
+            <summary>Establecer el shim de clsAeropuerto.set_Ciudad(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAeropuerto.AllInstances.CodigoAeropuertoGet">
+            <summary>Establecer el shim de clsAeropuerto.get_CodigoAeropuerto()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAeropuerto.AllInstances.CodigoAeropuertoSetString">
+            <summary>Establecer el shim de clsAeropuerto.set_CodigoAeropuerto(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAeropuerto.AllInstances.CodigoResponsableGet">
+            <summary>Establecer el shim de clsAeropuerto.get_CodigoResponsable()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAeropuerto.AllInstances.CodigoResponsableSetString">
+            <summary>Establecer el shim de clsAeropuerto.set_CodigoResponsable(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAeropuerto.AllInstances.ConsultarAeropuerto">
+            <summary>Establecer el shim de clsAeropuerto.ConsultarAeropuerto()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAeropuerto.AllInstances.CrearAeropuerto">
+            <summary>Establecer el shim de clsAeropuerto.CrearAeropuerto()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAeropuerto.AllInstances.CrearParametrosString">
+            <summary>Establecer el shim de clsAeropuerto.CrearParametros(String strTipo)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAeropuerto.AllInstances.ErrorGet">
+            <summary>Establecer el shim de clsAeropuerto.get_Error()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAeropuerto.AllInstances.EstadoGet">
+            <summary>Establecer el shim de clsAeropuerto.get_Estado()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAeropuerto.AllInstances.EstadoSetString">
+            <summary>Establecer el shim de clsAeropuerto.set_Estado(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAeropuerto.AllInstances.NombreGet">
+            <summary>Establecer el shim de clsAeropuerto.get_Nombre()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAeropuerto.AllInstances.NombreSetString">
+            <summary>Establecer el shim de clsAeropuerto.set_Nombre(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAeropuerto.AllInstances.PaisGet">
+            <summary>Establecer el shim de clsAeropuerto.get_Pais()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAeropuerto.AllInstances.PaisSetString">
+            <summary>Establecer el shim de clsAeropuerto.set_Pais(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAeropuerto.AllInstances.RespuestaGet">
+            <summary>Establecer el shim de clsAeropuerto.get_Respuesta()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAeropuerto.AllInstances.ValidarString">
+            <summary>Establecer el shim de clsAeropuerto.Validar(String strOpcion)</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.ShimclsAeropuerto.BehaveAsCurrent">
+            <summary>Asigna el comportamiento &apos;Current&apos; a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.ShimclsAeropuerto.BehaveAsNotImplemented">
+            <summary>Asigna el comportamiento &apos;NotImplemented&apos; a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAeropuerto.Behavior">
+            <summary>Asigna el comportamiento a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAeropuerto.CiudadGet">
+            <summary>Establecer el shim de clsAeropuerto.get_Ciudad()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAeropuerto.CiudadSetString">
+            <summary>Establecer el shim de clsAeropuerto.set_Ciudad(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAeropuerto.CodigoAeropuertoGet">
+            <summary>Establecer el shim de clsAeropuerto.get_CodigoAeropuerto()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAeropuerto.CodigoAeropuertoSetString">
+            <summary>Establecer el shim de clsAeropuerto.set_CodigoAeropuerto(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAeropuerto.CodigoResponsableGet">
+            <summary>Establecer el shim de clsAeropuerto.get_CodigoResponsable()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAeropuerto.CodigoResponsableSetString">
+            <summary>Establecer el shim de clsAeropuerto.set_CodigoResponsable(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAeropuerto.ConstructorString">
+            <summary>Establecer el shim de clsAeropuerto.clsAeropuerto(String strNomApp)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAeropuerto.ConsultarAeropuerto">
+            <summary>Establecer el shim de clsAeropuerto.ConsultarAeropuerto()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAeropuerto.CrearAeropuerto">
+            <summary>Establecer el shim de clsAeropuerto.CrearAeropuerto()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAeropuerto.CrearParametrosString">
+            <summary>Establecer el shim de clsAeropuerto.CrearParametros(String strTipo)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAeropuerto.ErrorGet">
+            <summary>Establecer el shim de clsAeropuerto.get_Error()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAeropuerto.EstadoGet">
+            <summary>Establecer el shim de clsAeropuerto.get_Estado()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAeropuerto.EstadoSetString">
+            <summary>Establecer el shim de clsAeropuerto.set_Estado(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAeropuerto.NombreGet">
+            <summary>Establecer el shim de clsAeropuerto.get_Nombre()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAeropuerto.NombreSetString">
+            <summary>Establecer el shim de clsAeropuerto.set_Nombre(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAeropuerto.PaisGet">
+            <summary>Establecer el shim de clsAeropuerto.get_Pais()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAeropuerto.PaisSetString">
+            <summary>Establecer el shim de clsAeropuerto.set_Pais(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAeropuerto.RespuestaGet">
+            <summary>Establecer el shim de clsAeropuerto.get_Respuesta()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAeropuerto.ValidarString">
+            <summary>Establecer el shim de clsAeropuerto.Validar(String strOpcion)</summary>
+        </member>
+        <member name="T:libGestionVuelos.Fakes.ShimclsAvion">
+            <summary>Tipo de correcciones de compatibilidad (shim) de libGestionVuelos.clsAvion</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.ShimclsAvion.#ctor">
+            <summary>Inicializa una nueva instancia de correcciones de compatibilidad (shim)</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.ShimclsAvion.#ctor(libGestionVuelos.clsAvion)">
+            <summary>Inicializa nuevas correcciones de compatibilidad (shim) para la instancia especificada</summary>
+        </member>
+        <member name="T:libGestionVuelos.Fakes.ShimclsAvion.AllInstances">
+            <summary>Definir correcciones de compatibilidad (shim) para todos los miembros de instancia</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAvion.AllInstances.CapacidadGet">
+            <summary>Establecer el shim de clsAvion.get_Capacidad()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAvion.AllInstances.CapacidadSetInt32">
+            <summary>Establecer el shim de clsAvion.set_Capacidad(Int32 value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAvion.AllInstances.CodLineaGet">
+            <summary>Establecer el shim de clsAvion.get_CodLinea()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAvion.AllInstances.CodLineaSetString">
+            <summary>Establecer el shim de clsAvion.set_CodLinea(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAvion.AllInstances.CodigoAvionGet">
+            <summary>Establecer el shim de clsAvion.get_CodigoAvion()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAvion.AllInstances.CodigoAvionSetString">
+            <summary>Establecer el shim de clsAvion.set_CodigoAvion(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAvion.AllInstances.ConsultarAvion">
+            <summary>Establecer el shim de clsAvion.ConsultarAvion()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAvion.AllInstances.CrearAvion">
+            <summary>Establecer el shim de clsAvion.CrearAvion()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAvion.AllInstances.CrearParametrosString">
+            <summary>Establecer el shim de clsAvion.CrearParametros(String strTipo)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAvion.AllInstances.ErrorGet">
+            <summary>Establecer el shim de clsAvion.get_Error()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAvion.AllInstances.ModeloGet">
+            <summary>Establecer el shim de clsAvion.get_Modelo()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAvion.AllInstances.ModeloSetString">
+            <summary>Establecer el shim de clsAvion.set_Modelo(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAvion.AllInstances.RespuestaGet">
+            <summary>Establecer el shim de clsAvion.get_Respuesta()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAvion.AllInstances.ValidarString">
+            <summary>Establecer el shim de clsAvion.Validar(String strOpcion)</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.ShimclsAvion.BehaveAsCurrent">
+            <summary>Asigna el comportamiento &apos;Current&apos; a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.ShimclsAvion.BehaveAsNotImplemented">
+            <summary>Asigna el comportamiento &apos;NotImplemented&apos; a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAvion.Behavior">
+            <summary>Asigna el comportamiento a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAvion.CapacidadGet">
+            <summary>Establecer el shim de clsAvion.get_Capacidad()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAvion.CapacidadSetInt32">
+            <summary>Establecer el shim de clsAvion.set_Capacidad(Int32 value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAvion.CodLineaGet">
+            <summary>Establecer el shim de clsAvion.get_CodLinea()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAvion.CodLineaSetString">
+            <summary>Establecer el shim de clsAvion.set_CodLinea(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAvion.CodigoAvionGet">
+            <summary>Establecer el shim de clsAvion.get_CodigoAvion()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAvion.CodigoAvionSetString">
+            <summary>Establecer el shim de clsAvion.set_CodigoAvion(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAvion.ConstructorString">
+            <summary>Establecer el shim de clsAvion.clsAvion(String strNomApp)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAvion.ConsultarAvion">
+            <summary>Establecer el shim de clsAvion.ConsultarAvion()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAvion.CrearAvion">
+            <summary>Establecer el shim de clsAvion.CrearAvion()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAvion.CrearParametrosString">
+            <summary>Establecer el shim de clsAvion.CrearParametros(String strTipo)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAvion.ErrorGet">
+            <summary>Establecer el shim de clsAvion.get_Error()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAvion.ModeloGet">
+            <summary>Establecer el shim de clsAvion.get_Modelo()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAvion.ModeloSetString">
+            <summary>Establecer el shim de clsAvion.set_Modelo(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAvion.RespuestaGet">
+            <summary>Establecer el shim de clsAvion.get_Respuesta()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsAvion.ValidarString">
+            <summary>Establecer el shim de clsAvion.Validar(String strOpcion)</summary>
+        </member>
+        <member name="T:libGestionVuelos.Fakes.ShimclsEscalaTecnica">
+            <summary>Tipo de correcciones de compatibilidad (shim) de libGestionVuelos.clsEscalaTecnica</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.ShimclsEscalaTecnica.#ctor">
+            <summary>Inicializa una nueva instancia de correcciones de compatibilidad (shim)</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.ShimclsEscalaTecnica.#ctor(libGestionVuelos.clsEscalaTecnica)">
+            <summary>Inicializa nuevas correcciones de compatibilidad (shim) para la instancia especificada</summary>
+        </member>
+        <member name="T:libGestionVuelos.Fakes.ShimclsEscalaTecnica.AllInstances">
+            <summary>Definir correcciones de compatibilidad (shim) para todos los miembros de instancia</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsEscalaTecnica.AllInstances.CodEscalaTecnicaGet">
+            <summary>Establecer el shim de clsEscalaTecnica.get_CodEscalaTecnica()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsEscalaTecnica.AllInstances.CodEscalaTecnicaSetString">
+            <summary>Establecer el shim de clsEscalaTecnica.set_CodEscalaTecnica(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsEscalaTecnica.AllInstances.CodigoAeropuertoGet">
+            <summary>Establecer el shim de clsEscalaTecnica.get_CodigoAeropuerto()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsEscalaTecnica.AllInstances.CodigoAeropuertoSetString">
+            <summary>Establecer el shim de clsEscalaTecnica.set_CodigoAeropuerto(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsEscalaTecnica.AllInstances.ConsultarEscalaTenica">
+            <summary>Establecer el shim de clsEscalaTecnica.ConsultarEscalaTenica()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsEscalaTecnica.AllInstances.CrearEscalaTecnica">
+            <summary>Establecer el shim de clsEscalaTecnica.CrearEscalaTecnica()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsEscalaTecnica.AllInstances.CrearParametrosString">
+            <summary>Establecer el shim de clsEscalaTecnica.CrearParametros(String strTipo)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsEscalaTecnica.AllInstances.ErrorGet">
+            <summary>Establecer el shim de clsEscalaTecnica.get_Error()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsEscalaTecnica.AllInstances.RespuestaGet">
+            <summary>Establecer el shim de clsEscalaTecnica.get_Respuesta()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsEscalaTecnica.AllInstances.ValidarString">
+            <summary>Establecer el shim de clsEscalaTecnica.Validar(String strOpcion)</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.ShimclsEscalaTecnica.BehaveAsCurrent">
+            <summary>Asigna el comportamiento &apos;Current&apos; a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.ShimclsEscalaTecnica.BehaveAsNotImplemented">
+            <summary>Asigna el comportamiento &apos;NotImplemented&apos; a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsEscalaTecnica.Behavior">
+            <summary>Asigna el comportamiento a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsEscalaTecnica.CodEscalaTecnicaGet">
+            <summary>Establecer el shim de clsEscalaTecnica.get_CodEscalaTecnica()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsEscalaTecnica.CodEscalaTecnicaSetString">
+            <summary>Establecer el shim de clsEscalaTecnica.set_CodEscalaTecnica(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsEscalaTecnica.CodigoAeropuertoGet">
+            <summary>Establecer el shim de clsEscalaTecnica.get_CodigoAeropuerto()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsEscalaTecnica.CodigoAeropuertoSetString">
+            <summary>Establecer el shim de clsEscalaTecnica.set_CodigoAeropuerto(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsEscalaTecnica.ConstructorString">
+            <summary>Establecer el shim de clsEscalaTecnica.clsEscalaTecnica(String strNomApp)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsEscalaTecnica.ConsultarEscalaTenica">
+            <summary>Establecer el shim de clsEscalaTecnica.ConsultarEscalaTenica()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsEscalaTecnica.CrearEscalaTecnica">
+            <summary>Establecer el shim de clsEscalaTecnica.CrearEscalaTecnica()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsEscalaTecnica.CrearParametrosString">
+            <summary>Establecer el shim de clsEscalaTecnica.CrearParametros(String strTipo)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsEscalaTecnica.ErrorGet">
+            <summary>Establecer el shim de clsEscalaTecnica.get_Error()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsEscalaTecnica.RespuestaGet">
+            <summary>Establecer el shim de clsEscalaTecnica.get_Respuesta()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsEscalaTecnica.ValidarString">
+            <summary>Establecer el shim de clsEscalaTecnica.Validar(String strOpcion)</summary>
+        </member>
+        <member name="T:libGestionVuelos.Fakes.ShimclsLineaAerea">
+            <summary>Tipo de correcciones de compatibilidad (shim) de libGestionVuelos.clsLineaAerea</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.ShimclsLineaAerea.#ctor">
+            <summary>Inicializa una nueva instancia de correcciones de compatibilidad (shim)</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.ShimclsLineaAerea.#ctor(libGestionVuelos.clsLineaAerea)">
+            <summary>Inicializa nuevas correcciones de compatibilidad (shim) para la instancia especificada</summary>
+        </member>
+        <member name="T:libGestionVuelos.Fakes.ShimclsLineaAerea.AllInstances">
+            <summary>Definir correcciones de compatibilidad (shim) para todos los miembros de instancia</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsLineaAerea.AllInstances.CodLineaAereaGet">
+            <summary>Establecer el shim de clsLineaAerea.get_CodLineaAerea()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsLineaAerea.AllInstances.CodLineaAereaSetString">
+            <summary>Establecer el shim de clsLineaAerea.set_CodLineaAerea(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsLineaAerea.AllInstances.ConsultarLineaAerea">
+            <summary>Establecer el shim de clsLineaAerea.ConsultarLineaAerea()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsLineaAerea.AllInstances.CrearParametrosString">
+            <summary>Establecer el shim de clsLineaAerea.CrearParametros(String strTipo)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsLineaAerea.AllInstances.Crear_Linea_Aerea">
+            <summary>Establecer el shim de clsLineaAerea.Crear_Linea_Aerea()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsLineaAerea.AllInstances.ErrorGet">
+            <summary>Establecer el shim de clsLineaAerea.get_Error()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsLineaAerea.AllInstances.NombreLineaAereaGet">
+            <summary>Establecer el shim de clsLineaAerea.get_NombreLineaAerea()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsLineaAerea.AllInstances.NombreLineaAereaSetString">
+            <summary>Establecer el shim de clsLineaAerea.set_NombreLineaAerea(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsLineaAerea.AllInstances.PaisGet">
+            <summary>Establecer el shim de clsLineaAerea.get_Pais()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsLineaAerea.AllInstances.PaisSetString">
+            <summary>Establecer el shim de clsLineaAerea.set_Pais(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsLineaAerea.AllInstances.RespuestaGet">
+            <summary>Establecer el shim de clsLineaAerea.get_Respuesta()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsLineaAerea.AllInstances.ValidarString">
+            <summary>Establecer el shim de clsLineaAerea.Validar(String strOpcion)</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.ShimclsLineaAerea.BehaveAsCurrent">
+            <summary>Asigna el comportamiento &apos;Current&apos; a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.ShimclsLineaAerea.BehaveAsNotImplemented">
+            <summary>Asigna el comportamiento &apos;NotImplemented&apos; a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsLineaAerea.Behavior">
+            <summary>Asigna el comportamiento a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsLineaAerea.CodLineaAereaGet">
+            <summary>Establecer el shim de clsLineaAerea.get_CodLineaAerea()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsLineaAerea.CodLineaAereaSetString">
+            <summary>Establecer el shim de clsLineaAerea.set_CodLineaAerea(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsLineaAerea.ConstructorString">
+            <summary>Establecer el shim de clsLineaAerea.clsLineaAerea(String strNomApp)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsLineaAerea.ConsultarLineaAerea">
+            <summary>Establecer el shim de clsLineaAerea.ConsultarLineaAerea()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsLineaAerea.CrearParametrosString">
+            <summary>Establecer el shim de clsLineaAerea.CrearParametros(String strTipo)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsLineaAerea.Crear_Linea_Aerea">
+            <summary>Establecer el shim de clsLineaAerea.Crear_Linea_Aerea()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsLineaAerea.ErrorGet">
+            <summary>Establecer el shim de clsLineaAerea.get_Error()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsLineaAerea.NombreLineaAereaGet">
+            <summary>Establecer el shim de clsLineaAerea.get_NombreLineaAerea()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsLineaAerea.NombreLineaAereaSetString">
+            <summary>Establecer el shim de clsLineaAerea.set_NombreLineaAerea(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsLineaAerea.PaisGet">
+            <summary>Establecer el shim de clsLineaAerea.get_Pais()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsLineaAerea.PaisSetString">
+            <summary>Establecer el shim de clsLineaAerea.set_Pais(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsLineaAerea.RespuestaGet">
+            <summary>Establecer el shim de clsLineaAerea.get_Respuesta()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsLineaAerea.ValidarString">
+            <summary>Establecer el shim de clsLineaAerea.Validar(String strOpcion)</summary>
+        </member>
+        <member name="T:libGestionVuelos.Fakes.ShimclsLogin">
+            <summary>Tipo de correcciones de compatibilidad (shim) de libGestionVuelos.clsLogin</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.ShimclsLogin.#ctor">
+            <summary>Inicializa una nueva instancia de correcciones de compatibilidad (shim)</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.ShimclsLogin.#ctor(libGestionVuelos.clsLogin)">
+            <summary>Inicializa nuevas correcciones de compatibilidad (shim) para la instancia especificada</summary>
+        </member>
+        <member name="T:libGestionVuelos.Fakes.ShimclsLogin.AllInstances">
+            <summary>Definir correcciones de compatibilidad (shim) para todos los miembros de instancia</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsLogin.AllInstances.ClaveSetString">
+            <summary>Establecer el shim de clsLogin.set_Clave(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsLogin.AllInstances.ConsultarROl">
+            <summary>Establecer el shim de clsLogin.ConsultarROl()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsLogin.AllInstances.CrearParametrosString">
+            <summary>Establecer el shim de clsLogin.CrearParametros(String strTipo)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsLogin.AllInstances.ErrorGet">
+            <summary>Establecer el shim de clsLogin.get_Error()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsLogin.AllInstances.Logueo">
+            <summary>Establecer el shim de clsLogin.Logueo()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsLogin.AllInstances.RespuestaGet">
+            <summary>Establecer el shim de clsLogin.get_Respuesta()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsLogin.AllInstances.RolGet">
+            <summary>Establecer el shim de clsLogin.get_Rol()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsLogin.AllInstances.UsuarioSetString">
+            <summary>Establecer el shim de clsLogin.set_Usuario(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsLogin.AllInstances.Validar">
+            <summary>Establecer el shim de clsLogin.Validar()</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.ShimclsLogin.BehaveAsCurrent">
+            <summary>Asigna el comportamiento &apos;Current&apos; a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.ShimclsLogin.BehaveAsNotImplemented">
+            <summary>Asigna el comportamiento &apos;NotImplemented&apos; a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsLogin.Behavior">
+            <summary>Asigna el comportamiento a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsLogin.ClaveSetString">
+            <summary>Establecer el shim de clsLogin.set_Clave(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsLogin.ConstructorString">
+            <summary>Establecer el shim de clsLogin.clsLogin(String strNombreAplicacion)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsLogin.ConsultarROl">
+            <summary>Establecer el shim de clsLogin.ConsultarROl()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsLogin.CrearParametrosString">
+            <summary>Establecer el shim de clsLogin.CrearParametros(String strTipo)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsLogin.ErrorGet">
+            <summary>Establecer el shim de clsLogin.get_Error()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsLogin.Logueo">
+            <summary>Establecer el shim de clsLogin.Logueo()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsLogin.RespuestaGet">
+            <summary>Establecer el shim de clsLogin.get_Respuesta()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsLogin.RolGet">
+            <summary>Establecer el shim de clsLogin.get_Rol()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsLogin.UsuarioSetString">
+            <summary>Establecer el shim de clsLogin.set_Usuario(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsLogin.Validar">
+            <summary>Establecer el shim de clsLogin.Validar()</summary>
+        </member>
+        <member name="T:libGestionVuelos.Fakes.ShimclsPersona">
+            <summary>Tipo de correcciones de compatibilidad (shim) de libGestionVuelos.clsPersona</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.ShimclsPersona.#ctor">
+            <summary>Inicializa una nueva instancia de correcciones de compatibilidad (shim)</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.ShimclsPersona.#ctor(libGestionVuelos.clsPersona)">
+            <summary>Inicializa nuevas correcciones de compatibilidad (shim) para la instancia especificada</summary>
+        </member>
+        <member name="T:libGestionVuelos.Fakes.ShimclsPersona.AllInstances">
+            <summary>Definir correcciones de compatibilidad (shim) para todos los miembros de instancia</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPersona.AllInstances.CiudadGet">
+            <summary>Establecer el shim de clsPersona.get_Ciudad()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPersona.AllInstances.CiudadSetString">
+            <summary>Establecer el shim de clsPersona.set_Ciudad(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPersona.AllInstances.CodUsuarioGet">
+            <summary>Establecer el shim de clsPersona.get_CodUsuario()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPersona.AllInstances.CodUsuarioSetInt32">
+            <summary>Establecer el shim de clsPersona.set_CodUsuario(Int32 value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPersona.AllInstances.ConsultarPersona">
+            <summary>Establecer el shim de clsPersona.ConsultarPersona()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPersona.AllInstances.CrearParametrosString">
+            <summary>Establecer el shim de clsPersona.CrearParametros(String strTipo)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPersona.AllInstances.CrearPersona">
+            <summary>Establecer el shim de clsPersona.CrearPersona()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPersona.AllInstances.ErrorGet">
+            <summary>Establecer el shim de clsPersona.get_Error()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPersona.AllInstances.IdentificacionGet">
+            <summary>Establecer el shim de clsPersona.get_Identificacion()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPersona.AllInstances.IdentificacionSetString">
+            <summary>Establecer el shim de clsPersona.set_Identificacion(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPersona.AllInstances.NickSetString">
+            <summary>Establecer el shim de clsPersona.set_Nick(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPersona.AllInstances.NombreGet">
+            <summary>Establecer el shim de clsPersona.get_Nombre()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPersona.AllInstances.NombreSetString">
+            <summary>Establecer el shim de clsPersona.set_Nombre(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPersona.AllInstances.RespuestaGet">
+            <summary>Establecer el shim de clsPersona.get_Respuesta()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPersona.AllInstances.ValidarIdentificacion">
+            <summary>Establecer el shim de clsPersona.ValidarIdentificacion()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPersona.AllInstances.ValidarString">
+            <summary>Establecer el shim de clsPersona.Validar(String strOpcion)</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.ShimclsPersona.BehaveAsCurrent">
+            <summary>Asigna el comportamiento &apos;Current&apos; a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.ShimclsPersona.BehaveAsNotImplemented">
+            <summary>Asigna el comportamiento &apos;NotImplemented&apos; a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPersona.Behavior">
+            <summary>Asigna el comportamiento a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPersona.CiudadGet">
+            <summary>Establecer el shim de clsPersona.get_Ciudad()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPersona.CiudadSetString">
+            <summary>Establecer el shim de clsPersona.set_Ciudad(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPersona.CodUsuarioGet">
+            <summary>Establecer el shim de clsPersona.get_CodUsuario()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPersona.CodUsuarioSetInt32">
+            <summary>Establecer el shim de clsPersona.set_CodUsuario(Int32 value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPersona.ConstructorString">
+            <summary>Establecer el shim de clsPersona.clsPersona(String strNomApp)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPersona.ConsultarPersona">
+            <summary>Establecer el shim de clsPersona.ConsultarPersona()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPersona.CrearParametrosString">
+            <summary>Establecer el shim de clsPersona.CrearParametros(String strTipo)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPersona.CrearPersona">
+            <summary>Establecer el shim de clsPersona.CrearPersona()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPersona.ErrorGet">
+            <summary>Establecer el shim de clsPersona.get_Error()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPersona.IdentificacionGet">
+            <summary>Establecer el shim de clsPersona.get_Identificacion()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPersona.IdentificacionSetString">
+            <summary>Establecer el shim de clsPersona.set_Identificacion(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPersona.NickSetString">
+            <summary>Establecer el shim de clsPersona.set_Nick(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPersona.NombreGet">
+            <summary>Establecer el shim de clsPersona.get_Nombre()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPersona.NombreSetString">
+            <summary>Establecer el shim de clsPersona.set_Nombre(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPersona.RespuestaGet">
+            <summary>Establecer el shim de clsPersona.get_Respuesta()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPersona.ValidarIdentificacion">
+            <summary>Establecer el shim de clsPersona.ValidarIdentificacion()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPersona.ValidarString">
+            <summary>Establecer el shim de clsPersona.Validar(String strOpcion)</summary>
+        </member>
+        <member name="T:libGestionVuelos.Fakes.ShimclsPiloto">
+            <summary>Tipo de correcciones de compatibilidad (shim) de libGestionVuelos.clsPiloto</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.ShimclsPiloto.#ctor">
+            <summary>Inicializa una nueva instancia de correcciones de compatibilidad (shim)</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.ShimclsPiloto.#ctor(libGestionVuelos.clsPiloto)">
+            <summary>Inicializa nuevas correcciones de compatibilidad (shim) para la instancia especificada</summary>
+        </member>
+        <member name="T:libGestionVuelos.Fakes.ShimclsPiloto.AllInstances">
+            <summary>Definir correcciones de compatibilidad (shim) para todos los miembros de instancia</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPiloto.AllInstances.CiudadGet">
+            <summary>Establecer el shim de clsPiloto.get_Ciudad()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPiloto.AllInstances.CiudadSetString">
+            <summary>Establecer el shim de clsPiloto.set_Ciudad(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPiloto.AllInstances.Codigo_LineaGet">
+            <summary>Establecer el shim de clsPiloto.get_Codigo_Linea()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPiloto.AllInstances.Codigo_LineaSetString">
+            <summary>Establecer el shim de clsPiloto.set_Codigo_Linea(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPiloto.AllInstances.Codigo_UsuarioGet">
+            <summary>Establecer el shim de clsPiloto.get_Codigo_Usuario()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPiloto.AllInstances.Codigo_UsuarioSetInt32">
+            <summary>Establecer el shim de clsPiloto.set_Codigo_Usuario(Int32 value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPiloto.AllInstances.ConsultarPiloto">
+            <summary>Establecer el shim de clsPiloto.ConsultarPiloto()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPiloto.AllInstances.CrearParametrosString">
+            <summary>Establecer el shim de clsPiloto.CrearParametros(String strTipo)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPiloto.AllInstances.CrearPiloto">
+            <summary>Establecer el shim de clsPiloto.CrearPiloto()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPiloto.AllInstances.DireccionGet">
+            <summary>Establecer el shim de clsPiloto.get_Direccion()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPiloto.AllInstances.DireccionSetString">
+            <summary>Establecer el shim de clsPiloto.set_Direccion(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPiloto.AllInstances.ErrorGet">
+            <summary>Establecer el shim de clsPiloto.get_Error()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPiloto.AllInstances.IdentificacionGet">
+            <summary>Establecer el shim de clsPiloto.get_Identificacion()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPiloto.AllInstances.IdentificacionSetString">
+            <summary>Establecer el shim de clsPiloto.set_Identificacion(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPiloto.AllInstances.NickGet">
+            <summary>Establecer el shim de clsPiloto.get_Nick()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPiloto.AllInstances.NickSetString">
+            <summary>Establecer el shim de clsPiloto.set_Nick(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPiloto.AllInstances.NombreGet">
+            <summary>Establecer el shim de clsPiloto.get_Nombre()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPiloto.AllInstances.NombreSetString">
+            <summary>Establecer el shim de clsPiloto.set_Nombre(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPiloto.AllInstances.ObtenerIdUsuario">
+            <summary>Establecer el shim de clsPiloto.ObtenerIdUsuario()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPiloto.AllInstances.RespuestaGet">
+            <summary>Establecer el shim de clsPiloto.get_Respuesta()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPiloto.AllInstances.TelefonoGet">
+            <summary>Establecer el shim de clsPiloto.get_Telefono()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPiloto.AllInstances.TelefonoSetString">
+            <summary>Establecer el shim de clsPiloto.set_Telefono(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPiloto.AllInstances.ValidarString">
+            <summary>Establecer el shim de clsPiloto.Validar(String strOpcion)</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.ShimclsPiloto.BehaveAsCurrent">
+            <summary>Asigna el comportamiento &apos;Current&apos; a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.ShimclsPiloto.BehaveAsNotImplemented">
+            <summary>Asigna el comportamiento &apos;NotImplemented&apos; a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPiloto.Behavior">
+            <summary>Asigna el comportamiento a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPiloto.CiudadGet">
+            <summary>Establecer el shim de clsPiloto.get_Ciudad()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPiloto.CiudadSetString">
+            <summary>Establecer el shim de clsPiloto.set_Ciudad(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPiloto.Codigo_LineaGet">
+            <summary>Establecer el shim de clsPiloto.get_Codigo_Linea()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPiloto.Codigo_LineaSetString">
+            <summary>Establecer el shim de clsPiloto.set_Codigo_Linea(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPiloto.Codigo_UsuarioGet">
+            <summary>Establecer el shim de clsPiloto.get_Codigo_Usuario()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPiloto.Codigo_UsuarioSetInt32">
+            <summary>Establecer el shim de clsPiloto.set_Codigo_Usuario(Int32 value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPiloto.ConstructorString">
+            <summary>Establecer el shim de clsPiloto.clsPiloto(String strNomApp)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPiloto.ConsultarPiloto">
+            <summary>Establecer el shim de clsPiloto.ConsultarPiloto()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPiloto.CrearParametrosString">
+            <summary>Establecer el shim de clsPiloto.CrearParametros(String strTipo)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPiloto.CrearPiloto">
+            <summary>Establecer el shim de clsPiloto.CrearPiloto()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPiloto.DireccionGet">
+            <summary>Establecer el shim de clsPiloto.get_Direccion()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPiloto.DireccionSetString">
+            <summary>Establecer el shim de clsPiloto.set_Direccion(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPiloto.ErrorGet">
+            <summary>Establecer el shim de clsPiloto.get_Error()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPiloto.IdentificacionGet">
+            <summary>Establecer el shim de clsPiloto.get_Identificacion()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPiloto.IdentificacionSetString">
+            <summary>Establecer el shim de clsPiloto.set_Identificacion(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPiloto.NickGet">
+            <summary>Establecer el shim de clsPiloto.get_Nick()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPiloto.NickSetString">
+            <summary>Establecer el shim de clsPiloto.set_Nick(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPiloto.NombreGet">
+            <summary>Establecer el shim de clsPiloto.get_Nombre()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPiloto.NombreSetString">
+            <summary>Establecer el shim de clsPiloto.set_Nombre(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPiloto.ObtenerIdUsuario">
+            <summary>Establecer el shim de clsPiloto.ObtenerIdUsuario()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPiloto.RespuestaGet">
+            <summary>Establecer el shim de clsPiloto.get_Respuesta()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPiloto.TelefonoGet">
+            <summary>Establecer el shim de clsPiloto.get_Telefono()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPiloto.TelefonoSetString">
+            <summary>Establecer el shim de clsPiloto.set_Telefono(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPiloto.ValidarString">
+            <summary>Establecer el shim de clsPiloto.Validar(String strOpcion)</summary>
+        </member>
+        <member name="T:libGestionVuelos.Fakes.ShimclsPlanVuelo">
+            <summary>Tipo de correcciones de compatibilidad (shim) de libGestionVuelos.clsPlanVuelo</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.ShimclsPlanVuelo.#ctor">
+            <summary>Inicializa una nueva instancia de correcciones de compatibilidad (shim)</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.ShimclsPlanVuelo.#ctor(libGestionVuelos.clsPlanVuelo)">
+            <summary>Inicializa nuevas correcciones de compatibilidad (shim) para la instancia especificada</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPlanVuelo.AeropuertoLlegadaGet">
+            <summary>Establecer el shim de clsPlanVuelo.get_AeropuertoLlegada()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPlanVuelo.AeropuertoLlegadaSetString">
+            <summary>Establecer el shim de clsPlanVuelo.set_AeropuertoLlegada(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPlanVuelo.AeropuertoPartidaGet">
+            <summary>Establecer el shim de clsPlanVuelo.get_AeropuertoPartida()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPlanVuelo.AeropuertoPartidaSetString">
+            <summary>Establecer el shim de clsPlanVuelo.set_AeropuertoPartida(String value)</summary>
+        </member>
+        <member name="T:libGestionVuelos.Fakes.ShimclsPlanVuelo.AllInstances">
+            <summary>Definir correcciones de compatibilidad (shim) para todos los miembros de instancia</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPlanVuelo.AllInstances.AeropuertoLlegadaGet">
+            <summary>Establecer el shim de clsPlanVuelo.get_AeropuertoLlegada()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPlanVuelo.AllInstances.AeropuertoLlegadaSetString">
+            <summary>Establecer el shim de clsPlanVuelo.set_AeropuertoLlegada(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPlanVuelo.AllInstances.AeropuertoPartidaGet">
+            <summary>Establecer el shim de clsPlanVuelo.get_AeropuertoPartida()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPlanVuelo.AllInstances.AeropuertoPartidaSetString">
+            <summary>Establecer el shim de clsPlanVuelo.set_AeropuertoPartida(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPlanVuelo.AllInstances.CodigoEscalaTGet">
+            <summary>Establecer el shim de clsPlanVuelo.get_CodigoEscalaT()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPlanVuelo.AllInstances.CodigoEscalaTSetString">
+            <summary>Establecer el shim de clsPlanVuelo.set_CodigoEscalaT(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPlanVuelo.AllInstances.CodigoLineaAGet">
+            <summary>Establecer el shim de clsPlanVuelo.get_CodigoLineaA()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPlanVuelo.AllInstances.CodigoLineaASetString">
+            <summary>Establecer el shim de clsPlanVuelo.set_CodigoLineaA(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPlanVuelo.AllInstances.CodigoVueloGet">
+            <summary>Establecer el shim de clsPlanVuelo.get_CodigoVuelo()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPlanVuelo.AllInstances.CodigoVueloSetString">
+            <summary>Establecer el shim de clsPlanVuelo.set_CodigoVuelo(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPlanVuelo.AllInstances.ConsultarPlanVuelo">
+            <summary>Establecer el shim de clsPlanVuelo.ConsultarPlanVuelo()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPlanVuelo.AllInstances.CrearParametrosString">
+            <summary>Establecer el shim de clsPlanVuelo.CrearParametros(String strTipo)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPlanVuelo.AllInstances.CrearPlanVuelo">
+            <summary>Establecer el shim de clsPlanVuelo.CrearPlanVuelo()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPlanVuelo.AllInstances.ErrorGet">
+            <summary>Establecer el shim de clsPlanVuelo.get_Error()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPlanVuelo.AllInstances.PlanVueloGet">
+            <summary>Establecer el shim de clsPlanVuelo.get_PlanVuelo()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPlanVuelo.AllInstances.PlanVueloSetString">
+            <summary>Establecer el shim de clsPlanVuelo.set_PlanVuelo(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPlanVuelo.AllInstances.RespuestaGet">
+            <summary>Establecer el shim de clsPlanVuelo.get_Respuesta()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPlanVuelo.AllInstances.ValidarString">
+            <summary>Establecer el shim de clsPlanVuelo.Validar(String strOpcion)</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.ShimclsPlanVuelo.BehaveAsCurrent">
+            <summary>Asigna el comportamiento &apos;Current&apos; a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.ShimclsPlanVuelo.BehaveAsNotImplemented">
+            <summary>Asigna el comportamiento &apos;NotImplemented&apos; a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPlanVuelo.Behavior">
+            <summary>Asigna el comportamiento a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPlanVuelo.CodigoEscalaTGet">
+            <summary>Establecer el shim de clsPlanVuelo.get_CodigoEscalaT()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPlanVuelo.CodigoEscalaTSetString">
+            <summary>Establecer el shim de clsPlanVuelo.set_CodigoEscalaT(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPlanVuelo.CodigoLineaAGet">
+            <summary>Establecer el shim de clsPlanVuelo.get_CodigoLineaA()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPlanVuelo.CodigoLineaASetString">
+            <summary>Establecer el shim de clsPlanVuelo.set_CodigoLineaA(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPlanVuelo.CodigoVueloGet">
+            <summary>Establecer el shim de clsPlanVuelo.get_CodigoVuelo()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPlanVuelo.CodigoVueloSetString">
+            <summary>Establecer el shim de clsPlanVuelo.set_CodigoVuelo(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPlanVuelo.ConstructorString">
+            <summary>Establecer el shim de clsPlanVuelo.clsPlanVuelo(String strNomApp)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPlanVuelo.ConsultarPlanVuelo">
+            <summary>Establecer el shim de clsPlanVuelo.ConsultarPlanVuelo()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPlanVuelo.CrearParametrosString">
+            <summary>Establecer el shim de clsPlanVuelo.CrearParametros(String strTipo)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPlanVuelo.CrearPlanVuelo">
+            <summary>Establecer el shim de clsPlanVuelo.CrearPlanVuelo()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPlanVuelo.ErrorGet">
+            <summary>Establecer el shim de clsPlanVuelo.get_Error()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPlanVuelo.PlanVueloGet">
+            <summary>Establecer el shim de clsPlanVuelo.get_PlanVuelo()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPlanVuelo.PlanVueloSetString">
+            <summary>Establecer el shim de clsPlanVuelo.set_PlanVuelo(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPlanVuelo.RespuestaGet">
+            <summary>Establecer el shim de clsPlanVuelo.get_Respuesta()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsPlanVuelo.ValidarString">
+            <summary>Establecer el shim de clsPlanVuelo.Validar(String strOpcion)</summary>
+        </member>
+        <member name="T:libGestionVuelos.Fakes.ShimclsUsuario">
+            <summary>Tipo de correcciones de compatibilidad (shim) de libGestionVuelos.clsUsuario</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.ShimclsUsuario.#ctor">
+            <summary>Inicializa una nueva instancia de correcciones de compatibilidad (shim)</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.ShimclsUsuario.#ctor(libGestionVuelos.clsUsuario)">
+            <summary>Inicializa nuevas correcciones de compatibilidad (shim) para la instancia especificada</summary>
+        </member>
+        <member name="T:libGestionVuelos.Fakes.ShimclsUsuario.AllInstances">
+            <summary>Definir correcciones de compatibilidad (shim) para todos los miembros de instancia</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsUsuario.AllInstances.CedulaSetString">
+            <summary>Establecer el shim de clsUsuario.set_Cedula(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsUsuario.AllInstances.ClaveSetString">
+            <summary>Establecer el shim de clsUsuario.set_Clave(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsUsuario.AllInstances.CodigoUsuarioGet">
+            <summary>Establecer el shim de clsUsuario.get_CodigoUsuario()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsUsuario.AllInstances.CodigoUsuarioSetInt32">
+            <summary>Establecer el shim de clsUsuario.set_CodigoUsuario(Int32 value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsUsuario.AllInstances.CrearParametrosString">
+            <summary>Establecer el shim de clsUsuario.CrearParametros(String strTipo)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsUsuario.AllInstances.CrearUsuario">
+            <summary>Establecer el shim de clsUsuario.CrearUsuario()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsUsuario.AllInstances.ErrorGet">
+            <summary>Establecer el shim de clsUsuario.get_Error()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsUsuario.AllInstances.NickUsuarioSetString">
+            <summary>Establecer el shim de clsUsuario.set_NickUsuario(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsUsuario.AllInstances.ObtenerCodigoUsuario">
+            <summary>Establecer el shim de clsUsuario.ObtenerCodigoUsuario()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsUsuario.AllInstances.RespuestaGet">
+            <summary>Establecer el shim de clsUsuario.get_Respuesta()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsUsuario.AllInstances.RolSetString">
+            <summary>Establecer el shim de clsUsuario.set_Rol(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsUsuario.AllInstances.ValidarString">
+            <summary>Establecer el shim de clsUsuario.Validar(String strOpcion)</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.ShimclsUsuario.BehaveAsCurrent">
+            <summary>Asigna el comportamiento &apos;Current&apos; a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.ShimclsUsuario.BehaveAsNotImplemented">
+            <summary>Asigna el comportamiento &apos;NotImplemented&apos; a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsUsuario.Behavior">
+            <summary>Asigna el comportamiento a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsUsuario.CedulaSetString">
+            <summary>Establecer el shim de clsUsuario.set_Cedula(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsUsuario.ClaveSetString">
+            <summary>Establecer el shim de clsUsuario.set_Clave(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsUsuario.CodigoUsuarioGet">
+            <summary>Establecer el shim de clsUsuario.get_CodigoUsuario()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsUsuario.CodigoUsuarioSetInt32">
+            <summary>Establecer el shim de clsUsuario.set_CodigoUsuario(Int32 value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsUsuario.ConstructorString">
+            <summary>Establecer el shim de clsUsuario.clsUsuario(String strNomApp)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsUsuario.CrearParametrosString">
+            <summary>Establecer el shim de clsUsuario.CrearParametros(String strTipo)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsUsuario.CrearUsuario">
+            <summary>Establecer el shim de clsUsuario.CrearUsuario()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsUsuario.ErrorGet">
+            <summary>Establecer el shim de clsUsuario.get_Error()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsUsuario.NickUsuarioSetString">
+            <summary>Establecer el shim de clsUsuario.set_NickUsuario(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsUsuario.ObtenerCodigoUsuario">
+            <summary>Establecer el shim de clsUsuario.ObtenerCodigoUsuario()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsUsuario.RespuestaGet">
+            <summary>Establecer el shim de clsUsuario.get_Respuesta()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsUsuario.RolSetString">
+            <summary>Establecer el shim de clsUsuario.set_Rol(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsUsuario.ValidarString">
+            <summary>Establecer el shim de clsUsuario.Validar(String strOpcion)</summary>
+        </member>
+        <member name="T:libGestionVuelos.Fakes.ShimclsVuelo">
+            <summary>Tipo de correcciones de compatibilidad (shim) de libGestionVuelos.clsVuelo</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.ShimclsVuelo.#ctor">
+            <summary>Inicializa una nueva instancia de correcciones de compatibilidad (shim)</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.ShimclsVuelo.#ctor(libGestionVuelos.clsVuelo)">
+            <summary>Inicializa nuevas correcciones de compatibilidad (shim) para la instancia especificada</summary>
+        </member>
+        <member name="T:libGestionVuelos.Fakes.ShimclsVuelo.AllInstances">
+            <summary>Definir correcciones de compatibilidad (shim) para todos los miembros de instancia</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsVuelo.AllInstances.CodigoAvionGet">
+            <summary>Establecer el shim de clsVuelo.get_CodigoAvion()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsVuelo.AllInstances.CodigoAvionSetString">
+            <summary>Establecer el shim de clsVuelo.set_CodigoAvion(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsVuelo.AllInstances.CodigoVueloGet">
+            <summary>Establecer el shim de clsVuelo.get_CodigoVuelo()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsVuelo.AllInstances.CodigoVueloSetString">
+            <summary>Establecer el shim de clsVuelo.set_CodigoVuelo(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsVuelo.AllInstances.ConsultarVuelo">
+            <summary>Establecer el shim de clsVuelo.ConsultarVuelo()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsVuelo.AllInstances.CrearParametrosString">
+            <summary>Establecer el shim de clsVuelo.CrearParametros(String strTipo)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsVuelo.AllInstances.CrearVuelo">
+            <summary>Establecer el shim de clsVuelo.CrearVuelo()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsVuelo.AllInstances.ErrorGet">
+            <summary>Establecer el shim de clsVuelo.get_Error()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsVuelo.AllInstances.FechaLlegadaGet">
+            <summary>Establecer el shim de clsVuelo.get_FechaLlegada()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsVuelo.AllInstances.FechaLlegadaSetDateTime">
+            <summary>Establecer el shim de clsVuelo.set_FechaLlegada(DateTime value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsVuelo.AllInstances.FechaPartidaGet">
+            <summary>Establecer el shim de clsVuelo.get_FechaPartida()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsVuelo.AllInstances.FechaPartidaSetDateTime">
+            <summary>Establecer el shim de clsVuelo.set_FechaPartida(DateTime value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsVuelo.AllInstances.IDPilotoGet">
+            <summary>Establecer el shim de clsVuelo.get_IDPiloto()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsVuelo.AllInstances.IDPilotoSetString">
+            <summary>Establecer el shim de clsVuelo.set_IDPiloto(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsVuelo.AllInstances.PlazasVaciasGet">
+            <summary>Establecer el shim de clsVuelo.get_PlazasVacias()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsVuelo.AllInstances.PlazasVaciasSetInt32">
+            <summary>Establecer el shim de clsVuelo.set_PlazasVacias(Int32 value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsVuelo.AllInstances.RespuestaGet">
+            <summary>Establecer el shim de clsVuelo.get_Respuesta()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsVuelo.AllInstances.ValidarString">
+            <summary>Establecer el shim de clsVuelo.Validar(String strOpcion)</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.ShimclsVuelo.BehaveAsCurrent">
+            <summary>Asigna el comportamiento &apos;Current&apos; a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.ShimclsVuelo.BehaveAsNotImplemented">
+            <summary>Asigna el comportamiento &apos;NotImplemented&apos; a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsVuelo.Behavior">
+            <summary>Asigna el comportamiento a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsVuelo.CodigoAvionGet">
+            <summary>Establecer el shim de clsVuelo.get_CodigoAvion()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsVuelo.CodigoAvionSetString">
+            <summary>Establecer el shim de clsVuelo.set_CodigoAvion(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsVuelo.CodigoVueloGet">
+            <summary>Establecer el shim de clsVuelo.get_CodigoVuelo()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsVuelo.CodigoVueloSetString">
+            <summary>Establecer el shim de clsVuelo.set_CodigoVuelo(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsVuelo.ConstructorString">
+            <summary>Establecer el shim de clsVuelo.clsVuelo(String strNomApp)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsVuelo.ConsultarVuelo">
+            <summary>Establecer el shim de clsVuelo.ConsultarVuelo()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsVuelo.CrearParametrosString">
+            <summary>Establecer el shim de clsVuelo.CrearParametros(String strTipo)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsVuelo.CrearVuelo">
+            <summary>Establecer el shim de clsVuelo.CrearVuelo()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsVuelo.ErrorGet">
+            <summary>Establecer el shim de clsVuelo.get_Error()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsVuelo.FechaLlegadaGet">
+            <summary>Establecer el shim de clsVuelo.get_FechaLlegada()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsVuelo.FechaLlegadaSetDateTime">
+            <summary>Establecer el shim de clsVuelo.set_FechaLlegada(DateTime value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsVuelo.FechaPartidaGet">
+            <summary>Establecer el shim de clsVuelo.get_FechaPartida()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsVuelo.FechaPartidaSetDateTime">
+            <summary>Establecer el shim de clsVuelo.set_FechaPartida(DateTime value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsVuelo.IDPilotoGet">
+            <summary>Establecer el shim de clsVuelo.get_IDPiloto()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsVuelo.IDPilotoSetString">
+            <summary>Establecer el shim de clsVuelo.set_IDPiloto(String value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsVuelo.PlazasVaciasGet">
+            <summary>Establecer el shim de clsVuelo.get_PlazasVacias()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsVuelo.PlazasVaciasSetInt32">
+            <summary>Establecer el shim de clsVuelo.set_PlazasVacias(Int32 value)</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsVuelo.RespuestaGet">
+            <summary>Establecer el shim de clsVuelo.get_Respuesta()</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.ShimclsVuelo.ValidarString">
+            <summary>Establecer el shim de clsVuelo.Validar(String strOpcion)</summary>
+        </member>
+        <member name="T:libGestionVuelos.Fakes.StubclsAeropuerto">
+            <summary>Tipo stub de libGestionVuelos.clsAeropuerto</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.StubclsAeropuerto.#ctor(System.String)">
+            <summary>Inicializa una nueva instancia</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.StubclsAeropuerto.CallBase">
+            <summary>Obtiene o establece un valor que indica si debe llamarse al método base en lugar del comportamiento de reserva</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.StubclsAeropuerto.InitializeStub">
+            <summary>Inicializa una nueva instancia de type StubclsAeropuerto</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.StubclsAeropuerto.InstanceBehavior">
+            <summary>Obtiene o establece el comportamiento de instancia.</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.StubclsAeropuerto.InstanceObserver">
+            <summary>Obtiene o establece el observador de la instancia.</summary>
+        </member>
+        <member name="T:libGestionVuelos.Fakes.StubclsAvion">
+            <summary>Tipo stub de libGestionVuelos.clsAvion</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.StubclsAvion.#ctor(System.String)">
+            <summary>Inicializa una nueva instancia</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.StubclsAvion.CallBase">
+            <summary>Obtiene o establece un valor que indica si debe llamarse al método base en lugar del comportamiento de reserva</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.StubclsAvion.InitializeStub">
+            <summary>Inicializa una nueva instancia de type StubclsAvion</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.StubclsAvion.InstanceBehavior">
+            <summary>Obtiene o establece el comportamiento de instancia.</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.StubclsAvion.InstanceObserver">
+            <summary>Obtiene o establece el observador de la instancia.</summary>
+        </member>
+        <member name="T:libGestionVuelos.Fakes.StubclsEscalaTecnica">
+            <summary>Tipo stub de libGestionVuelos.clsEscalaTecnica</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.StubclsEscalaTecnica.#ctor(System.String)">
+            <summary>Inicializa una nueva instancia</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.StubclsEscalaTecnica.CallBase">
+            <summary>Obtiene o establece un valor que indica si debe llamarse al método base en lugar del comportamiento de reserva</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.StubclsEscalaTecnica.InitializeStub">
+            <summary>Inicializa una nueva instancia de type StubclsEscalaTecnica</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.StubclsEscalaTecnica.InstanceBehavior">
+            <summary>Obtiene o establece el comportamiento de instancia.</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.StubclsEscalaTecnica.InstanceObserver">
+            <summary>Obtiene o establece el observador de la instancia.</summary>
+        </member>
+        <member name="T:libGestionVuelos.Fakes.StubclsLineaAerea">
+            <summary>Tipo stub de libGestionVuelos.clsLineaAerea</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.StubclsLineaAerea.#ctor(System.String)">
+            <summary>Inicializa una nueva instancia</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.StubclsLineaAerea.CallBase">
+            <summary>Obtiene o establece un valor que indica si debe llamarse al método base en lugar del comportamiento de reserva</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.StubclsLineaAerea.InitializeStub">
+            <summary>Inicializa una nueva instancia de type StubclsLineaAerea</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.StubclsLineaAerea.InstanceBehavior">
+            <summary>Obtiene o establece el comportamiento de instancia.</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.StubclsLineaAerea.InstanceObserver">
+            <summary>Obtiene o establece el observador de la instancia.</summary>
+        </member>
+        <member name="T:libGestionVuelos.Fakes.StubclsLogin">
+            <summary>Tipo stub de libGestionVuelos.clsLogin</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.StubclsLogin.#ctor(System.String)">
+            <summary>Inicializa una nueva instancia</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.StubclsLogin.CallBase">
+            <summary>Obtiene o establece un valor que indica si debe llamarse al método base en lugar del comportamiento de reserva</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.StubclsLogin.InitializeStub">
+            <summary>Inicializa una nueva instancia de type StubclsLogin</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.StubclsLogin.InstanceBehavior">
+            <summary>Obtiene o establece el comportamiento de instancia.</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.StubclsLogin.InstanceObserver">
+            <summary>Obtiene o establece el observador de la instancia.</summary>
+        </member>
+        <member name="T:libGestionVuelos.Fakes.StubclsPersona">
+            <summary>Tipo stub de libGestionVuelos.clsPersona</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.StubclsPersona.#ctor(System.String)">
+            <summary>Inicializa una nueva instancia</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.StubclsPersona.CallBase">
+            <summary>Obtiene o establece un valor que indica si debe llamarse al método base en lugar del comportamiento de reserva</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.StubclsPersona.InitializeStub">
+            <summary>Inicializa una nueva instancia de type StubclsPersona</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.StubclsPersona.InstanceBehavior">
+            <summary>Obtiene o establece el comportamiento de instancia.</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.StubclsPersona.InstanceObserver">
+            <summary>Obtiene o establece el observador de la instancia.</summary>
+        </member>
+        <member name="T:libGestionVuelos.Fakes.StubclsPiloto">
+            <summary>Tipo stub de libGestionVuelos.clsPiloto</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.StubclsPiloto.#ctor(System.String)">
+            <summary>Inicializa una nueva instancia</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.StubclsPiloto.CallBase">
+            <summary>Obtiene o establece un valor que indica si debe llamarse al método base en lugar del comportamiento de reserva</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.StubclsPiloto.InitializeStub">
+            <summary>Inicializa una nueva instancia de type StubclsPiloto</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.StubclsPiloto.InstanceBehavior">
+            <summary>Obtiene o establece el comportamiento de instancia.</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.StubclsPiloto.InstanceObserver">
+            <summary>Obtiene o establece el observador de la instancia.</summary>
+        </member>
+        <member name="T:libGestionVuelos.Fakes.StubclsPlanVuelo">
+            <summary>Tipo stub de libGestionVuelos.clsPlanVuelo</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.StubclsPlanVuelo.#ctor(System.String)">
+            <summary>Inicializa una nueva instancia</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.StubclsPlanVuelo.CallBase">
+            <summary>Obtiene o establece un valor que indica si debe llamarse al método base en lugar del comportamiento de reserva</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.StubclsPlanVuelo.InitializeStub">
+            <summary>Inicializa una nueva instancia de type StubclsPlanVuelo</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.StubclsPlanVuelo.InstanceBehavior">
+            <summary>Obtiene o establece el comportamiento de instancia.</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.StubclsPlanVuelo.InstanceObserver">
+            <summary>Obtiene o establece el observador de la instancia.</summary>
+        </member>
+        <member name="T:libGestionVuelos.Fakes.StubclsUsuario">
+            <summary>Tipo stub de libGestionVuelos.clsUsuario</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.StubclsUsuario.#ctor(System.String)">
+            <summary>Inicializa una nueva instancia</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.StubclsUsuario.CallBase">
+            <summary>Obtiene o establece un valor que indica si debe llamarse al método base en lugar del comportamiento de reserva</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.StubclsUsuario.InitializeStub">
+            <summary>Inicializa una nueva instancia de type StubclsUsuario</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.StubclsUsuario.InstanceBehavior">
+            <summary>Obtiene o establece el comportamiento de instancia.</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.StubclsUsuario.InstanceObserver">
+            <summary>Obtiene o establece el observador de la instancia.</summary>
+        </member>
+        <member name="T:libGestionVuelos.Fakes.StubclsVuelo">
+            <summary>Tipo stub de libGestionVuelos.clsVuelo</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.StubclsVuelo.#ctor(System.String)">
+            <summary>Inicializa una nueva instancia</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.StubclsVuelo.CallBase">
+            <summary>Obtiene o establece un valor que indica si debe llamarse al método base en lugar del comportamiento de reserva</summary>
+        </member>
+        <member name="M:libGestionVuelos.Fakes.StubclsVuelo.InitializeStub">
+            <summary>Inicializa una nueva instancia de type StubclsVuelo</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.StubclsVuelo.InstanceBehavior">
+            <summary>Obtiene o establece el comportamiento de instancia.</summary>
+        </member>
+        <member name="P:libGestionVuelos.Fakes.StubclsVuelo.InstanceObserver">
+            <summary>Obtiene o establece el observador de la instancia.</summary>
+        </member>
+    </members>
+</doc>
