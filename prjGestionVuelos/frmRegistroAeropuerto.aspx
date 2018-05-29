@@ -13,7 +13,7 @@
                                     
                 <form id="frmRegistroAeropuerto" runat="server">
                     <asp:textbox id="txtCodAeropuerto" runat="server" cssclass="form-control" placeholder="Ingrese el codigo del Aeropuerto" MaxLength="10"></asp:TextBox>
-                    <%--<br />--%>                    
+                    <br />                    
                     <asp:TextBox ID="txtNombreAeropuerto" runat="server" CssClass="form-control" placeholder="Nombre del Aeropuerto" MaxLength="30"></asp:TextBox>
                     <br />
                     <asp:TextBox ID="txtPaisAeropuerto" runat="server"  CssClass="form-control" placeholder="Ingrese el pais del Aeropuerto" MaxLength="30"></asp:TextBox>

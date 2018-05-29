@@ -24,7 +24,7 @@
                     <br />
                     <asp:TextBox ID="txtAeroLlegada" runat="server" CssClass="form-control" placeholder="Ingrese el código del Aeropuerto de destino" MaxLength="10"></asp:TextBox>
                     <br />
-                    <asp:Button ID="btnRegistroPV" runat="server" CssClass="btn btn-primary btn-lg btn-block" Text="Registrar nuevo Plan de Vuelo" OnClick="btnRegistroPV_Click"/>
+                    <asp:Button ID="btnRegistroPV" runat="server" CssClass="btn btn-success btn-lg btn-block" Text="Registrar nuevo Plan de Vuelo" OnClick="btnRegistroPV_Click"/>
                 </form>
                 <br /><br />
                     <asp:Panel ID="pnlAlerta" runat="server">

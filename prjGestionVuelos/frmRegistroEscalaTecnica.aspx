@@ -16,7 +16,7 @@
                     <br />                    
                     <asp:TextBox ID="txtAeropuerto" runat="server" CssClass="form-control" placeholder="Aeropuerto de escala" MaxLength="10"></asp:TextBox>
                     <br />                    
-                    <asp:Button ID="btnRegistroET" runat="server" CssClass="btn btn-primary btn-lg btn-block" Text="Registrar nueva Escala Técnica" OnClick="btnRegistroET_Click" />
+                    <asp:Button ID="btnRegistroET" runat="server" CssClass="btn btn-success btn-lg btn-block" Text="Registrar nueva Escala Técnica" OnClick="btnRegistroET_Click" />
                 </form>
                 <br /><br />
                     <asp:Panel ID="pnlAlerta" runat="server">
