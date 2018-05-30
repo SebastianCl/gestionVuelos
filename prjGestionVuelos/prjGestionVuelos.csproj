@@ -75,6 +75,11 @@
   <ItemGroup>
     <Content Include="frmAero_LineaAe.aspx" />
     <Content Include="frmBienvenida.aspx" />
+    <Content Include="frmBuscarAeropuerto.aspx" />
+    <Content Include="frmBuscarAvion.aspx" />
+    <Content Include="frmBuscarLineaAerea.aspx" />
+    <Content Include="frmBuscarPersona.aspx" />
+    <Content Include="frmBuscarPlanVuelo.aspx" />
     <Content Include="frmBusquedaPrincipal.aspx" />
     <Content Include="frmRegistroLineaAerea.aspx" />
     <Content Include="frmRegistroAeropuerto.aspx" />
@@ -85,8 +90,10 @@
     <Content Include="frmRegistroPlanVuelo.aspx" />
     <Content Include="frmRegistroUsuario.aspx" />
     <Content Include="frmRegistroVuelo.aspx" />
+    <Content Include="frmBuscarVuelo.aspx" />
     <Content Include="packages.config" />
     <Content Include="frmPrincipal.Master" />
+    <Content Include="resources\css\gridVi.css" />
     <Content Include="resources\font-awesome\fonts\fontawesome-webfont.eot" />
     <Content Include="resources\font-awesome\fonts\fontawesome-webfont.ttf" />
     <Content Include="resources\font-awesome\fonts\fontawesome-webfont.woff" />
@@ -143,6 +150,41 @@
     </Compile>
     <Compile Include="frmBienvenida.aspx.designer.cs">
       <DependentUpon>frmBienvenida.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarAeropuerto.aspx.cs">
+      <DependentUpon>frmBuscarAeropuerto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmBuscarAeropuerto.aspx.designer.cs">
+      <DependentUpon>frmBuscarAeropuerto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarAvion.aspx.cs">
+      <DependentUpon>frmBuscarAvion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmBuscarAvion.aspx.designer.cs">
+      <DependentUpon>frmBuscarAvion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarLineaAerea.aspx.cs">
+      <DependentUpon>frmBuscarLineaAerea.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmBuscarLineaAerea.aspx.designer.cs">
+      <DependentUpon>frmBuscarLineaAerea.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarPersona.aspx.cs">
+      <DependentUpon>frmBuscarPersona.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmBuscarPersona.aspx.designer.cs">
+      <DependentUpon>frmBuscarPersona.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarPlanVuelo.aspx.cs">
+      <DependentUpon>frmBuscarPlanVuelo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmBuscarPlanVuelo.aspx.designer.cs">
+      <DependentUpon>frmBuscarPlanVuelo.aspx</DependentUpon>
     </Compile>
     <Compile Include="frmBusqueda.aspx.cs">
       <DependentUpon>frmBusqueda.aspx</DependentUpon>
@@ -234,6 +276,13 @@
     </Compile>
     <Compile Include="frmRegistroVuelo.aspx.designer.cs">
       <DependentUpon>frmRegistroVuelo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarVuelo.aspx.cs">
+      <DependentUpon>frmBuscarVuelo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmBuscarVuelo.aspx.designer.cs">
+      <DependentUpon>frmBuscarVuelo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="frmPrincipal.Master.cs">

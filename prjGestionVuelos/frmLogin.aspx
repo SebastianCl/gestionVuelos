@@ -26,11 +26,11 @@
 				<div class="login-group">
 					<div class="form-group">
 						<label for="lg_username" class="sr-only">usuario</label>                        						
-                        <asp:TextBox ID="txtUsuario" runat="server" CssClass="form-control" placeholder="username" MaxLength="10"></asp:TextBox>
+                        <asp:TextBox ID="txtUsuario" runat="server" CssClass="form-control" placeholder="username" MaxLength="100"></asp:TextBox>
 					</div>
 					<div class="form-group">
 						<label for="lg_password" class="sr-only">clave</label>
-                        <asp:TextBox ID="txtClave" runat="server" CssClass="form-control" TextMode="Password" placeholder="password" MaxLength="10"></asp:TextBox>						
+                        <asp:TextBox ID="txtClave" runat="server" CssClass="form-control" TextMode="Password" placeholder="password" MaxLength="100"></asp:TextBox>						
 					</div>
 
 				</div>				
@@ -39,7 +39,7 @@
             </form>        
 		
 	</div>
- 
+    <br /><br />
     <asp:Panel ID="pnlAlerta" runat="server">
         <div class="col-md-3"></div>
         <div class="col-md-6">

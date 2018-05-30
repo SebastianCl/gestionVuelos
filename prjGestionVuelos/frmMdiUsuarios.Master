@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link href="resources/img/avion-ico.ico" rel="icon" type="image/png"/>
     <link href="resources/css/bootstrap.css" rel="stylesheet" />              
+    <link href="resources/css/gridVi.css" rel="stylesheet" />     
     <link href="resources/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500" rel="stylesheet"/>
     <link href="resources/css/custom.css" rel="stylesheet" />
@@ -77,40 +78,42 @@
         </nav>
      </header>
 
-     <div id="wrapper" >
-      <!-- Sidebar -->
-      <div class="navbar navbar-fixed-top" id="sidebar-wrapper" role="navigation">
-          
-        <ul class="nav sidebar-nav">
-          <li>
-              <a href="frmBusquedaPrincipal.aspx">
-                 <asp:Image id="imgLogo" runat="server" CssClass="img-responsive" ImageUrl="~/resources/img/avion.png"/>
-              </a>
-          </li>
-          <li class="my-li-navG">
-              <a href="#">Plan de vuelos</a>
-          </li>  
-            <li class="my-li-navY">
-              <a href="#">Vuelo</a>
-          </li>    
-            <li class="my-li-nav">
-              <a href="#">Aeropuerto</a>
-          </li>    
-            <li class="my-li-navR">
-              <a href="#">Avion</a>
-          </li>   
-         </ul>             
-      </div>           
-         
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div class="navbar navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+
+            <ul class="nav sidebar-nav">
+                <li>
+                    <a href="frmBusquedaPrincipal.aspx">
+                        <asp:Image ID="imgLogo" runat="server" CssClass="img-responsive" ImageUrl="~/resources/img/avion.png" />
+                    </a>
+                </li>
+                <li class="my-li-navG">
+                    <a href="frmBuscarPlanVuelo.aspx">Plan de vuelos</a>
+                </li>
+                <li class="my-li-navY">
+                    <a href="frmBuscarVuelo.aspx">Vuelo</a>
+                </li>
+                <li class="my-li-nav">
+                    <a href="frmBuscarAeropuerto.aspx">Aeropuerto</a>
+                </li>
+                <li class="my-li-navR">
+                    <a href="frmBuscarAvion.aspx">Avion</a>
+                </li>
+                <li class="my-li-navR">
+                    <a href="frmBuscarLineaAerea.aspx">Avion</a>
+                </li>
+            </ul>
+        </div>
+
     </div>
     <div>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        
         </asp:ContentPlaceHolder>
-    </div> 
+    </div>
     <script src="resources/js/jquery-3.1.1.min.js"></script>
     <script src="resources/js/bootstrap.js"></script>
-    <script src="resources/js/myscript.js"></script>      
+    <script src="resources/js/myscript.js"></script>
 
 </body>
 </html>

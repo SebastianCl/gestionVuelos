@@ -11,15 +11,16 @@ namespace prjGestionVuelos
 {
     public partial class frmAero_LineaAe : System.Web.UI.Page
     {
-        #region "Variables Globales"
+        #region VARIABLES GLOABLES
         private static string strNombreApp;
         #endregion
+
         #region METODOS PRIVADOS
         private void LimpiarCampos()
         {
             this.txtCodRLineaAerea.Text = string.Empty;
             this.txtCodRAeropuerto.Text = string.Empty;
-        }
+        }      
         private bool ValidarCampos()
         {
             if (this.txtCodRAeropuerto.Text.Trim() == string.Empty)

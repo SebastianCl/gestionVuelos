@@ -93,8 +93,8 @@ GO
 
 /*******------------------------------ PROCEDIMIENTOS ALMACENADOS ------------------------------*******/
 CREATE PROCEDURE SP_ValidarCredencialesDeAcceso (
-@usuario VARCHAR(10),
-@clave VARCHAR(10))
+@usuario VARCHAR(100),
+@clave VARCHAR(100))
 AS
 BEGIN
 	IF EXISTS (SELECT nombre_usuario, clave_usuario FROM tblUSUARIO WHERE nombre_usuario = @usuario AND clave_usuario = @clave)
@@ -395,9 +395,9 @@ GO
 INSERT INTO tblUsuario VALUES ('sebas','1','A')
 INSERT INTO tblLINEA_AEREA VALUES ('1','LA','COLOMBIA')
 
-exec SP_CrearUsuario @NOMBRE_USUARIO = 'usuPiloto', @CLAVE_USUARIO='1', @ROL_USUARIO='P'
+exec SP_CrearUsuario @NOMBRE_USUARIO = 'usu', @CLAVE_USUARIO='1', @ROL_USUARIO='U'
 
-exec SP_CrearPiloto @ID = '1017', @NOMBRE = 'DonPiloto', @DIRECCION = 'Cra 10',@CIUDAD_RESIDENCIA = 'Medellín', @CODIGO_LINEA = '1', @COD_USUARIO = 2 , @TELEFONO = '2341672'
+exec SP_CrearPiloto @ID = '1017', @NOMBRE = 'DonPiloto', @DIRECCION = 'Cra 10',@CIUDAD_RESIDENCIA = 'Medellín', @CODIGO_LINEA = '1', @COD_USUARIO = 11 , @TELEFONO = '2341672'
 
 exec SP_CrearPersona @ID='1111', @NOMBRE='Sebastian', @CIUDAD = 'Medellín',@COD_USUARIO='1'
 
@@ -406,9 +406,18 @@ exec SP_CrearAeropuerto @CODIGO = 'AB12',@NOMBRE = 'Olaya Herrera',@CIUDAD= 'Med
 exec SP_CrearEscalaTecnica @CODIGO = 'N/A', @COD_AEROPUERTO = null
 
 select * from tbllinea_aerea
-select * from tblusuario
+select * from tblescala_tecnica
 
-SELECT* FROM tblLINEA_AEROPUERTO
+SELECT* FROM tblAVION
+select * from tblUSUARIO
+SELECT * FROM tblPILOTO
+SELECT * FROM TBLVUELO
+SELECT * FROM tblLINEA_AEREA
+SELECT * FROM tblAEROPUERTO
+
+SELECT * FROM tblPROGRAMA_VUELO WHERE CODIGO LIKE '%Seb%' OR CODIGO_VUELO LIKE '%Seb%' OR CIUDAD LIKE '%Seb%' OR CODIGO_ESCALATECNICA LIKE '%Seb%'
 
 
 
+
+SELECT * FROM tblVUELO WHERE CODIGO LIKE '%VU1%' OR FECHA_partida LIKE '%U12%' OR FECHA_llegada LIKE '%U12%' OR PLAZAS_VACIAS LIKE '%U12%' OR IDPILOTO LIKE '%U12%' OR COD_AVION LIKE '%U12%'
