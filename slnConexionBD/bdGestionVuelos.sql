@@ -406,8 +406,8 @@ exec SP_CrearAeropuerto @CODIGO = 'AB12',@NOMBRE = 'Olaya Herrera',@CIUDAD= 'Med
 exec SP_CrearEscalaTecnica @CODIGO = 'N/A', @COD_AEROPUERTO = null
 
 select * from tbllinea_aerea
-select * from tblAEROPUERTO
-11
+select * from tblusuario
+
 SELECT* FROM tblLINEA_AEROPUERTO
 
 
