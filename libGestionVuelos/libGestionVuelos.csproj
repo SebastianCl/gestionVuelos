@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsAeropuerto.cs" />
+    <Compile Include="clsAsignacion.cs" />
     <Compile Include="clsAvion.cs" />
     <Compile Include="clsEscalaTecnica.cs" />
     <Compile Include="clsLineaAerea.cs" />

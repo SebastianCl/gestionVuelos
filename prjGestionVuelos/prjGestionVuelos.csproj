@@ -73,7 +73,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="frmAero_LineaAe.aspx" />
     <Content Include="frmBienvenida.aspx" />
+    <Content Include="frmBusquedaPrincipal.aspx" />
     <Content Include="frmRegistroLineaAerea.aspx" />
     <Content Include="frmRegistroAeropuerto.aspx" />
     <Content Include="frmRegistroAvion.aspx" />
@@ -94,6 +96,7 @@
     <Content Include="resources\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="resources\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="resources\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="frmMdiUsuarios.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -127,6 +130,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAero_LineaAe.aspx.cs">
+      <DependentUpon>frmAero_LineaAe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmAero_LineaAe.aspx.designer.cs">
+      <DependentUpon>frmAero_LineaAe.aspx</DependentUpon>
+    </Compile>
     <Compile Include="frmBienvenida.aspx.cs">
       <DependentUpon>frmBienvenida.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -140,6 +150,20 @@
     </Compile>
     <Compile Include="frmBusqueda.aspx.designer.cs">
       <DependentUpon>frmBusqueda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmBusquedaPrincipal.aspx.cs">
+      <DependentUpon>frmBusquedaPrincipal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmBusquedaPrincipal.aspx.designer.cs">
+      <DependentUpon>frmBusquedaPrincipal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmMdiUsuarios.Master.cs">
+      <DependentUpon>frmMdiUsuarios.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmMdiUsuarios.Master.designer.cs">
+      <DependentUpon>frmMdiUsuarios.Master</DependentUpon>
     </Compile>
     <Compile Include="frmRegistroLineaAerea.aspx.cs">
       <DependentUpon>frmRegistroLineaAerea.aspx</DependentUpon>

@@ -182,3 +182,4 @@ C:\Users\Sebastian\Documents\GIT\gestionVuelos\prjGestionVuelos\obj\Debug\prjGes
 C:\Users\Sebastian\Documents\GIT\gestionVuelos\prjGestionVuelos\obj\Debug\prjGestionVuelos.pdb
 C:\Users\Sebastian\Documents\GIT\gestionVuelos\prjGestionVuelos\bin\Microsoft.QualityTools.Testing.Fakes.dll
 C:\Users\Sebastian\Documents\GIT\gestionVuelos\prjGestionVuelos\bin\es\Microsoft.QualityTools.Testing.Fakes.resources.dll
+C:\Users\sebas\Desktop\GIT\gestionVuelos\prjGestionVuelos\bin\es\Microsoft.QualityTools.Testing.Fakes.resources.dll

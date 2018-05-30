@@ -59,18 +59,15 @@ namespace prjGestionVuelos
                         return;
                     }
                     strRolUsuario = objLog.Rol;
-                    switch (strRolUsuario)
+                    if (strRolUsuario == "A")
                     {
-                        case "A":
-                            Response.Redirect("frmBienvenida.aspx");
-                            break;
-                        case "U":
-                            Response.Redirect("frmBienvenida.aspx");
-                            break;
-                        case "P":
-                            Response.Redirect("frmBienvenida.aspx");
-                            break;
+                        Response.Redirect("frmBienvenida.aspx");
                     }
+                    else
+                    {
+                        Response.Redirect("frmBusquedaPrincipal.aspx");
+                    }
+                    
                     
                 }
                 else

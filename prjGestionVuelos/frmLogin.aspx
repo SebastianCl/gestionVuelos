@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+        
     <link href="resources/css/login.css" rel="stylesheet" />
     <link href="resources/css/bootstrap.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet"/>
@@ -32,19 +33,13 @@
                         <asp:TextBox ID="txtClave" runat="server" CssClass="form-control" TextMode="Password" placeholder="password" MaxLength="10"></asp:TextBox>						
 					</div>
 
-					<div class="form-group login-group-checkbox">
-						<input type="checkbox" id="lg_remember" name="lg_remember"/>
-						<label for="lg_remember">recordar</label>
-					</div>
 				</div>				
                 <asp:Button ID="btnEntrar" runat="server" CssClass="login-button" Text="GO" OnClick="btnEntrar_Click"/>
 			</div>
-			<div class="etc-login-form">
-				<p>¿Olvido su contraseña? <a href="#">click aqui</a></p>				
-			</div>	
             </form>        
 		
 	</div>
+ 
     <asp:Panel ID="pnlAlerta" runat="server">
         <div class="col-md-3"></div>
         <div class="col-md-6">
