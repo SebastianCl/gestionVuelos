@@ -10,7 +10,7 @@
 namespace prjGestionVuelos {
     
     
-    public partial class frmBuscarLineaAerea {
+    public partial class frmBusqueda {
         
         /// <summary>
         /// Control frmBusquedaLA.

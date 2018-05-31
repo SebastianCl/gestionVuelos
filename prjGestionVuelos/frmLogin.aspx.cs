@@ -44,8 +44,8 @@ namespace prjGestionVuelos
                     return;
                 }
                 clsLogin objLog = new clsLogin(strNombreApp);
-                objLog.Usuario = this.txtUsuario.Text;
-                objLog.Clave = this.txtClave.Text;
+                objLog.Usuario = this.txtUsuario.Text.Trim();
+                objLog.Clave = this.txtClave.Text.Trim();
                 if (!objLog.Logueo())
                 {
                     objLog = null;
@@ -65,7 +65,7 @@ namespace prjGestionVuelos
                     }
                     else
                     {
-                        Response.Redirect("frmBusquedaPrincipal.aspx");
+                        Response.Redirect("frmBienvenidaU.aspx");
                     }
                     
                     

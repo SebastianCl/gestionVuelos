@@ -73,14 +73,18 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="frmABusquedaAE.aspx" />
+    <Content Include="frmABusquedaAV.aspx" />
+    <Content Include="frmABusquedaPV.aspx" />
+    <Content Include="frmABusquedaUsuario.aspx" />
+    <Content Include="frmABusquedaVU.aspx" />
     <Content Include="frmAero_LineaAe.aspx" />
     <Content Include="frmBienvenida.aspx" />
+    <Content Include="frmBienvenidaU.aspx" />
     <Content Include="frmBuscarAeropuerto.aspx" />
     <Content Include="frmBuscarAvion.aspx" />
     <Content Include="frmBuscarLineaAerea.aspx" />
-    <Content Include="frmBuscarPersona.aspx" />
     <Content Include="frmBuscarPlanVuelo.aspx" />
-    <Content Include="frmBusquedaPrincipal.aspx" />
     <Content Include="frmRegistroLineaAerea.aspx" />
     <Content Include="frmRegistroAeropuerto.aspx" />
     <Content Include="frmRegistroAvion.aspx" />
@@ -112,7 +116,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="frmBusqueda.aspx" />
+    <Content Include="frmABusquedaLA.aspx" />
     <Content Include="frmLogin.aspx" />
     <Content Include="resources\css\bootstrap-theme.css" />
     <Content Include="resources\css\bootstrap.css" />
@@ -137,6 +141,41 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmABusquedaAE.aspx.cs">
+      <DependentUpon>frmABusquedaAE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmABusquedaAE.aspx.designer.cs">
+      <DependentUpon>frmABusquedaAE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmABusquedaAV.aspx.cs">
+      <DependentUpon>frmABusquedaAV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmABusquedaAV.aspx.designer.cs">
+      <DependentUpon>frmABusquedaAV.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmABusquedaPV.aspx.cs">
+      <DependentUpon>frmABusquedaPV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmABusquedaPV.aspx.designer.cs">
+      <DependentUpon>frmABusquedaPV.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmABusquedaUsuario.aspx.cs">
+      <DependentUpon>frmABusquedaUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmABusquedaUsuario.aspx.designer.cs">
+      <DependentUpon>frmABusquedaUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmABusquedaVU.aspx.cs">
+      <DependentUpon>frmABusquedaVU.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmABusquedaVU.aspx.designer.cs">
+      <DependentUpon>frmABusquedaVU.aspx</DependentUpon>
+    </Compile>
     <Compile Include="frmAero_LineaAe.aspx.cs">
       <DependentUpon>frmAero_LineaAe.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -150,6 +189,13 @@
     </Compile>
     <Compile Include="frmBienvenida.aspx.designer.cs">
       <DependentUpon>frmBienvenida.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmBienvenidaU.aspx.cs">
+      <DependentUpon>frmBienvenidaU.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmBienvenidaU.aspx.designer.cs">
+      <DependentUpon>frmBienvenidaU.aspx</DependentUpon>
     </Compile>
     <Compile Include="frmBuscarAeropuerto.aspx.cs">
       <DependentUpon>frmBuscarAeropuerto.aspx</DependentUpon>
@@ -172,13 +218,6 @@
     <Compile Include="frmBuscarLineaAerea.aspx.designer.cs">
       <DependentUpon>frmBuscarLineaAerea.aspx</DependentUpon>
     </Compile>
-    <Compile Include="frmBuscarPersona.aspx.cs">
-      <DependentUpon>frmBuscarPersona.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="frmBuscarPersona.aspx.designer.cs">
-      <DependentUpon>frmBuscarPersona.aspx</DependentUpon>
-    </Compile>
     <Compile Include="frmBuscarPlanVuelo.aspx.cs">
       <DependentUpon>frmBuscarPlanVuelo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -186,19 +225,12 @@
     <Compile Include="frmBuscarPlanVuelo.aspx.designer.cs">
       <DependentUpon>frmBuscarPlanVuelo.aspx</DependentUpon>
     </Compile>
-    <Compile Include="frmBusqueda.aspx.cs">
-      <DependentUpon>frmBusqueda.aspx</DependentUpon>
+    <Compile Include="frmABusquedaLA.aspx.cs">
+      <DependentUpon>frmABusquedaLA.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="frmBusqueda.aspx.designer.cs">
-      <DependentUpon>frmBusqueda.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="frmBusquedaPrincipal.aspx.cs">
-      <DependentUpon>frmBusquedaPrincipal.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="frmBusquedaPrincipal.aspx.designer.cs">
-      <DependentUpon>frmBusquedaPrincipal.aspx</DependentUpon>
+    <Compile Include="frmABusquedaLA.aspx.designer.cs">
+      <DependentUpon>frmABusquedaLA.aspx</DependentUpon>
     </Compile>
     <Compile Include="frmMdiUsuarios.Master.cs">
       <DependentUpon>frmMdiUsuarios.Master</DependentUpon>

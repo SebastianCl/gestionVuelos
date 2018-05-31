@@ -256,6 +256,19 @@ div#barra-menu {
     .sidebar-nav li.my-li-navR:before {
         background-color: #d13232;
     }
+    .sidebar-nav li.my-li-navB:before {
+        background-color: #1f54f0;
+    }
+    .sidebar-nav li.my-li-navN:before {
+        background-color: #f0a41f;
+    }
+    .sidebar-nav li.my-li-navF:before {
+        background-color: #bb1fef;
+    }
+     .sidebar-nav li.my-li-navC:before {
+        background-color: #1fd8f0;
+    }
+
 
 
 

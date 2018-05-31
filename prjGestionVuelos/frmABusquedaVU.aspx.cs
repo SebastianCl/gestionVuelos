@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 
 namespace prjGestionVuelos
 {
-    public partial class frmVuelo1 : System.Web.UI.Page
+    public partial class frmABusquedaVU : System.Web.UI.Page
     {
         #region EVENTOS
 
@@ -31,7 +31,7 @@ namespace prjGestionVuelos
 
         #region METODOS PRIVADOS
         private void Consultar()
-        {
+        {            
             try
             {
                 string strValor = this.txtCodVuelo.Text.Trim();
@@ -47,7 +47,7 @@ namespace prjGestionVuelos
             catch (Exception ex)
             {
                 this.lblMensaje.Text = ex.Message;
-                this.pnlAlerta.Visible = true;
+                this.pnlAlerta.Visible = true;                
                 return;
             }
         }

@@ -10,34 +10,34 @@
 namespace prjGestionVuelos {
     
     
-    public partial class frmBuscarLineaAerea {
+    public partial class frmABusquedaAV {
         
         /// <summary>
-        /// Control frmBusquedaLA.
+        /// Control frmBusquedaAe.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm frmBusquedaLA;
+        protected global::System.Web.UI.HtmlControls.HtmlForm frmBusquedaAe;
         
         /// <summary>
-        /// Control txtCodLA.
+        /// Control txtCodAvion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCodLA;
+        protected global::System.Web.UI.WebControls.TextBox txtCodAvion;
         
         /// <summary>
-        /// Control btnBuscarLA.
+        /// Control btnBuscarAvi.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBuscarLA;
+        protected global::System.Web.UI.WebControls.Button btnBuscarAvi;
         
         /// <summary>
         /// Control GridVPV.

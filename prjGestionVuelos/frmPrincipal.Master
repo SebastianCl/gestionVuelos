@@ -7,6 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>    
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link href="resources/img/avion-ico.ico" rel="icon" type="image/png"/>
+    <link href="resources/css/gridVi.css" rel="stylesheet" />  
     <link href="resources/css/bootstrap.css" rel="stylesheet" />              
     <link href="resources/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500" rel="stylesheet"/>
@@ -50,7 +51,7 @@
                       <ul class="dropdown-menu">
                         <li class="my-user-header">
                           <img src="resources/img/default.png" class="img-circle" />
-                          <p><asp:Label runat="server" >Sebastian Cardona - User ADMIN</asp:Label><br/>
+                          <p><asp:Label runat="server" >User ADMIN</asp:Label><br/>
                             <small>Mar. 2018</small>
                           </p>
                         </li>
@@ -80,9 +81,19 @@
                  <asp:Image id="imgLogo" runat="server" CssClass="img-responsive" ImageUrl="~/resources/img/avion.png"/>
               </a>
           </li>
-          <li class="my-li-nav">
-              <a href="frmBusqueda.aspx">Busqueda</a>
-          </li>                   
+          <li class="dropdown my-li-nav">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Buscar<span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li class="dropdown-header">Busquedas</li>                    
+                  <li class="my-li-navC"><a href="frmABusquedaPV.aspx">Plan de vuelo</a></li>
+                  <li class="my-li-navC"><a href="frmABusquedaVU.aspx">Vuelo</a></li> 
+                  <li class="my-li-navC"><a href="frmABusquedaAE.aspx">Aeropuerto</a></li>                    
+                  <li class="my-li-navC"><a href="frmABusquedaAV.aspx">Avión</a></li>                       
+                  <li class="my-li-navC"><a href="frmABusquedaLA.aspx">Linea Aerea</a></li>                   
+                  <li class="my-li-navC"><a href="frmABusquedaUsuario.aspx">Usuarios</a></li>   
+                  <li class="divider"></li>                             
+              </ul>
+          </li>             
           <li class="dropdown my-li-nav">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Registros<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
@@ -100,9 +111,9 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Registro usuarios<span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
                 <li class="dropdown-header">Usuarios</li>
-                <li class="my-li-navY"><a href="frmRegistroPiloto.aspx">Piloto</a></li>
-                <li class="my-li-navY"><a href="frmRegistroUsuario.aspx">Usuario Estandar</a></li>
-                <li class="my-li-navY"><a href="frmRegistroAdmin.aspx">Usuario Administrador</a></li>      
+                <li class="my-li-navN"><a href="frmRegistroPiloto.aspx">Piloto</a></li>
+                <li class="my-li-navN"><a href="frmRegistroUsuario.aspx">Usuario Estandar</a></li>
+                <li class="my-li-navN"><a href="frmRegistroAdmin.aspx">Usuario Administrador</a></li>      
                 <li class="divider"></li>    
             </ul>                                           
         </li>    

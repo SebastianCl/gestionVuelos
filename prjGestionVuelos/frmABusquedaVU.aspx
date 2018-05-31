@@ -1,34 +1,35 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/frmMdiUsuarios.Master" AutoEventWireup="true" CodeBehind="frmBuscarAvion.aspx.cs" Inherits="prjGestionVuelos.frmBuscarAvion" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/frmPrincipal.Master" AutoEventWireup="true" CodeBehind="frmABusquedaVU.aspx.cs" Inherits="prjGestionVuelos.frmABusquedaVU" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <div id="page-content-Buscar-Avion">
+     <div id="page-content-Buscar-Vuelo">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-12 col-md-2">
                 </div>
                 <div class="col-xs-12 col-md-8">
                     <br /><br /><br />
-                    <form id="frmBusquedaAe" runat="server">
-                        <h2>Busqueda de aviones
-                        </h2>
-                        <asp:TextBox CssClass="form-control input-lg" runat="server" ID="txtCodAvion"></asp:TextBox>
+                    <form id="frmBusquedaPV" runat="server">
+                        <h2>Busqueda de Vuelos</h2>
+                        <asp:TextBox CssClass="form-control input-lg" runat="server" ID="txtCodVuelo"></asp:TextBox>
                         <br />
-                        <asp:Button ID="btnBuscarAvi" runat="server" CssClass="btn btn-danger btn-lg btn-block" Text="BUSCAR" OnClick="btnBuscarAvi_Click" />
+                        <asp:Button ID="btnBuscarVu" runat="server" CssClass="btn btn-info btn-lg btn-block" Text="BUSCAR" OnClick="btnBuscarVu_Click" />
                         <br /><br /><br />
                         <asp:GridView ID="GridVPV" runat="server" AutoGenerateColumns="False" GridLines="None"  
-                            AllowPaging="true" CssClass="mGrid" PagerStyle-CssClass="pgr" AlternatingRowStyle-CssClass="alt" 
-                            PageSize="200">  
+                            AllowPaging="true" CssClass="mGrid" PagerStyle-CssClass="pgr" AlternatingRowStyle-CssClass="alt"  
+                            PageSize="200" >  
                             <Columns>  
                                 <asp:BoundField DataField="CODIGO" HeaderText="Código" />  
-                                <asp:BoundField DataField="MODELO" HeaderText="Modelo" />  
-                                <asp:BoundField DataField="CAPACIDAD" HeaderText="Capacidad" />  
-                                <asp:BoundField DataField="CODIGO_LINEA" HeaderText="Linea Aerea"/>                                  
+                                <asp:BoundField DataField="FECHA_partida" HeaderText="Fecha de Partida" />  
+                                <asp:BoundField DataField="FECHA_llegada" HeaderText="Fecha de Llegada" />  
+                                <asp:BoundField DataField="PLAZAS_VACIAS" HeaderText="Plazas Vacias" />  
+                                <asp:BoundField DataField="IDPILOTO" HeaderText="Piloto" />  
+                                <asp:BoundField DataField="COD_AVION" HeaderText="Avión" />  
                             </Columns>  
                         </asp:GridView>  
                         
                     </form>
-                      <br /><br />
+                    <br /><br />
                     <asp:Panel ID="pnlAlerta" runat="server">
                         <div class="col-md-3"></div>
                         <div class="col-md-6">

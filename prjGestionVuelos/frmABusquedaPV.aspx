@@ -1,8 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/frmMdiUsuarios.Master" AutoEventWireup="true" CodeBehind="frmBuscarVuelo.aspx.cs" Inherits="prjGestionVuelos.frmVuelo1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/frmPrincipal.Master" AutoEventWireup="true" CodeBehind="frmABusquedaPV.aspx.cs" Inherits="prjGestionVuelos.frmABusquedaPV" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div id="page-content-Buscar-Vuelo">
+    <div id="page-content-Buscar-PlanVuelo">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-12 col-md-2">
@@ -10,27 +10,25 @@
                 <div class="col-xs-12 col-md-8">
                     <br /><br /><br />
                     <form id="frmBusquedaPV" runat="server">
-                        <h2>Busqueda de Vuelos</h2>
-                        <asp:TextBox CssClass="form-control input-lg" runat="server" ID="txtCodVuelo"></asp:TextBox>
+                        <h2>Busqueda de planes de vuelo</h2>
+                        <asp:TextBox CssClass="form-control input-lg" runat="server" ID="txtCodPlanV"></asp:TextBox>
                         <br />
-                        <asp:Button ID="btnBuscarVu" runat="server" CssClass="btn btn-warning btn-lg btn-block" Text="BUSCAR" OnClick="btnBuscarVu_Click" />
+                        <asp:Button ID="btnBuscarPV" runat="server" CssClass="btn btn-info btn-lg btn-block" Text="BUSCAR" OnClick="btnBuscarPV_Click" />
                         <br /><br /><br />
                         <asp:GridView ID="GridVPV" runat="server" AutoGenerateColumns="False" GridLines="None"  
                             AllowPaging="true" CssClass="mGrid" PagerStyle-CssClass="pgr" AlternatingRowStyle-CssClass="alt"  
                             PageSize="200" >  
                             <Columns>  
-                                <asp:BoundField DataField="CODIGO" HeaderText="Código" />  
-                                <asp:BoundField DataField="FECHA_partida" HeaderText="Fecha de Partida" />  
-                                <asp:BoundField DataField="FECHA_llegada" HeaderText="Fecha de Llegada" />  
-                                <asp:BoundField DataField="PLAZAS_VACIAS" HeaderText="Plazas Vacias" />  
-                                <asp:BoundField DataField="IDPILOTO" HeaderText="Piloto" />  
-                                <asp:BoundField DataField="COD_AVION" HeaderText="Avión" />  
+                                <asp:BoundField DataField="CODIGO" HeaderText="Código Plan" />  
+                                <asp:BoundField DataField="CODIGO_VUELO" HeaderText="Vuelo" />  
+                                <asp:BoundField DataField="CODIGO_LINEA" HeaderText="Linea Aerea" />  
+                                <asp:BoundField DataField="CODIGO_ESCALATECNICA" HeaderText="Escala Tecnica" />  
+                                <asp:BoundField DataField="AEROPUERTO_PARTIDA" HeaderText="Aeropuerto de partida" />  
+                                <asp:BoundField DataField="AEROPUERTO_DESTINO" HeaderText="Aeropuerto de destino" />  
                             </Columns>  
                         </asp:GridView>  
-                        
-                    </form>
-                    <br /><br />
-                    <asp:Panel ID="pnlAlerta" runat="server">
+                        <br /><br />
+                         <asp:Panel ID="pnlAlerta" runat="server">
                         <div class="col-md-3"></div>
                         <div class="col-md-6">
                             <div class="alert alert-info alert-dismissible">
@@ -39,6 +37,7 @@
                             </div>
                         </div>  	
                     </asp:Panel>
+                    </form>
                 </div>
                 <div class="col-xs-12 col-md-2">
                 </div>

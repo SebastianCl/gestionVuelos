@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/frmMdiUsuarios.Master" AutoEventWireup="true" CodeBehind="frmBuscarAvion.aspx.cs" Inherits="prjGestionVuelos.frmBuscarAvion" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/frmPrincipal.Master" AutoEventWireup="true" CodeBehind="frmABusquedaAV.aspx.cs" Inherits="prjGestionVuelos.frmABusquedaAV" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -14,7 +14,7 @@
                         </h2>
                         <asp:TextBox CssClass="form-control input-lg" runat="server" ID="txtCodAvion"></asp:TextBox>
                         <br />
-                        <asp:Button ID="btnBuscarAvi" runat="server" CssClass="btn btn-danger btn-lg btn-block" Text="BUSCAR" OnClick="btnBuscarAvi_Click" />
+                        <asp:Button ID="btnBuscarAvi" runat="server" CssClass="btn btn-info btn-lg btn-block" Text="BUSCAR" OnClick="btnBuscarAvi_Click" />
                         <br /><br /><br />
                         <asp:GridView ID="GridVPV" runat="server" AutoGenerateColumns="False" GridLines="None"  
                             AllowPaging="true" CssClass="mGrid" PagerStyle-CssClass="pgr" AlternatingRowStyle-CssClass="alt" 

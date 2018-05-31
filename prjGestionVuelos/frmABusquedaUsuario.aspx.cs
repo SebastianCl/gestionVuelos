@@ -9,57 +9,33 @@ using System.Web.UI.WebControls;
 
 namespace prjGestionVuelos
 {
-    public partial class frmVuelo1 : System.Web.UI.Page
+    public partial class frmABusquedaUsuario : System.Web.UI.Page
     {
         #region EVENTOS
-
         protected void Page_Load(object sender, EventArgs e)
         {
             this.pnlAlerta.Visible = false;
-            if (!LlenarGrid())
+            if (!LlenarGRID())
             {
                 this.pnlAlerta.Visible = true;
             }
         }
-
-        protected void btnBuscarVu_Click(object sender, EventArgs e)
+        protected void btnBuscarUsu_Click(object sender, EventArgs e)
         {
             Consultar();
         }
-
         #endregion
 
-        #region METODOS PRIVADOS
-        private void Consultar()
-        {
-            try
-            {
-                string strValor = this.txtCodVuelo.Text.Trim();
-                string strInstancia = "SEBASTIAN\\SQLEXPRESS";
-                SqlConnection objCon = new SqlConnection("Data Source = " + strInstancia + "; Initial Catalog = CONTROLVUELO; Integrated Security = SSPI;");
-                SqlDataAdapter objDA = new SqlDataAdapter("SELECT * FROM tblVUELO WHERE CODIGO LIKE '%" + strValor + "%' OR FECHA_partida LIKE '%" + strValor + "%' OR FECHA_llegada LIKE '%" + strValor + "%' OR PLAZAS_VACIAS LIKE '%" + strValor + "%' OR IDPILOTO LIKE '%" + strValor + "%' OR COD_AVION LIKE '%" + strValor + "%'", objCon);
-                DataTable dt = new DataTable();
-                objDA.Fill(dt);
-                this.GridVPV.DataSource = dt;
-                GridVPV.DataBind();
-                objCon = null;
-            }
-            catch (Exception ex)
-            {
-                this.lblMensaje.Text = ex.Message;
-                this.pnlAlerta.Visible = true;
-                return;
-            }
-        }
 
-        private bool LlenarGrid()
+        #region METODOS PRIVADOS
+        private bool LlenarGRID()
         {
             try
             {
-                string strValor = this.txtCodVuelo.Text.Trim();
                 string strInstancia = "SEBASTIAN\\SQLEXPRESS";
                 SqlConnection objCon = new SqlConnection("Data Source = " + strInstancia + "; Initial Catalog = CONTROLVUELO; Integrated Security = SSPI;");
-                SqlDataAdapter objDA = new SqlDataAdapter("SELECT * FROM tblVUELO ", objCon);
+                string strValor = this.txtCodUsuario.Text.Trim();
+                SqlDataAdapter objDA = new SqlDataAdapter("SELECT * FROM tblPERSONA ", objCon);
                 DataTable dt = new DataTable();
                 objDA.Fill(dt);
                 this.GridVPV.DataSource = dt;
@@ -74,6 +50,29 @@ namespace prjGestionVuelos
                 return false;
             }
         }
+
+        private void Consultar()
+        {
+            try
+            {
+                string strValor = this.txtCodUsuario.Text.Trim();
+                string strInstancia = "SEBASTIAN\\SQLEXPRESS";
+                SqlConnection objCon = new SqlConnection("Data Source = " + strInstancia + "; Initial Catalog = CONTROLVUELO; Integrated Security = SSPI;");
+                SqlDataAdapter objDA = new SqlDataAdapter("SELECT * FROM tblPERSONA WHERE ID LIKE '%" + strValor + "%' OR NOMBRE LIKE '%" + strValor + "%' OR CIUDAD LIKE '%" + strValor + "%' OR COD_USUARIO LIKE '%" + strValor + "%'", objCon);
+                DataTable dt = new DataTable();
+                objDA.Fill(dt);
+                this.GridVPV.DataSource = dt;
+                GridVPV.DataBind();
+                objCon = null;
+            }
+            catch (Exception ex)
+            {
+                this.lblMensaje.Text = ex.Message;
+                this.pnlAlerta.Visible = true;
+                return;
+            }
+        }
         #endregion
+
     }
 }

@@ -42,14 +42,6 @@
 
                 <div class="navbar-collapse  collapse"  id="barra-menu">
                 <ul class="nav navbar-nav my-right-ul">
-                                  
-                  <li class="dropdown messages-menu" id="liNotificacion">
-                      <a href="#" class="dropdown-toggle mytool" data-toggle="tooltip" data-placement="bottom" data-original-title="Notificaciones">
-                      <i class="fa fa-bell"></i>
-                      <span class="label label-default">4</span>
-                      </a>
-                  </li>
-
                   <li class="dropdown user-menu">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <img src="resources/img/default.png" class="user-image" />
@@ -58,7 +50,7 @@
                       <ul class="dropdown-menu">
                         <li class="my-user-header">
                           <img src="resources/img/default.png" class="img-circle" />
-                          <p>Sebastian Cardona - User ADMIN<br/>
+                          <p>User<br/>
                             <small>Mar. 2018</small>
                           </p>
                         </li>
@@ -91,17 +83,17 @@
                 <li class="my-li-navG">
                     <a href="frmBuscarPlanVuelo.aspx">Plan de vuelos</a>
                 </li>
-                <li class="my-li-navY">
+                <li class="my-li-navN">
                     <a href="frmBuscarVuelo.aspx">Vuelo</a>
                 </li>
                 <li class="my-li-nav">
                     <a href="frmBuscarAeropuerto.aspx">Aeropuerto</a>
                 </li>
                 <li class="my-li-navR">
-                    <a href="frmBuscarAvion.aspx">Avion</a>
+                    <a href="frmBuscarAvion.aspx">Avión</a>
                 </li>
-                <li class="my-li-navR">
-                    <a href="frmBuscarLineaAerea.aspx">Avion</a>
+                <li class="my-li-navB">
+                    <a href="frmBuscarLineaAerea.aspx">Linea Aérea</a>
                 </li>
             </ul>
         </div>
